@@ -1,0 +1,1 @@
+docker run -it -v "%cd%\DockerFolder\:/workdir" szilardvajda/ubuntu_2204lts_cs470 bin/bash
