@@ -10,7 +10,7 @@ Prerequisites: C or higher in CS 302, CS 312, CS 325, and CS 361.
 
 ### Credits: (4)
 
-###Learner Outcomes:
+### Learner Outcomes:
 Upon successful completion of this course, the student will be able to:
 - Manipulate operating system functions with particularities considered for Linux and Windows.
 - Integrate concepts such as process management, how processes are created, synchronized, canceled, deadlocks, etc.
