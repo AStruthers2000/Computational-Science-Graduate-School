@@ -3,9 +3,21 @@
 int ParseArgsFromCMD(const struct Command command, char* args)
 {
 	int i, j;
-	if(args[0] == '-' && args[1] == 'h')
+	if(
+		(args[0] == '-' && args[1] == 'h') || 
+		(strncmp(args, "--help", 6) == 0) ||
+		(strcmp(command.cmd, "cpuinfo") == 0 && strlen(args) == 0) ||
+		(strcmp(command.cmd, "meminfo") == 0 && strlen(args) == 0)
+	)
 	{
-		printf("Help for using command %s:\n==========\n%s\n\tAcceptable arguments are: %s\n==========\n", command.cmd, command.usage_string, command.args);
+		char cmd_man[MAX_STR_SIZE];
+		//strcpy(
+		sprintf(cmd_man, "man ./%s.h", command.cmd);
+		int result = system(cmd_man);
+		if(result != 0)
+		{
+			printf("Help for using command %s:\n==========\n%s\n\tAcceptable arguments are: %s\n==========\n", command.cmd, command.usage_string, command.args);
+		}
 		return 2;
 	}
 
@@ -89,7 +101,7 @@ void ParseInput(const char* input, char* cmd, char* args, int* is_cmd_good, int*
 	}
 }
 
-int HandleCMD(char* cmd, char* args, int good_cmd, int good_args)
+void HandleCMD(char* cmd, char* args, int good_cmd, int good_args)
 {
 	struct Command cmd_generic;
 
@@ -177,26 +189,67 @@ void HandlePrompt(char* args, int g_arg)
 
 void HandleCPUInfo(char* args, int g_arg)
 {
+	int cores = get_nprocs();
+	char clock_speed[MAX_STR_SIZE];
+	char cpu_type[MAX_STR_SIZE];
+
+	clock_speed[0] = '\0';
+	cpu_type[0] = '\0';
+
+	FILE* cpuinfo;
+	cpuinfo = fopen("/proc/cpuinfo", "r");
+	char buff[MAX_STR_SIZE];
+
+	while(fgets(buff, sizeof(buff), (FILE*)cpuinfo) != NULL)
+	{
+		if(feof(cpuinfo))
+		{
+			printf("End of /proc/cpuinfo\n");
+		}
+		else
+		{
+			if(clock_speed[0] == '\0')
+			{
+				if(strncmp(buff, "cpu MHz", 7) == 0)
+				{
+					strcpy(clock_speed, buff + 11);
+				}
+			}
+
+			if(cpu_type[0] == '\0')
+			{
+				if(strncmp(buff, "model name", 10) == 0)
+				{
+					//printf("=====\nMODEL NAME: %s\n=====", buff);
+					strcpy(cpu_type, buff + 13);
+				}
+			}
+		}
+	}
+
 	int i;
 	for(i = 0; i < strlen(args); i++)
 	{
 		if(args[i] == 'c')
 		{
-			printf("CPU clock speed:\n");
+			printf("CPU clock speed MHz: %s", clock_speed);
 		}
 		if(args[i] == 't')
 		{
-			printf("CPU type:\n");
+			printf("CPU type: %s", cpu_type);
 		}
 		if(args[i] == 'n')
 		{
-			printf("CPU cores: %d\n", get_nprocs());
+			printf("CPU cores: %d\n", cores);
 		}
 	}
+
+	fclose(cpuinfo);
 }
 
 void HandleMEMInfo(char* args, int g_arg)
 {
+	/*
 	struct sysinfo info;
 	sysinfo(&info);
 	long long totalmem = (info.totalram + info.totalswap) * info.mem_unit;
@@ -205,12 +258,128 @@ void HandleMEMInfo(char* args, int g_arg)
 	printf("Used memory: %lld\n", usedmem);
 	//printf("Memunit: %d\n", info.mem_unit);
 	//printf("L2 cache: %ld\n", sysconf(_SC_LEVEL2_CACHE_LINESIZE));
+	*/
+	long long int mTotal = 0;
+	long long int mFree = 0;
+
+	char* valid_nums = "1234567890";
+	char mem_total[MAX_STR_SIZE];
+	char mem_free[MAX_STR_SIZE];
+
+	mem_total[0] = '\0';
+	mem_free[0] = '\0';
+
+	FILE* meminfo;
+	meminfo = fopen("/proc/meminfo", "r");
+
+	char buff[MAX_STR_SIZE];
+	while(fgets(buff, sizeof(buff), (FILE*)meminfo) != NULL)
+	{
+		if(feof(meminfo))
+		{
+			printf("End of meminfo\n");
+		}
+		else
+		{
+			if(mem_total[0] == '\0')
+			{
+				if(strncmp(buff, "MemTotal", 8) == 0)
+				{
+					char total[MAX_STR_SIZE];
+					int good_count = 0;
+
+					int i;
+					for(i = 0; i < strlen(buff); i++)
+					{
+						int is_valid = 0;
+						int j;
+						for(j = 0; j < strlen(valid_nums); j++)
+						{
+							if(buff[i] == valid_nums[j])
+							{
+								is_valid = 1;
+							}
+						}
+						if(is_valid)
+						{
+							total[good_count++] = buff[i];
+						}
+					}
+					total[good_count++] = '\0';
+					sscanf(total, "%lld", &mTotal);
+					mTotal *= 1000;
+				}
+			}
+
+			if(mem_free[0] == '\0')
+			{
+				if(strncmp(buff, "MemFree", 7) == 0)
+				{
+					char free[MAX_STR_SIZE];
+					int good_count = 0;
+
+					int i;
+					for(i = 0; i < strlen(buff); i++)
+					{
+						int is_valid = 0;
+						int j;
+						for(j = 0; j < strlen(valid_nums); j++)
+						{
+							if(buff[i] == valid_nums[j])
+							{
+								is_valid = 1;
+							}
+						}
+						if(is_valid)
+						{
+							free[good_count++] = buff[i];
+						}
+					}
+					free[good_count++] = '\0';
+					sscanf(free, "%lld", &mFree);
+					mFree *= 1000;
+				}
+			}
+
+			/*
+			if(mem_avail[0] == '\0')
+			{
+				if(strncmp(buff, "MemAvailable", 12) == 0)
+				{
+					strcpy(mem_avail, buff + 16);
+				}
+			}
+			*/
+		}
+	}
+
+	int i;
+	for(i = 0; i < strlen(args); i++)
+	{
+		if(args[i] == 't')
+		{
+			printf("Total RAM: %lld bytes\n", mTotal);
+		}
+
+		if(args[i] == 'u')
+		{
+			printf("Used RAM: %lld bytes\n", mTotal - mFree);
+		}
+
+		if(args[i] == 'c')
+		{
+			//this outputs 0, but so does "getconf -a | grep CACHE" ?
+			printf("L2 cache: %ld\n", sysconf(_SC_LEVEL2_CACHE_SIZE));
+		}
+	}
+
+	fclose(meminfo);
 }
 
 struct Command cmd_exit = {HandleExit, "exit", "0123456789", "Usage: <exit> [n] -- terminates the shell. Exits with value of last executed command, or if an argument [n] is specified, exits with value [n]\n"};
 struct Command cmd_prompt = {HandlePrompt, "prompt", "*", "Usage: <prompt> [new_prompt] -- changes the current shell prompt to [new_prompt], or restores prompt to \"cwushell\" if no argument is specified\n"};
 struct Command cmd_cpuinfo = {HandleCPUInfo, "cpuinfo", "ctn", "Usage: <cpuinfo> -c -t -n -- prints to the screen different CPU related information based on the switch.\n\t-c -- will print the CPU clock\n\t-t -- will print the CPU type\n\t-n -- will print the number of cores\n"};
-struct Command cmd_meminfo = {HandleMEMInfo, "meminfo", "tuc", "Usage: <meminfo> -t -u -c --\n"};
+struct Command cmd_meminfo = {HandleMEMInfo, "meminfo", "tuc", "Usage: <meminfo> -t -u -c -- prints to the screen different memory related information based on the switch.\n\t-t -- prints the total RAM in the system in bytes\n\t-u -- prints the used RAM in bytes\n\t-c -- prints the L2 cache size in bytes\n"};
 
 int main()
 {
@@ -228,26 +397,12 @@ int main()
 		int bIsCMDGood = 0, bIsArgGood = 0;
 		ParseInput(line, parsed_cmd, parsed_args, &bIsCMDGood, &bIsArgGood);
 
-		//printf("=====\n\tCommand entered: %s\n\tArgs entered: %s\n\t\tcmd was good? %d\n\t\targs are good? %d\n=====\n", parsed_cmd, parsed_args, bIsCMDGood, bIsArgGood);
-		//do things with parsed_cmd and parsed_args
-
-		//memset(parsed_cmd, 0, sizeof(parsed_cmd));
-		//memset(parsed_args, 0, sizeof(parsed_args));
-
 		HandleCMD(parsed_cmd, parsed_args, bIsCMDGood, bIsArgGood);
-
-		/*
-		if(strcmp(parsed_cmd, "exit") == 0)
-		{
-			EXIT_FLAG = 1;
-		}
-		*/
 
 		memset(parsed_cmd, 0, sizeof(parsed_cmd));
 		memset(parsed_args, 0, sizeof(parsed_args));
 	}
 
-
 	printf("CWUSHELL exited with exit code %d\n", exit_code);
-	return 0;
+	return exit_code;
 }

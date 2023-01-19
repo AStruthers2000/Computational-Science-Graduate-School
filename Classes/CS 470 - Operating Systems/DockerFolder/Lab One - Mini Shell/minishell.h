@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/sysinfo.h>
+#include <unistd.h>
 
 //constants
 #define MAX_STR_SIZE 64
@@ -28,7 +29,7 @@ int EXIT_FLAG;
 int main(void);
 void ParseInput(const char* input, char* cmd, char* args, int* is_cmd_good, int* is_arg_good);
 int ParseArgsFromCMD(const struct Command command, char* args);
-int HandleCMD(char* cmd, char* args, int good_cmd, int good_args);
+void HandleCMD(char* cmd, char* args, int good_cmd, int good_args);
 
 void HandleExit(char* args, int g_arg);
 void HandlePrompt(char* args, int g_arg);
