@@ -202,7 +202,7 @@ void HandleMEMInfo(char* args, int g_arg)
 	long long totalmem = (info.totalram + info.totalswap) * info.mem_unit;
 	printf("Total memory: %lld\n", totalmem);
 	long long usedmem = ((info.totalram - info.freeram) + (info.totalswap - info.freeswap)) * info.mem_unit;
-	printf("Used memory: %lld\n", totalmem - info.freeram);
+	printf("Used memory: %lld\n", usedmem);
 	//printf("Memunit: %d\n", info.mem_unit);
 	//printf("L2 cache: %ld\n", sysconf(_SC_LEVEL2_CACHE_LINESIZE));
 }
