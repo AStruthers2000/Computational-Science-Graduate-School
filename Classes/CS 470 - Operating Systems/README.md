@@ -8,7 +8,8 @@ Topics will include principles of operating systems, concurrency, scheduling and
 ### Prerequisites:
 Prerequisites: C or higher in CS 302, CS 312, CS 325, and CS 361.
 
-### Credits: (4)
+### Credits: 
+(4)
 
 ### Learner Outcomes:
 Upon successful completion of this course, the student will be able to:
