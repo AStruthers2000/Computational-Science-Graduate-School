@@ -59,6 +59,7 @@ int getInput(int* x, int* y)
 	printf("Player %d input: ", player);
 	fgets(input, sizeof input, stdin);
 	fflush(stdin);
+
 	if(strncmp(input, "exit", 4) == 0)
 	{
 		is_running = 0;
@@ -121,7 +122,6 @@ void printGrid()
 
 int checkForWin()
 {
-	//int is_win_h = 1, is_win_v = 1, is_win_d = 1;
 	int is_win = 0;
 	int r, c;
 
@@ -134,7 +134,6 @@ int checkForWin()
 		{
 			if(strcmp(grid[r][c], grid[r][c-1]) != 0)
 			{
-				//printf("Failed horizontal check\n");
 				is_win_h = 0;
 				break;
 			}
@@ -154,7 +153,6 @@ int checkForWin()
 		{
 			if(strcmp(grid[r][c], grid[r-1][c]) != 0)
 			{
-				//printf("Failed vertical check\n");
 				is_win_v = 0;
 				break;
 			}
@@ -167,10 +165,10 @@ int checkForWin()
 
 	//diagonal l to r
 	int is_win_d = 1;
-	for(r = 1; r < grid_size; r++){
+	for(r = 1; r < grid_size; r++)
+	{
 		if(strcmp(grid[r][r], grid[r-1][r-1]) != 0)
 		{
-			//printf("Failed l to r diagonal check\n");
 			is_win_d = 0;
 			break;
 		}
@@ -186,10 +184,8 @@ int checkForWin()
 	for(c = grid_size - 2; c >= 0; c--)
 	{
 		r = grid_size - c - 1;
-		//printf("grid[%d][%d] = %s\n", r, c, grid[r][c]);
 		if(strcmp(grid[r][c], grid[r-1][c+1]) != 0)
 		{
-			//printf("Failed r to l diagonal check\n");
 			is_win_d = 0;
 			break;
 		}
@@ -206,7 +202,8 @@ int main(int argc, char** argv)
 {
 	if(argc != 2)
 	{
-		printf("Invalid arguments, please enter a single grid dimension\n");
+		printf("Usage: %s <grid_size>\n", argv[0]);
+		//printf("Invalid arguments, please enter a single grid dimension\n");
 		exit(-1);
 	}
 
@@ -245,5 +242,6 @@ int main(int argc, char** argv)
 		printf("Freeing dynamically allocated grid array %d\n", i+1);
 		free(grid[i]);
 	}
+	free(grid);
 	return 0;
 }
