@@ -1,3 +1,0 @@
-C:/Users/Strut/Documents/School/Grad School/Classes/CS 470 - Operating Systems/DockerFolder/Lab Two - Tic Tac Toe/TicTacToeGame/cmake-build-debug/CMakeFiles/TicTacToeGame.dir
-C:/Users/Strut/Documents/School/Grad School/Classes/CS 470 - Operating Systems/DockerFolder/Lab Two - Tic Tac Toe/TicTacToeGame/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Strut/Documents/School/Grad School/Classes/CS 470 - Operating Systems/DockerFolder/Lab Two - Tic Tac Toe/TicTacToeGame/cmake-build-debug/CMakeFiles/rebuild_cache.dir
