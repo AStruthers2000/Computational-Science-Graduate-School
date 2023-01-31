@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="DVProject:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DVProject_jar</output-path>
+    <root id="archive" name="DVProject.jar">
+      <element id="module-output" name="DVProject" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jcommon-1.0.23.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jfreechart-1.0.19.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
