@@ -12,8 +12,9 @@ int main(int argc, char** argv)
 	int size = atoi(argv[1]);
 	if(size < 3 || size > 10)
 	{
-		printf("Invalid grid size, defaulting to 3\n");
-		size = 3;
+		printf("<grid_size> must be in range [3, 10]\n");
+		//size = 3;
+		exit(-1);
 	}
 
 	//setting up shared memory of struct GameState* game defined in tictactoe.h
