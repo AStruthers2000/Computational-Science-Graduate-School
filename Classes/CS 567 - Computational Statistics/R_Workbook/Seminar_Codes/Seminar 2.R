@@ -1,3 +1,9 @@
+#Author: Andrew Struthers (Student ID 41371870)
+#Date: 1/31/2023
+#Honor code: I pledge that I have neither given nor received help from anyone 
+#            other than the instructor or the TAs for all work components included here. 
+#            -- Andrew
+
 #Install and load necessary libraries
 install.packages("ggplot2")
 
@@ -34,7 +40,7 @@ calc_spearman <- function(g) {
   y <- g[, 2]
   rho <- cor(x, y, method = "spearman")
   c <- cov(x, y)
-  se <- sqrt((2 * (2 * length(x) + 5)) / (9 * (length(x) - 1)))
+  se <- sqrt(c(var(x), var(y)) / (length(x) - 2))
   sig <- cor.test(x, y)$p.value
   return(c(rho = rho, covariance = c, significance = sig, standard_error = se))
 }
