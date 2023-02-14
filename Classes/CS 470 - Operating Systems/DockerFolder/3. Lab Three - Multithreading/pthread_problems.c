@@ -3,7 +3,7 @@
 /*
    Jump to line 194 to view Problem Two
    Jump to line 283 to view helper UI and execution functions
-   Jump to line 398 to view main function
+   Jump to line 409 to view main function
 */
 
 /* Begin Problem One specific code */
@@ -318,7 +318,7 @@ void handleProblemOne()
 	if(m < 1)
 	{
 		printf("Please enter a positive integer\n");
-		break;
+		return (void) 0;
 	}
 
 	pthread_t matrix_threads[m];
@@ -360,7 +360,7 @@ void handleProblemTwo()
 	if(m < 1)
 	{
 		printf("Please enter a positive integer\n");
-		break;
+		return (void) 0;
 	}
 
 	pthread_t array_threads[m];
