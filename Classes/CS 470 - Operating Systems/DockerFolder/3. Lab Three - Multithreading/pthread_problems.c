@@ -315,6 +315,12 @@ void handleProblemOne()
 	int m = 0;
 	m = atoi(temp);
 
+	if(m < 1)
+	{
+		printf("Please enter a positive integer\n");
+		break;
+	}
+
 	pthread_t matrix_threads[m];
 	pthread_t matrix_check;
 
@@ -351,6 +357,11 @@ void handleProblemTwo()
 	fflush(stdin);
 	int m = 0;
 	m = atoi(temp);
+	if(m < 1)
+	{
+		printf("Please enter a positive integer\n");
+		break;
+	}
 
 	pthread_t array_threads[m];
 	pthread_t array_check;
