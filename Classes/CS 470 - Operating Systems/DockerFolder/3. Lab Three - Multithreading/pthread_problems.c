@@ -418,7 +418,7 @@ int main(int argc, char** argv)
 
 	num_elements = atoi(argv[1]);
 
-	if(num_elements < 1 || num_elements > 100)
+	if(num_elements < 1 || num_elements > 1000)
 	{
 		printf("Please make sure you enter a reasonable number of elements (in the range [1, 100])\n");
 		exit(-1);
