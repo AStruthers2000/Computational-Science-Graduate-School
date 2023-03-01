@@ -42,7 +42,7 @@ void* waiter(void* arg)
 		}
 		else if(n == 0)
 		{
-			printf("[WAITER]:     #Customer has left waiter %d\n", me);
+			printf("[WAITER]:     Customer has left waiter %d\n", me);
 			break;
 		}
 
