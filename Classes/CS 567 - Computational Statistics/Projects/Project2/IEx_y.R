@@ -60,18 +60,21 @@ IEx_y(x,y,2)
 
 # -------- Experiment 2 form data file
 # Read in data file
+getwd()
 setwd("/Users/DonaldD/Desktop/Yvonne_Project_2023") # Change working directory if necessary 
 Data <- read.csv("Data.csv", skip = 2) # remove the first two rows 
 
 #compare two rows withe different varying vlaues of k
 attach(Data)
-a <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 5000)
-b <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 7500)
-c <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 10000)
-d <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 12500)
-e <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 15000)
-f <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 17500)
-g <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 20000)
+system.time({
+  a <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 5000)
+  b <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 7500)
+  c <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 10000)
+  d <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 12500)
+  e <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 15000)
+  f <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 17500)
+  g <- IEx_y(MATHEFF[1:50000], MATINTFC[1:50000], 20000)
+})
 plot(seq(5000,20000,2500),c(a,b,c,d,e,f,g), xlab = "k", ylab = "IE(MATHEFF|MATINTFC)")
 detach(Data)
 

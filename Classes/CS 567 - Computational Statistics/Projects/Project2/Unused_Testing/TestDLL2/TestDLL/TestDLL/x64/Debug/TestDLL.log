@@ -1,0 +1,5 @@
+﻿  dllmain.cpp
+D:\Users\Strut\Documents\My Documents\School\Grad School\Classes\CS 567 - Computational Statistics\Projects\Project2\TestDLL2\TestDLL\TestDLL\dllmain.cpp(21,6): warning C4273: 'add_numbers': inconsistent dll linkage
+D:\Users\Strut\Documents\My Documents\School\Grad School\Classes\CS 567 - Computational Statistics\Projects\Project2\TestDLL2\TestDLL\TestDLL\TestDLL.h(14,24): message : see previous definition of 'add_numbers'
+     Creating library D:\Users\Strut\Documents\My Documents\School\Grad School\Classes\CS 567 - Computational Statistics\Projects\Project2\TestDLL2\TestDLL\x64\Debug\TestDLL.lib and object D:\Users\Strut\Documents\My Documents\School\Grad School\Classes\CS 567 - Computational Statistics\Projects\Project2\TestDLL2\TestDLL\x64\Debug\TestDLL.exp
+  TestDLL.vcxproj -> D:\Users\Strut\Documents\My Documents\School\Grad School\Classes\CS 567 - Computational Statistics\Projects\Project2\TestDLL2\TestDLL\x64\Debug\TestDLL.dll
