@@ -1,21 +1,28 @@
-# Operating Systems
+# Computational Intelligence and Machine Learning
 
-Taken Winter of 2023.
+Taken Spring of 2023.
 
 ## Description:
-Topics will include principles of operating systems, concurrency, scheduling and dispatch, memory management, processes and threads, device management, security and protection, and file systems. Course will not have an established scheduling pattern.
+Introducing intelligent systems: artificial neural networks, deep learning, evolutionary computation, fuzzy systems, swarm intelligence, and hybridizations of the above techniques. We will look at these techniques from a machine learning perspective. CS 457 and CS 557 are layered courses; students may not receive credit for both.
 
 ### Prerequisites:
-Prerequisites: C or higher in CS 302, CS 312, CS 325, and CS 361.
+Prerequisites: CS 528.
 
 ### Credits: 
 (4)
 
 ### Learner Outcomes:
 Upon successful completion of this course, the student will be able to:
-- Manipulate operating system functions with particularities considered for Linux and Windows.
-- Integrate concepts such as process management, how processes are created, synchronized, canceled, deadlocks, etc.
-- Integrate concepts such as main/virtual memory management, how memory is allocated, how memory is shared, and how this integrates in the OS paradigm.
-- Design and develop multithreaded solutions to solve problems in multiprocessor architectures and be able to justify the parallel programming in the critical section paradigm.
-- Assess, test and compare different CPU scheduling mechanisms and recognize and distinguish advantages and disadvantages of these strategies in the OS paradigm.
-- Integrate data storage concepts.
+- Compare the development and history of computational and artificial intelligence as compared to the Turing Machine and conventional computing.
+- Describe the basic concepts of artificial neural networks: learning, classification, pattern recognition, memory, logical operations.
+- Build neural classifiers and pattern recognition models.
+- Describe the use of feedback in neural networks for optimization.
+- Describe associative memories and, their use in clustering, classification and visualization of very large data sets.
+- Define genetic algorithms and their use in optimization.
+- Discuss the basic features of swarm intelligence and ant colony optimization.
+- Compare fuzzy logic to binary logic and analyze the use of fuzzy rules for expert systems and the architecture of fuzzy neural systems.
+- Describe radial function neural networks.
+- Analyze the computational power of neural networks and determine the limits of neural computing.
+- Lead group discussions pertaining to building neural classifiers and pattern recognition models. [graduate level]
+- Prepare presentation for demonstrating basic concepts of learning, classification, pattern recognition, memory, and logical operations. [graduate level]
+- Research and present information pertaining to associative memories and their use in clustering, classification, and visualization of very large data sets. [graduate level]

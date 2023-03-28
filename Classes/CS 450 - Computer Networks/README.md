@@ -1,21 +1,21 @@
-# Operating Systems
+# Computer Network and Data Communications
 
-Taken Winter of 2023.
+Taken Spring of 2023.
 
 ## Description:
-Topics will include principles of operating systems, concurrency, scheduling and dispatch, memory management, processes and threads, device management, security and protection, and file systems. Course will not have an established scheduling pattern.
+The course deals with networking and data communication utilizing the concepts of device and network protocols, network configurations, encryption, data compression and security.
 
 ### Prerequisites:
-Prerequisites: C or higher in CS 302, CS 312, CS 325, and CS 361.
+Prerequisites: Academic Writing I and Academic Writing II and CS 301 and CS 311 and CS 325; MATH 172 or MATH 173, with a grade of C or higher in all courses.
 
 ### Credits: 
 (4)
 
 ### Learner Outcomes:
 Upon successful completion of this course, the student will be able to:
-- Manipulate operating system functions with particularities considered for Linux and Windows.
-- Integrate concepts such as process management, how processes are created, synchronized, canceled, deadlocks, etc.
-- Integrate concepts such as main/virtual memory management, how memory is allocated, how memory is shared, and how this integrates in the OS paradigm.
-- Design and develop multithreaded solutions to solve problems in multiprocessor architectures and be able to justify the parallel programming in the critical section paradigm.
-- Assess, test and compare different CPU scheduling mechanisms and recognize and distinguish advantages and disadvantages of these strategies in the OS paradigm.
-- Integrate data storage concepts.
+- Identify and explain the basic concepts of communication among computers.
+- Identify and explain the fundamentals of computer networks, primary LAN architectures, network topologies, and the difference between local and wide area networks.
+- Analyze the purpose of communication and network standards and identify the primary standards bodies for networking.
+- Examine the nature and functionality of protocol layering in networking.
+- Explain and classify the basic operation of network operating systems.
+- Evaluate the messaging mechanisms of networks.
