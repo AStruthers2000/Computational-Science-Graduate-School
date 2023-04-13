@@ -8,28 +8,36 @@ Created on Mon Apr 10 16:33:20 2023
              included here.
 """
 
-x1 = [2, 1, -1]
-x2 = [0, -1, -1]
+def dot(x, y):
+    assert len(x) == len(y)
+    return sum([x[i] * y[i] for i in range(len(w))])
+
+def scalar_multiply(a, s):
+    return [x * s for x in a]
+
+inputs = [[2, 1, -1],
+          [0, -1, -1]]
 
 w = [0, 1, 0]
 
-t1 = -1
-t2 = 1
+t = [-1, 1]
+
+o = [999 for i in range(len(t))]
+
 n = 1
 
 cases_passed = 0
 
-while cases_passed < 2:
-    net1 = sum([w[i] * x1[i] for i in range(len(w))])
-    act = 1 if net1 > 0 else -1
-    if act != t1:
-        print("correcting weights")
-        print(n*(t1-net1)*x1)
-        print(n*(t1-net1))
-        error = [n*(t1-net1)*x1[i] for i in range(len(x1))]
-        w = [w[i] + error[i] for i in range(len(error))]
-    else:
-        cases_passed += 1
-        
-    print(w)
-    break
+while t != o:
+    for i in range(len(inputs)):
+        x = inputs[i]
+        net = dot(w, x)
+
+        act = 1 if net > 0 else -1
+        if act != t[i]:
+            print("correcting weights")
+            error = scalar_multiply(x, n*(t[i] - net))
+            w = [w[i] + error[i] for i in range(len(error))]
+        else:
+            o[i] = act
+        print(w)
