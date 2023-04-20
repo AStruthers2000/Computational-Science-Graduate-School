@@ -46,6 +46,7 @@ def classify(test_set, test_set_out, weights, set_type, verbose = False):
             print_vector(input_vec)
             print("as: {0}".format("L" if actual_output == L_out else "I"))
             print("====="*5)
+            
         if actual_output == desired_output:
             num_correct += 1
 
@@ -61,7 +62,10 @@ L_data = [
     stoa("100111000"),
     stoa("100110000"),
     stoa("010010011"),
-    stoa("010011000")
+    stoa("010011000"),
+    stoa("010010110"),
+    stoa("001001111"),
+    stoa("001001011")
 ]
 
 I_data = [
@@ -73,7 +77,8 @@ I_data = [
     stoa("001001000"),
     stoa("000100100"),
     stoa("000010010"),
-    stoa("000001001")
+    stoa("000001001"),
+    stoa("100010001")
 ]
 
 # Define the desired outputs for L and I
@@ -95,7 +100,7 @@ weights = np.random.uniform(low=-1.0, high=1.0, size=10)
 
 # Train the weights with the provided training set of vectors
 start = timer()
-weights = train(training_set, weights, 0.1)
+weights = train(training_set, weights, 0.05)
 end = timer()
 print(f"Training took: {end - start} seconds")
 
@@ -106,7 +111,7 @@ classify([v for (v, c) in training_set], [c for (v, c) in training_set], weights
 # Define a test set of input vectors
 test_set = [
     stoa("100100110"),  #L with short tail
-    stoa("111010111"),  #I with upper case
+    stoa("100101100"),  #I with noise
     stoa("101100110"),  #L with short tail and noise
     stoa("101001001"),  #I with noise
     stoa("100100001"),  #short I with noise
