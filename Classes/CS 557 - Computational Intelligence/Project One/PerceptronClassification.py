@@ -2,10 +2,11 @@ import numpy as np
 from timeit import default_timer as timer
 
 def print_vector(v):
-    for x in range(3):
+    size = round(np.sqrt(len(v)))
+    for x in range(size):
         string = ""
-        for y in range(3):
-            i = x * 3 + y
+        for y in range(size):
+            i = x * size + y
             string += f"{v[i]} "
         print(string)
 
@@ -54,7 +55,6 @@ def classify(test_set, test_set_out, weights, set_type, verbose = False):
 
     print("Classification accuracy for {} set: {:.2f}%".format(set_type, accuracy))
 
-
 # Define the input vectors for L and I
 L_data = [
     stoa("100100111"),
@@ -80,6 +80,21 @@ I_data = [
     stoa("000001001"),
     stoa("100010001")
 ]
+"""
+
+L_data = [
+    stoa("1000010000100001000011111"),
+    stoa("1000010000100001000011110"),
+    stoa("1000010000100001000011100")
+]
+
+I_data = [
+    stoa("0010000100001000010000100"),
+    stoa("0010000000001000010000100"),
+    stoa("0001000010000100001000000")
+]
+"""
+
 
 # Define the desired outputs for L and I
 L_out = 1
@@ -96,7 +111,7 @@ for v in I_data:
 np.random.shuffle(training_set)
 
 # Initialize the weights randomly
-weights = np.random.uniform(low=-1.0, high=1.0, size=10)
+weights = np.random.uniform(low=-1.0, high=1.0, size=len(training_set[0][0]))
 
 # Train the weights with the provided training set of vectors
 start = timer()
@@ -108,6 +123,7 @@ print(f"Training took: {end - start} seconds")
 # Validate the training worked properly
 classify([v for (v, c) in training_set], [c for (v, c) in training_set], weights, "training")
 
+
 # Define a test set of input vectors
 test_set = [
     stoa("100100110"),  #L with short tail
@@ -117,8 +133,18 @@ test_set = [
     stoa("100100001"),  #short I with noise
     stoa("110010011"),  #L with noise
 ]
-
 # Define the correct outputs for the test set
 test_set_out = np.array([L_out, I_out, L_out, I_out, I_out, L_out, L_out, L_out, L_out, I_out, I_out, I_out])
+"""
+
+test_set = [
+    stoa("0010000100001000011100000"),
+    stoa("0100101000010100100001111"),
+    stoa("1001000010010100001000010"),
+    stoa("0100001000000000100001000")
+]
+
+test_set_out = np.array([L_out, L_out, I_out, I_out])
+"""
 
 classify(test_set, test_set_out, weights, "test", True)
