@@ -1,0 +1,16 @@
+173.42.226.84/20
+
+20 - 16 = 4, therefore we have 4 1 bits in the 3rd octet
+mask: 11111111 11111111 1111|0000 00000000
+addr: xxxxxxxx xxxxxxxx 1110|0010 00000000
+and:  xxxxxxxx xxxxxxxx 1110|0000 00000000
+answ: 173.42.224.0
+
+b/c:  xxxxxxxx xxxxxxxx 1110|1111 11111111
+answ: 173.42.239.255
+      
+
+ID:          173.42.224.0
+1st Usable:  173.42.224.1
+Last Usable: 173.24.239.254
+Broadcast:   173.42.239.255
