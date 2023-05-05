@@ -1,0 +1,2 @@
+Internetwork: An arbitrary collection of networks interconnected to provide some sort of host-to-host packet delivery service (the Internet?)
+

@@ -12,13 +12,14 @@ import numpy as np
 import math
 from sklearn.neural_network import MLPRegressor
 from sklearn.metrics import mean_squared_error
+import matplotlib.pyplot as plt
 
 # Define the function to be approximated
 def f(x, y):
-    return math.sin((math.pi * 10 * x) + (10 / (1 + y**2))) + math.log(x**2 + y**2)
+    return np.sin((np.pi * 10 * x) + (10 / (1 + y**2))) + np.log(x**2 + y**2)
 
 # Generate the training and testing data
-n_train, n_test = 5000, 500
+n_train, n_test = 10000, 10000
 
 input_train = np.random.uniform(1, 100, size=(n_train, 2))
 calculated_output_train = np.array([f(x[0], x[1]) for x in input_train])
@@ -33,6 +34,9 @@ print(f"There are {len(input_train)} (x, y) pairs and outputs used to train, wit
 min_hidden_layers = -1
 min_neurons = -1
 min_rmse = 1000
+
+min_prediction = []
+
 
 for n_hidden_layers in [1, 2]:
     for n_neurons in range(1, 20, 1):
@@ -51,12 +55,22 @@ for n_hidden_layers in [1, 2]:
         
         # Evaluate the MLP on the testing data
         predicted_output = mlp.predict(input_test)
+
+        diff = [abs(predicted_output[x] - calculated_output_test[x]) for x in range(len(predicted_output))]
+        
         mse = mean_squared_error(calculated_output_test, predicted_output)
         rmse = np.sqrt(mse)
+       
         print(f"Root-mean-squared error on test data with {n_hidden_layers} layers and {'0' if n_neurons < 10 else ''}{n_neurons} neurons per layer: {rmse}")
+        
         if rmse < min_rmse:
             min_rmse = rmse
             min_hidden_layers = n_hidden_layers
             min_neurons = n_neurons
+            min_prediction = diff
 
 print(f"\nThe result with the smallest rmse of {min_rmse} was given by {min_hidden_layers} layer(s) with {min_neurons} neuron(s) each")
+plt.title(f"Lowest RMSE: {round(min_rmse, 5)} with a\n{min_hidden_layers} layer, {min_neurons} neuron per layer architecture")
+plt.scatter([i for i in range(len(diff))], diff)
+plt.axhline(y=rmse, color='r', linestyle='-')
+plt.show()
