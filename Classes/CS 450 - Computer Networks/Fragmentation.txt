@@ -1,0 +1,8 @@
+Host A over Wi-Fi:
+(1500 - 20 - 20 = 1460)
+frag 1: 1460 bytes
+frag 2: 1460 bytes
+frag 3: 80 bytes
+
+Router A from Wi-Fi to PPP:
+(532 -20 - 20 = 492)
