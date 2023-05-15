@@ -9,7 +9,6 @@ Created on Mon May  1 20:36:30 2023
 """
 
 import numpy as np
-import math
 from sklearn.neural_network import MLPRegressor
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
@@ -19,7 +18,7 @@ def f(x, y):
     return np.sin((np.pi * 10 * x) + (10 / (1 + y**2))) + np.log(x**2 + y**2)
 
 # Generate the training and testing data
-n_train, n_test = 10000, 10000
+n_train, n_test = 1000000000, 500
 
 input_train = np.random.uniform(1, 100, size=(n_train, 2))
 calculated_output_train = np.array([f(x[0], x[1]) for x in input_train])
@@ -27,9 +26,6 @@ calculated_output_train = np.array([f(x[0], x[1]) for x in input_train])
 input_test = np.random.uniform(1, 100, size=(n_test, 2))
 calculated_output_test = np.array([f(x[0], x[1]) for x in input_test])
 
-# Specify the MLP architecture
-# n_hidden_layers = int(input("Enter the number of hidden layers: "))
-# n_neurons = int(input("Enter the number of neurons per hidden layer: "))
 print(f"There are {len(input_train)} (x, y) pairs and outputs used to train, with {len(input_test)} test case (x, y) pairs\n\n")
 min_hidden_layers = -1
 min_neurons = -1
@@ -37,7 +33,11 @@ min_rmse = 1000
 
 min_prediction = []
 
+single_layer_rmse = []
+double_layer_rmse = []
 
+
+# Specify the MLP architecture
 for n_hidden_layers in [1, 2]:
     for n_neurons in range(1, 20, 1):
         mlp = MLPRegressor(
@@ -60,6 +60,11 @@ for n_hidden_layers in [1, 2]:
         
         mse = mean_squared_error(calculated_output_test, predicted_output)
         rmse = np.sqrt(mse)
+        
+        if n_hidden_layers == 1:
+            single_layer_rmse.append(rmse)
+        else:
+            double_layer_rmse.append(rmse)
        
         print(f"Root-mean-squared error on test data with {n_hidden_layers} layers and {'0' if n_neurons < 10 else ''}{n_neurons} neurons per layer: {rmse}")
         
@@ -74,3 +79,14 @@ plt.title(f"Lowest RMSE: {round(min_rmse, 5)} with a\n{min_hidden_layers} layer,
 plt.scatter([i for i in range(len(diff))], diff)
 plt.axhline(y=rmse, color='r', linestyle='-')
 plt.show()
+
+plt.title("Single layer MLP RMSE values")
+plt.scatter([i for i in range(1, len(single_layer_rmse) + 1)], single_layer_rmse)
+plt.xticks([i for i in range(1, len(single_layer_rmse) + 1)])
+plt.show()
+
+plt.title("Double layer MLP RMSE values")
+plt.scatter([i for i in range(1, len(double_layer_rmse) + 1)], double_layer_rmse)
+plt.xticks([i for i in range(1, len(double_layer_rmse) + 1)])
+plt.show()
+
