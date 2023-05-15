@@ -18,7 +18,7 @@ def f(x, y):
     return np.sin((np.pi * 10 * x) + (10 / (1 + y**2))) + np.log(x**2 + y**2)
 
 # Generate the training and testing data
-n_train, n_test = 1000000000, 500
+n_train, n_test = 10000, 500
 
 input_train = np.random.uniform(1, 100, size=(n_train, 2))
 calculated_output_train = np.array([f(x[0], x[1]) for x in input_train])
