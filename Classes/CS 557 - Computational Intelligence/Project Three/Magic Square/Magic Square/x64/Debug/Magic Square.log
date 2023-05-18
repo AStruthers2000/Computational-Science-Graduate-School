@@ -1,5 +1,6 @@
 ﻿  Magic Square.cpp
 C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Magic Square\Magic Square\Magic Square.cpp(20,26): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Magic Square\Magic Square\Magic Square.cpp(86,26): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Magic Square\Magic Square\Magic Square.cpp(119,23): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Magic Square\Magic Square\Magic Square.cpp(124,23): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Magic Square\Magic Square\Magic Square.cpp(177,26): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   Magic Square.vcxproj -> C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Magic Square\x64\Debug\Magic Square.exe

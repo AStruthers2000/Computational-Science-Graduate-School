@@ -1,0 +1,9 @@
+﻿  Function Maximization.cpp
+C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Function Maximization\Function Maximization\Testing.h(11,19): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  Testing.cpp
+C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Function Maximization\Function Maximization\Testing.h(11,19): warning C4305: 'initializing': truncation from 'double' to 'const float'
+C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Function Maximization\Function Maximization\Testing.cpp(12,53): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Function Maximization\Function Maximization\Testing.cpp(17,15): warning C4244: 'initializing': conversion from 'const int' to 'float', possible loss of data
+C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Function Maximization\Function Maximization\Testing.cpp(19,16): warning C4244: 'initializing': conversion from 'const int' to 'float', possible loss of data
+  Generating Code...
+  Function Maximization.vcxproj -> C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Function Maximization\x64\Debug\Function Maximization.exe

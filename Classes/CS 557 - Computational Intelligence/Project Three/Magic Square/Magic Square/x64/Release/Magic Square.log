@@ -1,0 +1,11 @@
+﻿  Magic Square.cpp
+C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Magic Square\Magic Square\Magic Square.cpp(20,26): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Magic Square\Magic Square\Magic Square.cpp(21,19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Magic Square\Magic Square\Magic Square.cpp(86,26): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Magic Square\Magic Square\Magic Square.cpp(123,23): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+  Generating code
+  3 of 296 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Magic Square.vcxproj -> C:\Users\Strut\Documents\School\Grad School\Classes\CS 557 - Computational Intelligence\Project Three\Magic Square\x64\Release\Magic Square.exe

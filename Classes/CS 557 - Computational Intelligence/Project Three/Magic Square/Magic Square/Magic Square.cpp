@@ -108,6 +108,11 @@ vector<vector<int>> findMagicSquare(int n, int populationSize, int maxIterations
     for (int iteration = 0; iteration < maxIterations; iteration++) 
     {
         numIterations++;
+        if (numIterations % 100 == 0)
+        {
+            cout << "Current iteration: " << numIterations << endl;
+        }
+
         // Calculate fitness for each individual
         vector<int> fitnesses(populationSize);
         for (int i = 0; i < populationSize; i++) 
@@ -167,6 +172,44 @@ void printSquare(const vector<vector<int>>& square)
     }
 }
 
+void printSums(const vector<vector<int>>& square)
+{
+    int n = square.size();
+
+    // Calculate the flatness based on row sums
+    for (int i = 0; i < n; i++)
+    {
+        int rowSum = 0;
+        for (int j = 0; j < n; j++)
+        {
+            rowSum += square[i][j];
+        }
+        cout << "Row " << i + 1 << " sum  = " << rowSum << endl;
+    }
+
+    // Calculate the flatness based on column sums
+    for (int j = 0; j < n; j++)
+    {
+        int colSum = 0;
+        for (int i = 0; i < n; i++)
+        {
+            colSum += square[i][j];
+        }
+        cout << "Col " << j + 1 << " sum  = " << colSum << endl;
+    }
+
+    // Calculate the flatness based on diagonal sums
+    int diagSum1 = 0;
+    int diagSum2 = 0;
+    for (int i = 0; i < n; i++)
+    {
+        diagSum1 += square[i][i];
+        diagSum2 += square[i][n - i - 1];
+    }
+    cout << "Diag 1 sum = " << diagSum1 << endl;
+    cout << "Diag 2 sum = " << diagSum2 << endl;
+}
+
 
 int main() 
 {
@@ -179,15 +222,16 @@ int main()
         return 0;
     }
 
-    int populationSize = 100;
-    int maxIterations = numeric_limits<int>::max();
-    int numIterations = -1;
+    int populationSize = 5000;
+    constexpr int maxIterations = 2000;//numeric_limits<int>::max();
+    int numIterations = 0;
 
     vector<vector<int>> magicSquare = findMagicSquare(n, populationSize, maxIterations, numIterations);
     cout << "Took " << numIterations << " iterations" << endl;
-
     cout << "Magic Square:" << endl;
     printSquare(magicSquare);
-
+    cout << endl << "Magic sum is: " << n * (n * n + 1) / 2 << endl;
+    printSums(magicSquare);
+    cout << endl << "This square has fitness level: " << calculateFitness(magicSquare) << endl;
     return 0;
 }
