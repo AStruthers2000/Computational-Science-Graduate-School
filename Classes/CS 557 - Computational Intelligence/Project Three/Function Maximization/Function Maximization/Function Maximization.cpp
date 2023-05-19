@@ -1,3 +1,10 @@
+/*
+@author: Andrew Struthers
+@honor-code: I pledge that I have neither given nor received help from anyone 
+             other than the instructor or the TAs for all program components 
+             included here.
+*/
+
 #include <iostream>
 #include <vector>
 #include <random>
