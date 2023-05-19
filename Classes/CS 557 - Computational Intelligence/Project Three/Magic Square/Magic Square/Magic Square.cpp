@@ -5,6 +5,10 @@
 
 using namespace std;
 
+const double MUTATION_PROBABILITY = 0.05;
+
+void printSquare(const vector<vector<int>>& square);
+
 // Function to generate a random number between min and max (inclusive)
 int getRandomNumber(int min, int max)
 {
@@ -80,11 +84,18 @@ vector<vector<int>> generateRandomSquare(int n)
     return square;
 }
 
+vector<vector<int>> selection(const vector<vector<vector<int>>> population, vector<int> fitnesses, int size)
+{
+    int index1 = getRandomNumber(0, size - 1);
+    int index2 = getRandomNumber(0, size - 1);
+    return(fitnesses[index1] > fitnesses[index2] ? population[index1] : population[index2]);
+}
+
 // Function to mutate a magic square by swapping two elements
 void mutateSquare(vector<vector<int>>& square)
 {
     int n = square.size();
-    int mutationCount = n * n / 4; // Adjust the mutation count based on the square size
+    int mutationCount = n; // Adjust the mutation count based on the square size
     while (mutationCount > 0)
     {
         int i1 = getRandomNumber(0, n - 1);
@@ -97,70 +108,79 @@ void mutateSquare(vector<vector<int>>& square)
             mutationCount--;
         }
     }
+    
+    /*
+    if (getRandomNumber(0, 1) < MUTATION_PROBABILITY)
+    {
+        square = generateRandomSquare(square.size());
+    }
+    */
 }
 
-// Function to perform partially mapped crossover (PMX)
+// Function to perform cycle crossover (CX)
 vector<vector<int>> crossover(const vector<vector<int>>& parent1, const vector<vector<int>>& parent2)
 {
     int n = parent1.size();
     vector<vector<int>> child(n, vector<int>(n));
 
-    // Select two random column indices
-    int colIndex1 = getRandomNumber(0, n - 1);
-    int colIndex2 = getRandomNumber(0, n - 1);
+    // Initialize a boolean array to keep track of visited indices
+    vector<bool> visited(n * n + 1, false);
 
-    // Make sure the second column index is different from the first
-    while (colIndex2 == colIndex1)
-    {
-        colIndex2 = getRandomNumber(0, n - 1);
-    }
+    // Start the cycle from a random index
+    int startIndex = getRandomNumber(0, n - 1);
+    int currentRow = 0;
+    int currentCol = startIndex;
 
-    // Swap the column indices if necessary to ensure colIndex1 < colIndex2
-    if (colIndex1 > colIndex2)
+    // Perform the cycle crossover
+    do
     {
-        swap(colIndex1, colIndex2);
-    }
+        // Copy the current gene from parent1 to the child
+        child[currentRow][currentCol] = parent1[currentRow][currentCol];
+        visited[parent1[currentRow][currentCol]] = true;
 
-    // Copy the elements between the selected columns from parent1 to the child
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = colIndex1; j <= colIndex2; j++)
+        // Find the corresponding gene from parent2
+        int gene = parent2[currentRow][currentCol];
+
+        // Find the position of the gene in parent1
+        for (int i = 0; i < n; i++)
         {
-            child[i][j] = parent1[i][j];
-        }
-    }
-
-    // Map the elements from parent2 to the child while preserving uniqueness
-    for (int i = 0; i < n; i++)
-    {
-        if (i >= colIndex1 && i <= colIndex2)
-        {
-            continue; // Skip the selected columns
-        }
-
-        // Find the elements from parent2 that are not in the child
-        vector<int> missingElements;
-        for (int j = 0; j < n; j++)
-        {
-            if (find(child[i].begin(), child[i].end(), parent2[i][j]) == child[i].end())
+            for (int j = 0; j < n; j++)
             {
-                missingElements.push_back(parent2[i][j]);
+                if (parent1[i][j] == gene)
+                {
+                    currentRow = i;
+                    currentCol = j;
+                    break;
+                }
             }
         }
+    } while (currentRow != 0 || currentCol != startIndex);
 
-        // Map the missing elements from parent2 to the corresponding positions in the child
+    // Fill the remaining empty positions in the child with genes from parent2
+    for (int i = 0; i < n; i++)
+    {
         for (int j = 0; j < n; j++)
         {
-            if (child[i][j] == 0 && !missingElements.empty())
+            if (child[i][j] == 0)
             {
-                child[i][j] = missingElements.front();
-                missingElements.erase(missingElements.begin());
+                for (int k = 1; k <= n * n; k++)
+                {
+                    if (!visited[k])
+                    {
+                        child[i][j] = k;
+                        visited[k] = true;
+                        break;
+                    }
+                }
             }
         }
     }
 
     return child;
 }
+
+
+
 
 
 
@@ -212,24 +232,31 @@ vector<vector<int>> findMagicSquare(int n, int populationSize, int maxIterations
             bestSquare = population[bestIndex];
             cout << "Found new solution with fitness: " << bestFitness << endl;
         }
-
-        // Create a new population using tournament selection, crossover, and mutation
+        
+        // Create a new population using tournament selection and mutation
         vector<vector<vector<int>>> newPopulation(populationSize);
         for (int i = 0; i < populationSize; i++)
         {
-            // Tournament selection: select two random individuals and choose the fittest one as parent 1
-            int parentIndex1 = getRandomNumber(0, populationSize - 1);
-            int parentIndex2 = getRandomNumber(0, populationSize - 1);
-            vector<vector<int>> parent1 = population[parentIndex1];
-            vector<vector<int>> parent2 = population[parentIndex2];
-            if (fitnesses[parentIndex1] > fitnesses[parentIndex2])
-            {
-                swap(parent1, parent2);
-            }
+            /*
+            //Tournament selection with unique crossover and mutation
+            vector<vector<int>> parent1 = selection(population, fitnesses, populationSize);
+            vector<vector<int>> parent2 = selection(population, fitnesses, populationSize);
 
             vector<vector<int>> child = crossover(parent1, parent2);
+
             mutateSquare(child);
             newPopulation[i] = child;
+            */
+
+            //Tournament selection with no crossover
+            int parentIndex1 = getRandomNumber(0, populationSize - 1);
+            int parentIndex2 = getRandomNumber(0, populationSize - 1);
+            newPopulation[i] = population[parentIndex1];
+            if (fitnesses[parentIndex2] < fitnesses[parentIndex1])
+            {
+                newPopulation[i] = population[parentIndex2];
+            }
+            mutateSquare(newPopulation[i]);
         }
 
         population = newPopulation;
@@ -301,7 +328,7 @@ int main()
         return 0;
     }
 
-    int populationSize = 5000;
+    int populationSize = 10000;
     int maxIterations = 1000;
     int numIterations = 0;
 
