@@ -1,11 +1,13 @@
 #include "EVRP_Solver.h"
+#include "GeneticAlgorithmOptimizer.h"
+#include "GAOptimizer.h"
 
 
 EVRP_Solver::EVRP_Solver()
 {
 #if DEBUG
 	capacity = 10;
-	nodes.push_back(Node{ 0, 0, 0 });
+	//nodes.push_back(Node{ 0, 0, 0 });
 	nodes.push_back(Node{ 3, -5, 2 });
 	nodes.push_back(Node{ 6, 4, 6 });
 	nodes.push_back(Node{ -5, -1, 8 });
@@ -14,12 +16,12 @@ EVRP_Solver::EVRP_Solver()
 #else
 	float nLocations, temp;
 
-	ifstream file;
+	std::ifstream file;
 	char filename[STR_LEN] = "Data_Sets\\tai75a.dat";
 	file.open(filename);
 	if (!file.is_open())
 	{
-		cout << "Failed to open data file, exiting" << endl;
+		std::cout << "Failed to open data file, exiting" << std::endl;
 		exit(1);
 	}
 	else
@@ -27,8 +29,8 @@ EVRP_Solver::EVRP_Solver()
 		file >> nLocations >> provided_solution >> capacity;
 		double x, y;
 		file >> x >> y;
-		Node depot = Node{ x, y, 0 };
-		nodes.push_back(depot);
+		//Node depot = Node{ x, y, 0 };
+		//nodes.push_back(depot);
 		for (int i = 0; i < nLocations; i++)
 		{
 			int demand;
@@ -39,14 +41,22 @@ EVRP_Solver::EVRP_Solver()
 	}
 	file.close();
 #endif
+
+	int tot_demand = 0;
+	for(Node n : nodes)
+	{
+		tot_demand += n.demand;
+	}
+	std::cout << "The minimum number of subtours is: " << std::ceil(double(tot_demand) / capacity) << std::endl;
 }
 
 EVRP_Solver::~EVRP_Solver()
 {
 }
 
-vector<int> EVRP_Solver::SolveEVRP()
+std::vector<int> EVRP_Solver::SolveEVRP()
 {
+#if OLD_NOT_OPTIMIZED
 	//initialize variables
 	const int n = nodes.size();
 	int remaining_capacity = capacity;
@@ -100,12 +110,29 @@ vector<int> EVRP_Solver::SolveEVRP()
 #endif
 
 	return solution;
+#else
+	/*
+	GeneticAlgorithmOptimizer* ga = new GeneticAlgorithmOptimizer();
+	std::vector<int> optimalTour = ga->GeneticAlgorithm(nodes);
+	
+
+	return optimalTour;
+	*/
+	GAOptimizer* ga = new GAOptimizer();
+	std::vector<int> optimalTour;
+	int bestFitness;
+	double bestDistance;
+	ga->Optimize(nodes, capacity, optimalTour, bestFitness, bestDistance);
+	std::cout << "There are " << bestFitness << " subtours in this route, with a total distance of this route is: " << bestDistance << std::endl;
+	return optimalTour;
+
+#endif
 }
 
-int EVRP_Solver::FindNearestServicableNode(vector<bool> visited, int current, int remaining_capacity) const
+int EVRP_Solver::FindNearestServicableNode(std::vector<bool> visited, int current, int remaining_capacity) const
 {
 	int next = -1;
-	double min_dist = numeric_limits<double>::max();
+	double min_dist = std::numeric_limits<double>::max();
 
 	//finds the closest node that we haven't visited that we still have capacity to serve
 	for (int i = 0; i < visited.size(); i++)
@@ -123,7 +150,7 @@ int EVRP_Solver::FindNearestServicableNode(vector<bool> visited, int current, in
 	return next;
 }
 
-double EVRP_Solver::CalculateTotalDistance(const vector<int>& solution) const
+double EVRP_Solver::CalculateTotalDistance(const std::vector<int>& solution) const
 {
 	double tot = 0;
 	for (int i = 1; i < solution.size(); i++)
@@ -138,9 +165,9 @@ double EVRP_Solver::Distance(const Node& node1, const Node& node2) const
 	return hypot(node1.x - node2.x, node1.y - node2.y);
 }
 
-bool EVRP_Solver::AllNodesVisited(vector<bool> visited) const
+bool EVRP_Solver::AllNodesVisited(std::vector<bool> visited) const
 {
-	int sum = accumulate(begin(visited), end(visited), 0);
+	int sum = std::accumulate(begin(visited), end(visited), 0);
 	if (sum == visited.size()) return true;
 	else return false;
 }

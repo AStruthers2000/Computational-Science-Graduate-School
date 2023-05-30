@@ -1,15 +1,11 @@
 #pragma once
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <numeric>
-#include <limits>
+
+#include "GraphStructure.h"
 
 #define STR_LEN 64
-#define DEBUG false
+#define DEBUG true
 #define VERBOSE false
-
-using namespace std;
+#define OLD_NOT_OPTIMIZED false
 
 class EVRP_Solver
 {
@@ -17,24 +13,19 @@ public:
 	EVRP_Solver();
 	~EVRP_Solver();
 
-	double CalculateTotalDistance(const vector<int>& solution) const;
-	vector<int> SolveEVRP();
+	double CalculateTotalDistance(const std::vector<int>& solution) const;
+	std::vector<int> SolveEVRP();
 
 private:
-	typedef struct
-	{
-		double x;
-		double y;
-		int demand;
-	} Node;
+	
 
 	double Distance(const Node& node1, const Node& node2) const;
-	int FindNearestServicableNode(vector<bool> visited, int current, int remaining_capacity) const;
-	bool AllNodesVisited(vector<bool> visited) const;
+	int FindNearestServicableNode(std::vector<bool> visited, int current, int remaining_capacity) const;
+	bool AllNodesVisited(std::vector<bool> visited) const;
 
 
 	int capacity;
-	vector<Node> nodes;
+	std::vector<Node> nodes;
 	float provided_solution;
 };
 

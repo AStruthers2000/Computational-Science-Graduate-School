@@ -127,11 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AntColonyOptimizer.cpp" />
     <ClCompile Include="EVRP Optimization.cpp" />
     <ClCompile Include="EVRP_Solver.cpp" />
+    <ClCompile Include="GAOptimizer.cpp" />
+    <ClCompile Include="GeneticAlgorithmOptimizer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AntColonyOptimizer.h" />
     <ClInclude Include="EVRP_Solver.h" />
+    <ClInclude Include="GAOptimizer.h" />
+    <ClInclude Include="GeneticAlgorithmOptimizer.h" />
+    <ClInclude Include="GraphStructure.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data_Sets\tai100a.dat" />
