@@ -2,8 +2,8 @@
 
 #include "GraphStructure.h"
 
-#define STR_LEN 64
-#define DEBUG true
+#define STR_LEN 256
+#define DEBUG false
 #define VERBOSE false
 #define OLD_NOT_OPTIMIZED false
 
@@ -24,8 +24,14 @@ private:
 	bool AllNodesVisited(std::vector<bool> visited) const;
 
 
-	int capacity;
+	int vehicleLoadCapacity;
+	float vehicleBatteryCapacity;
+	float vehicleFuelConsumptionRate;
+
+	EVRP_Data data;
 	std::vector<Node> nodes;
+	std::vector<Node> customerNodes;
+	std::vector<Node> chargingStationNodes;
 	float provided_solution;
 };
 

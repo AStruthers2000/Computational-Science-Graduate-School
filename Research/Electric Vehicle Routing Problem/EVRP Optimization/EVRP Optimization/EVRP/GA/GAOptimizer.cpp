@@ -1,7 +1,7 @@
 #include "GAOptimizer.h"
 #include <set>
 
-void GAOptimizer::Optimize(const std::vector<Node> nodes, const int capacity, std::vector<int> &bestTour, int &bestFitness, double &bestDistance)
+void GAOptimizer::Optimize(const EVRP_Data data, std::vector<int> &bestTour, int &bestFitness, double &bestDistance)
 {
 	//std::vector<int> testRoute = { 4, 2, 0, 3, 1 };
 	//printf("Test - the test route has fitness %d\n", EvaluateFitness(nodes, testRoute, capacity, true));
@@ -14,14 +14,17 @@ void GAOptimizer::Optimize(const std::vector<Node> nodes, const int capacity, st
 	//generate initial population and fitnesses
 	for (int i = 0; i < POPULATION_SIZE; i++)
 	{
-		population.push_back(GenerateRandomTour(nodes.size()));
+		population.push_back(GenerateRandomTour(data.customerStartIndex, (data.nodes.size() - data.customerStartIndex)));
+		//PrintTour(population[i]);
 		int fitness;
 		double distance;
-		EvaluateFitness(nodes, population[i], capacity, fitness, distance);
+		EvaluateFitness(data, population[i], fitness, distance, false);
+		//std::cout << "Has fitness: " << fitness << std::endl;
+
 		fitnesses.push_back(fitness);
 		distances.push_back(distance);
 	}
-
+	//std::cout << "Done generating initial population" << std::endl;
 	for (int generation = 0; generation < MAX_GENERATIONS; generation++)
 	{
 		if ((generation+1) % 10 == 0)
@@ -40,8 +43,8 @@ void GAOptimizer::Optimize(const std::vector<Node> nodes, const int capacity, st
 			//perform crossover between parents
 			//mutate child
 
-			std::vector<int> parentTour1 = TournamentSelection(nodes, population, fitnesses, capacity);
-			std::vector<int> parentTour2 = TournamentSelection(nodes, population, fitnesses, capacity);
+			std::vector<int> parentTour1 = TournamentSelection(data.nodes, population, fitnesses, data.loadCapacity);
+			std::vector<int> parentTour2 = TournamentSelection(data.nodes, population, fitnesses, data.loadCapacity);
 			std::vector<int> childTour = Crossover(parentTour1, parentTour2);
 			if (std::rand() <= MUTATION_RATE)
 			{
@@ -53,7 +56,7 @@ void GAOptimizer::Optimize(const std::vector<Node> nodes, const int capacity, st
 
 			int fitness;
 			double distance;
-			EvaluateFitness(nodes, childTour, capacity, fitness, distance);
+			EvaluateFitness(data, childTour, fitness, distance);
 			newFitnesses.push_back(fitness);
 			newDistances.push_back(distance);
 
@@ -84,54 +87,98 @@ void GAOptimizer::Optimize(const std::vector<Node> nodes, const int capacity, st
 	std::cout << "Fitness calculations: " << std::endl;
 	int numSubtours;
 	double distance;
-	EvaluateFitness(nodes, bestTour, capacity, numSubtours, distance, true);
+	EvaluateFitness(data, bestTour, numSubtours, distance, true);
 }
 
-std::vector<int> GAOptimizer::GenerateRandomTour(const int size)
+std::vector<int> GAOptimizer::GenerateRandomTour(const int customerStart, const int size)
 {
 	std::vector<int> tour(size);
-	for (int i = 0; i < size; i++)
+	for (int i = customerStart; i < customerStart + size; i++)
 	{
-		tour[i] = i;
+		tour[i - customerStart] = i;
 	}
 	ShuffleVector(tour);
+
+	//testing purposes only
+	//tour = { 7, 8, 4, 5, 6 };
+	//PrintTour(tour);
 	return tour;
 }
 
-void GAOptimizer::EvaluateFitness(const std::vector<Node> nodes, const std::vector<int> tour, const int capacity, int& numSubtours, double& distance, const bool verbose) const
+void GAOptimizer::EvaluateFitness(const EVRP_Data data, const std::vector<int> tour, int& numSubtours, double& distance, const bool verbose) 
 {
 	std::vector<int> paddedTour;
 	//fitness = number of times we have to visit the depot in this tour
 	//fitness should be as small as possible. it will generally be > 0
 	int fitness = 0;
 
-	paddedTour.push_back(-1);
+	paddedTour.push_back(0);
 
-	int current_capacity = capacity;
-	for (int i = 0; i < tour.size(); i++)
+	int current_loadCapacity = data.loadCapacity;
+	float current_batteryCapacity = data.fuelCapacity;
+	int currentNodeIndex = 0;
+
+	std::vector<int> trueTour = tour;
+	//trueTour.insert(trueTour.begin(), 0);
+	trueTour.push_back(0);
+
+	for (int i = 0; i < trueTour.size(); i++)
 	{
-		int demand = nodes[tour[i]].demand;
-		if(verbose)	printf("We have %d remaining supply, and node %d has demand %d\n", current_capacity, tour[i] + 1, demand);
-		if (current_capacity - demand < 0)
+		int nextNodeIndex = trueTour[i];
+		float potentialDistance = Distance(data.nodes[currentNodeIndex], data.nodes[nextNodeIndex]);
+		float routeBatteryCost = potentialDistance * data.fuelConsumptionRate;
+		if (verbose)	std::cout << "Starting this route from node " << currentNodeIndex << " and attempting to travel to node " << nextNodeIndex << "\n\tThis route costs " << routeBatteryCost << std::endl;
+
+		int nextChargerIndex;
+		if (CanGetToNextCustomerSafely(data, data.nodes[currentNodeIndex], data.nodes[nextNodeIndex], current_batteryCapacity))
+		{
+			current_batteryCapacity -= routeBatteryCost;
+			if (verbose)	std::cout << "Can get to node " << trueTour[i] << " safely. Remaining battery cost: " << current_batteryCapacity << std::endl;
+			currentNodeIndex = nextNodeIndex;
+		}
+		else if (CanGetToNextChargerSafely(data, data.nodes[currentNodeIndex], current_batteryCapacity, nextChargerIndex))
+		{
+			current_batteryCapacity = data.fuelCapacity;
+			if (verbose)	std::cout << "Had to detour to charger " << nextChargerIndex << std::endl;
+			currentNodeIndex = nextChargerIndex;
+			i--;
+		}
+		else
+		{
+			std::cout << "Can't reach charging station, will run out of battery. Failed route" << std::endl;
+			fitness += 100000; //huge punishment for impossible routes
+			break;
+		}
+
+		paddedTour.push_back(currentNodeIndex);
+		
+		//if (verbose) std::cout << "\n\n======================================\n\n" << std::endl;
+
+		/*
+		int demand = data.nodes[tour[i]].demand;
+		if(verbose)	printf("We have %d remaining supply, and node %d has demand %d\n", current_loadCapacity, tour[i] + 1, demand);
+		if (current_loadCapacity - demand < 0)
 		{
 			//we needed to visit the depot befor servicing this node
 			fitness++; 
-			current_capacity = capacity;
-			paddedTour.push_back(-1);
+			current_loadCapacity = data.loadCapacity;
+			paddedTour.push_back(0);
 			if (verbose) printf("\tBefore servicing this node, we must go back to the depot. We have visited the depot %d times this tour\n", fitness);
 		}
-		current_capacity -= demand;
+		current_loadCapacity -= demand;
 		paddedTour.push_back(tour[i]);
-		if (verbose) printf("\tAfter servicing this node, we now have %d remaining supply\n", current_capacity);
+		if (verbose) printf("\tAfter servicing this node, we now have %d remaining supply\n", current_loadCapacity);
+		*/
 	}
 
 	//We return to the depot at the end of the tour, so we add one to the fitness
 	fitness++;
-	paddedTour.push_back(-1);
+	//paddedTour.push_back(0);
 	if (verbose) printf("Returning to the depot at the end of the tour\n====================\n");
 	if (verbose) PrintTour(paddedTour);
 
-	distance = CalculateTotalDistance(nodes, paddedTour, capacity);
+	//PrintTour(paddedTour);
+	distance = CalculateTotalDistance(data.nodes, paddedTour, data.loadCapacity);
 	numSubtours = fitness;
 }
 
@@ -170,11 +217,75 @@ double GAOptimizer::CalculateTotalDistance(const std::vector<Node> nodes, const 
 	return tot;
 }
 
+int GAOptimizer::GetClosestChargingStationToNode(std::vector<Node> nodes, Node node) const
+{
+	float closest = std::numeric_limits<float>::max();
+	int closestChargerIndex = -1;
+
+	for (int i = 0; i < nodes.size(); i++)
+	{
+		if (nodes[i].isCharger && nodes[i].index != node.index)
+		{
+			float dist = Distance(node, nodes[i]);
+			if (dist < closest)
+			{
+				closestChargerIndex = i;
+				closest = dist;
+			}
+		}
+	}
+	return closestChargerIndex;
+}
+
+bool GAOptimizer::CanGetToNextCustomerSafely(EVRP_Data data, Node from, Node to, float batteryRemaining)
+{
+	//std::cout << "Attempting to get from node " << from.index << " to node " << to.index << " with " << batteryRemaining << " battery" << std::endl;
+	int chargerIndex = GetClosestChargingStationToNode(data.nodes, to);
+	
+	if (chargerIndex == -1)
+	{
+		return false;
+	}
+
+	Node closestCharger = data.nodes[chargerIndex];
+	if (batteryRemaining > BatteryCost(data, from, to) + BatteryCost(data, to, closestCharger))
+	{
+		return true;
+	}
+	
+	return false;
+}
+
+bool GAOptimizer::CanGetToNextChargerSafely(EVRP_Data data, Node from, float batteryRemaining, int& chargerIndex)
+{
+	chargerIndex = GetClosestChargingStationToNode(data.nodes, from);
+	//std::cout << "Closest charger to current node is charger " << chargerIndex << std::endl;
+
+	if (chargerIndex == -1)
+	{
+		return false;
+	}
+
+
+	Node closest = data.nodes[chargerIndex];
+	if (batteryRemaining > BatteryCost(data, from, closest))
+	{
+		return true;
+	}
+	return false;
+}
+
+
 double GAOptimizer::Distance(const Node& node1, const Node& node2) const
 {
 	double dist = hypot(node1.x - node2.x, node1.y - node2.y);
 	//printf("Distance between node at (%f, %f) and (%f, %f) is %f\n", node1.x, node1.y, node2.x, node2.y, dist);
 	return dist;
+}
+
+double GAOptimizer::BatteryCost(const EVRP_Data data, const Node node1, const Node node2) const
+{
+	return Distance(node1, node2) * data.fuelConsumptionRate;
 }
 
 std::vector<int> GAOptimizer::TournamentSelection(const std::vector<Node> nodes, const std::vector<std::vector<int>> population, const std::vector<int> fitnesses, const int capacity) const
@@ -183,7 +294,7 @@ std::vector<int> GAOptimizer::TournamentSelection(const std::vector<Node> nodes,
 	int bestFitness = std::numeric_limits<int>::max();
 	double bestDistance = std::numeric_limits<double>::max();
 
-	for (int i = 0; i < TOURNAMENT_SIZE; i++)
+	for (int i = 0; i < std::max(2, TOURNAMENT_SIZE); i++)
 	{
 		int index = RandomNumberGenerator(0, population.size() - 1);
 		std::vector<int> tour = population[index];
@@ -266,7 +377,8 @@ void GAOptimizer::PrintTour(const std::vector<int> tour) const
 	std::cout << "Tour: ";
 	for (int i = 0; i < tour.size(); i++)
 	{
-		std::cout << tour[i] + 1 << " ";
+		std::cout << tour[i] << " ";
 	}
 	std::cout << std::endl;
 }
+

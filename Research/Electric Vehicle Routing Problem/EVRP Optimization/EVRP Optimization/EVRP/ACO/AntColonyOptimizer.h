@@ -1,5 +1,5 @@
 #pragma once
-#include "GraphStructure.h"
+#include "../GraphStructure.h"
 
 class AntColonyOptimizer
 {

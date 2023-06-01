@@ -7,10 +7,22 @@
 #include <algorithm>
 #include <cmath>
 #include <random>
+#include <sstream>
 
 typedef struct
 {
 	double x;
 	double y;
 	int demand;
+	bool isCharger;
+	int index;
 } Node;
+
+typedef struct
+{
+	std::vector<Node> nodes;
+	float fuelCapacity;
+	int loadCapacity;
+	float fuelConsumptionRate;
+	int customerStartIndex;
+} EVRP_Data;

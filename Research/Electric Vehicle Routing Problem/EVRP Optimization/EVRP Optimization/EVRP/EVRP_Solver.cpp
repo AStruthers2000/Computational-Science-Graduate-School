@@ -1,6 +1,5 @@
 #include "EVRP_Solver.h"
-#include "GeneticAlgorithmOptimizer.h"
-#include "GAOptimizer.h"
+#include "GA\GAOptimizer.h"
 
 
 EVRP_Solver::EVRP_Solver()
@@ -17,7 +16,9 @@ EVRP_Solver::EVRP_Solver()
 	float nLocations, temp;
 
 	std::ifstream file;
-	char filename[STR_LEN] = "Data_Sets\\tai75a.dat";
+	char filename[STR_LEN] = ".\\EVRP\\Data_Sets\\EVRP TW\\c101C5.txt";
+	bool isEVRP = true;
+
 	file.open(filename);
 	if (!file.is_open())
 	{
@@ -26,28 +27,96 @@ EVRP_Solver::EVRP_Solver()
 	}
 	else
 	{
-		file >> nLocations >> provided_solution >> capacity;
-		double x, y;
-		file >> x >> y;
-		//Node depot = Node{ x, y, 0 };
-		//nodes.push_back(depot);
-		for (int i = 0; i < nLocations; i++)
+		if (!isEVRP)
 		{
+			file >> nLocations >> provided_solution >> vehicleLoadCapacity;
+			double x, y;
+			file >> x >> y;
+			//Node depot = Node{ x, y, 0 };
+			//nodes.push_back(depot);
+			for (int i = 0; i < nLocations; i++)
+			{
+				int demand;
+				file >> temp >> x >> y >> demand;
+				Node n = Node{ x, y, demand };
+				customerNodes.push_back(n);
+			}
+		}
+		else
+		{
+			std::string ID;
+			char nodeType;
+			std::string line;
+			double x, y;
 			int demand;
-			file >> temp >> x >> y >> demand;
-			Node n = Node{ x, y, demand };
-			nodes.push_back(n);
+			int index = 0;
+			data.customerStartIndex = -1;
+			while (std::getline(file, line))
+			{
+				std::istringstream iss(line);
+				if (!(iss >> ID >> nodeType >> x >> y >> demand))
+				{
+					char type = line[0];
+					int pos = 0;
+					std::string token;
+					while ((pos = line.find('/')) != std::string::npos)
+					{
+						token = line.substr(0, pos);
+						line.erase(0, pos + 1);
+					}
+					if (!token.empty())
+					{
+						float num = std::stof(token);
+						switch (type)
+						{
+						case 'Q':
+							vehicleBatteryCapacity = num;
+							break;
+						case 'C':
+							vehicleLoadCapacity = num;
+							break;
+						case 'r':
+							vehicleFuelConsumptionRate = num;
+						default:
+							break;
+						}
+					}
+				}
+				else
+				{
+					Node n = Node{ x, y, 0, false, index};
+					switch (nodeType)
+					{
+					case 'f':
+						n.demand = 0;
+						n.isCharger = true;
+						break;
+					case 'c':
+						if (data.customerStartIndex == -1) data.customerStartIndex = index;
+						n.demand = demand;
+						n.isCharger = false;
+						break;
+					default:
+						//std::cout << "Undefined type: " << nodeType << std::endl;
+						break;
+					}
+					nodes.push_back(n);
+					index++;
+				}
+			}
+
+			data = EVRP_Data{ nodes, vehicleBatteryCapacity, vehicleLoadCapacity, vehicleFuelConsumptionRate, data.customerStartIndex};
 		}
 	}
 	file.close();
 #endif
 
 	int tot_demand = 0;
-	for(Node n : nodes)
+	for(const Node &node : nodes)
 	{
-		tot_demand += n.demand;
+		tot_demand += node.demand;
 	}
-	std::cout << "The minimum number of subtours is: " << std::ceil(double(tot_demand) / capacity) << std::endl;
+	std::cout << "The minimum number of subtours is: " << std::ceil(double(tot_demand) / vehicleLoadCapacity) << std::endl;
 }
 
 EVRP_Solver::~EVRP_Solver()
@@ -111,18 +180,11 @@ std::vector<int> EVRP_Solver::SolveEVRP()
 
 	return solution;
 #else
-	/*
-	GeneticAlgorithmOptimizer* ga = new GeneticAlgorithmOptimizer();
-	std::vector<int> optimalTour = ga->GeneticAlgorithm(nodes);
-	
-
-	return optimalTour;
-	*/
 	GAOptimizer* ga = new GAOptimizer();
 	std::vector<int> optimalTour;
 	int bestFitness;
 	double bestDistance;
-	ga->Optimize(nodes, capacity, optimalTour, bestFitness, bestDistance);
+	ga->Optimize(data, optimalTour, bestFitness, bestDistance);
 	std::cout << "There are " << bestFitness << " subtours in this route, with a total distance of this route is: " << bestDistance << std::endl;
 	return optimalTour;
 
@@ -137,9 +199,9 @@ int EVRP_Solver::FindNearestServicableNode(std::vector<bool> visited, int curren
 	//finds the closest node that we haven't visited that we still have capacity to serve
 	for (int i = 0; i < visited.size(); i++)
 	{
-		if (!visited[i] && nodes[i].demand <= remaining_capacity)
+		if (!visited[i] && customerNodes[i].demand <= remaining_capacity)
 		{
-			double dist = Distance(nodes[current], nodes[i]);
+			double dist = Distance(customerNodes[current], customerNodes[i]);
 			if (dist < min_dist)
 			{
 				min_dist = dist;
@@ -155,7 +217,7 @@ double EVRP_Solver::CalculateTotalDistance(const std::vector<int>& solution) con
 	double tot = 0;
 	for (int i = 1; i < solution.size(); i++)
 	{
-		tot += Distance(nodes[solution[i - 1]], nodes[solution[i]]);
+		tot += Distance(customerNodes[solution[i - 1]], customerNodes[solution[i]]);
 	}
 	return tot;
 }

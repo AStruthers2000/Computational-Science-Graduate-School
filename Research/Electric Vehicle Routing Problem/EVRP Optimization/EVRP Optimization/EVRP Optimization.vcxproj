@@ -127,33 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AntColonyOptimizer.cpp" />
-    <ClCompile Include="EVRP Optimization.cpp" />
-    <ClCompile Include="EVRP_Solver.cpp" />
-    <ClCompile Include="GAOptimizer.cpp" />
-    <ClCompile Include="GeneticAlgorithmOptimizer.cpp" />
+    <ClInclude Include="EVRP\ACO\AntColonyOptimizer.h" />
+    <ClInclude Include="EVRP\EVRP_Solver.h" />
+    <ClInclude Include="EVRP\GA\GAOptimizer.h" />
+    <ClInclude Include="EVRP\GraphStructure.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AntColonyOptimizer.h" />
-    <ClInclude Include="EVRP_Solver.h" />
-    <ClInclude Include="GAOptimizer.h" />
-    <ClInclude Include="GeneticAlgorithmOptimizer.h" />
-    <ClInclude Include="GraphStructure.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Data_Sets\tai100a.dat" />
-    <None Include="Data_Sets\tai100b.dat" />
-    <None Include="Data_Sets\tai100c.dat" />
-    <None Include="Data_Sets\tai100d.dat" />
-    <None Include="Data_Sets\tai150a.dat" />
-    <None Include="Data_Sets\tai150b.dat" />
-    <None Include="Data_Sets\tai150c.dat" />
-    <None Include="Data_Sets\tai150d.dat" />
-    <None Include="Data_Sets\tai385.dat" />
-    <None Include="Data_Sets\tai75a.dat" />
-    <None Include="Data_Sets\tai75b.dat" />
-    <None Include="Data_Sets\tai75c.dat" />
-    <None Include="Data_Sets\tai75d.dat" />
+    <ClCompile Include="EVRP\ACO\AntColonyOptimizer.cpp" />
+    <ClCompile Include="EVRP\EVRP Optimization.cpp" />
+    <ClCompile Include="EVRP\EVRP_Solver.cpp" />
+    <ClCompile Include="EVRP\GA\GAOptimizer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

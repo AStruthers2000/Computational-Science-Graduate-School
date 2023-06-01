@@ -15,52 +15,31 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EVRP Optimization.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EVRP_Solver.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AntColonyOptimizer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneticAlgorithmOptimizer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GAOptimizer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="EVRP_Solver.h">
+    <ClInclude Include="EVRP\ACO\AntColonyOptimizer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AntColonyOptimizer.h">
+    <ClInclude Include="EVRP\GA\GAOptimizer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GraphStructure.h">
+    <ClInclude Include="EVRP\EVRP_Solver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GeneticAlgorithmOptimizer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GAOptimizer.h">
+    <ClInclude Include="EVRP\GraphStructure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data_Sets\tai75a.dat" />
-    <None Include="Data_Sets\tai75b.dat" />
-    <None Include="Data_Sets\tai75c.dat" />
-    <None Include="Data_Sets\tai75d.dat" />
-    <None Include="Data_Sets\tai100a.dat" />
-    <None Include="Data_Sets\tai100b.dat" />
-    <None Include="Data_Sets\tai100c.dat" />
-    <None Include="Data_Sets\tai100d.dat" />
-    <None Include="Data_Sets\tai150a.dat" />
-    <None Include="Data_Sets\tai150b.dat" />
-    <None Include="Data_Sets\tai150c.dat" />
-    <None Include="Data_Sets\tai150d.dat" />
-    <None Include="Data_Sets\tai385.dat" />
+    <ClCompile Include="EVRP\ACO\AntColonyOptimizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EVRP\GA\GAOptimizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EVRP\EVRP Optimization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EVRP\EVRP_Solver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
