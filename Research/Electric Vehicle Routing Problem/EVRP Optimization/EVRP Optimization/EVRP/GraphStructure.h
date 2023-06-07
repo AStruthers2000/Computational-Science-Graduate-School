@@ -8,6 +8,7 @@
 #include <cmath>
 #include <random>
 #include <sstream>
+#include <chrono>
 
 typedef struct
 {

@@ -3,10 +3,6 @@
 
 void GAOptimizer::Optimize(const EVRP_Data data, std::vector<int> &bestTour, int &bestFitness, double &bestDistance)
 {
-	//std::vector<int> testRoute = { 4, 2, 0, 3, 1 };
-	//printf("Test - the test route has fitness %d\n", EvaluateFitness(nodes, testRoute, capacity, true));
-	//printf("Test - test route has distance: %f\n", CalculateTotalDistance(nodes, testRoute, capacity));
-
 	std::vector<std::vector<int>> population;
 	std::vector<int> fitnesses;
 	std::vector<double> distances;
@@ -15,16 +11,15 @@ void GAOptimizer::Optimize(const EVRP_Data data, std::vector<int> &bestTour, int
 	for (int i = 0; i < POPULATION_SIZE; i++)
 	{
 		population.push_back(GenerateRandomTour(data.customerStartIndex, (data.nodes.size() - data.customerStartIndex)));
-		//PrintTour(population[i]);
 		int fitness;
 		double distance;
 		EvaluateFitness(data, population[i], fitness, distance, false);
-		//std::cout << "Has fitness: " << fitness << std::endl;
 
 		fitnesses.push_back(fitness);
 		distances.push_back(distance);
 	}
-	//std::cout << "Done generating initial population" << std::endl;
+
+	//iterate for MAX_GENERATIONS generations
 	for (int generation = 0; generation < MAX_GENERATIONS; generation++)
 	{
 		if ((generation+1) % 10 == 0)
@@ -98,10 +93,6 @@ std::vector<int> GAOptimizer::GenerateRandomTour(const int customerStart, const 
 		tour[i - customerStart] = i;
 	}
 	ShuffleVector(tour);
-
-	//testing purposes only
-	//tour = { 7, 8, 4, 5, 6 };
-	//PrintTour(tour);
 	return tour;
 }
 
@@ -119,7 +110,6 @@ void GAOptimizer::EvaluateFitness(const EVRP_Data data, const std::vector<int> t
 	int currentNodeIndex = 0;
 
 	std::vector<int> trueTour = tour;
-	//trueTour.insert(trueTour.begin(), 0);
 	trueTour.push_back(0);
 
 	for (int i = 0; i < trueTour.size(); i++)
@@ -127,6 +117,7 @@ void GAOptimizer::EvaluateFitness(const EVRP_Data data, const std::vector<int> t
 		int nextNodeIndex = trueTour[i];
 		float potentialDistance = Distance(data.nodes[currentNodeIndex], data.nodes[nextNodeIndex]);
 		float routeBatteryCost = potentialDistance * data.fuelConsumptionRate;
+		
 		if (verbose)	std::cout << "Starting this route from node " << currentNodeIndex << " and attempting to travel to node " << nextNodeIndex << "\n\tThis route costs " << routeBatteryCost << std::endl;
 
 		int nextChargerIndex;
@@ -212,8 +203,6 @@ double GAOptimizer::CalculateTotalDistance(const std::vector<Node> nodes, const 
 
 		tot += Distance(from, to);
 	}
-
-	//printf("Total distance %f\n", tot);
 	return tot;
 }
 
@@ -239,7 +228,6 @@ int GAOptimizer::GetClosestChargingStationToNode(std::vector<Node> nodes, Node n
 
 bool GAOptimizer::CanGetToNextCustomerSafely(EVRP_Data data, Node from, Node to, float batteryRemaining)
 {
-	//std::cout << "Attempting to get from node " << from.index << " to node " << to.index << " with " << batteryRemaining << " battery" << std::endl;
 	int chargerIndex = GetClosestChargingStationToNode(data.nodes, to);
 	
 	if (chargerIndex == -1)
@@ -259,7 +247,6 @@ bool GAOptimizer::CanGetToNextCustomerSafely(EVRP_Data data, Node from, Node to,
 bool GAOptimizer::CanGetToNextChargerSafely(EVRP_Data data, Node from, float batteryRemaining, int& chargerIndex)
 {
 	chargerIndex = GetClosestChargingStationToNode(data.nodes, from);
-	//std::cout << "Closest charger to current node is charger " << chargerIndex << std::endl;
 
 	if (chargerIndex == -1)
 	{
@@ -279,7 +266,6 @@ bool GAOptimizer::CanGetToNextChargerSafely(EVRP_Data data, Node from, float bat
 double GAOptimizer::Distance(const Node& node1, const Node& node2) const
 {
 	double dist = hypot(node1.x - node2.x, node1.y - node2.y);
-	//printf("Distance between node at (%f, %f) and (%f, %f) is %f\n", node1.x, node1.y, node2.x, node2.y, dist);
 	return dist;
 }
 
@@ -354,8 +340,6 @@ void GAOptimizer::Mutate(std::vector<int>& child)
 	int index2 = RandomNumberGenerator(0, child.size() - 1);
 	std::swap(child[index1], child[index2]);
 }
-
-
 
 int GAOptimizer::RandomNumberGenerator(const int min, const int max) const
 {
