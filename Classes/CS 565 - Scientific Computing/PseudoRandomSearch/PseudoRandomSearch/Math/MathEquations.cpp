@@ -1,6 +1,7 @@
 ﻿#include "MathEquations.h"
 #include <cmath>
 
+/*
 double MathEquations::Schwefel(double input[dimension])
 {
     double ans = schwefel_constant * dimension;
@@ -185,3 +186,4 @@ double MathEquations::EggHolder(double input[dimension])
     
     return ans;
 }
+*/

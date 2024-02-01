@@ -154,10 +154,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Math\BenchmarkEquation.cpp" />
+    <ClCompile Include="Math\Equations\AckleyOne.cpp" />
+    <ClCompile Include="Math\Equations\AckleyTwo.cpp" />
+    <ClCompile Include="Math\Equations\DeJong1.cpp" />
+    <ClCompile Include="Math\Equations\EggHolder.cpp" />
+    <ClCompile Include="Math\Equations\Griewangk.cpp" />
+    <ClCompile Include="Math\Equations\Rastrigin.cpp" />
+    <ClCompile Include="Math\Equations\RosenbrockSaddle.cpp" />
+    <ClCompile Include="Math\Equations\Schwefel.cpp" />
+    <ClCompile Include="Math\Equations\SineEnvelopeSineWave.cpp" />
+    <ClCompile Include="Math\Equations\StretchVSineWave.cpp" />
     <ClCompile Include="Math\MathEquations.cpp" />
     <ClCompile Include="PseudoRandomSearch.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Math\BenchmarkEquation.h" />
+    <ClInclude Include="Math\Equations\AckleyOne.h" />
+    <ClInclude Include="Math\Equations\AckleyTwo.h" />
+    <ClInclude Include="Math\Equations\DeJong1.h" />
+    <ClInclude Include="Math\Equations\EggHolder.h" />
+    <ClInclude Include="Math\Equations\Griewangk.h" />
+    <ClInclude Include="Math\Equations\Rastrigin.h" />
+    <ClInclude Include="Math\Equations\RosenbrockSaddle.h" />
+    <ClInclude Include="Math\Equations\Schwefel.h" />
+    <ClInclude Include="Math\Equations\SineEnvelopeSineWave.h" />
+    <ClInclude Include="Math\Equations\StretchVSineWave.h" />
     <ClInclude Include="Math\MathEquations.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
