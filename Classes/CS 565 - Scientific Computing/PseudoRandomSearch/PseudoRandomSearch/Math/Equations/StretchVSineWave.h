@@ -9,5 +9,5 @@ public:
     {
     }
 
-    double Evaluate(const double input[dimension]) override;
+    double Evaluate(const vector<double>& input) override;
 };

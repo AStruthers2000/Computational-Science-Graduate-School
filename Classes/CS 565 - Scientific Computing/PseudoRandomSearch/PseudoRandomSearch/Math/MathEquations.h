@@ -8,6 +8,7 @@
 */
 //constexpr int dimension = 30;
 
+/*
 constexpr double schwefel_constant = 418.9829;
 constexpr double rosenbrock_constant = 100.0;
 constexpr double rastrigin_constant = 10.0;
@@ -42,7 +43,7 @@ constexpr double min_eggholder = 0;
 class MathEquations
 {
 public:
-    /*
+    
     double Schwefel(double input[dimension]);
     double DeJong1(double input[dimension]);
     double RosenbrockSaddle(double input[dimension]);
@@ -53,8 +54,9 @@ public:
     double AckleyOne(double input[dimension]);
     double AckelyTwo(double input[dimension]);
     double EggHolder(double input[dimension]);
-    */
+
 
 private:
 
 };
+*/

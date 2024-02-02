@@ -1,9 +1,19 @@
 ﻿#pragma once
 #include <string>
+#include <vector>
 
 #define PI 3.14159265358979323846
 #define PI_2 (PI * 2.0)
 #define E 2.71828182845904523536
+
+constexpr double schwefel_constant = 418.9829;
+constexpr double rosenbrock_constant = 100.0;
+constexpr double rastrigin_constant = 10.0;
+constexpr double griewangk_constant = 4000.0;
+#define ackleys_one_constant (1.0 / pow(E, 0.2))
+#define ackelys_two_e_02 pow(E, 0.2)
+#define ackelys_two_e_05 pow(E, 0.5)
+constexpr double eggholder_constant = 47.0;
 
 constexpr int dimension = 30;
 
@@ -46,7 +56,7 @@ public:
         return _equation_name;
     }
 
-    virtual double Evaluate(const double input[dimension]) = 0;
+    virtual double Evaluate(const vector<double>& input) = 0;
 
 private:
     EvalRange _eval_range;

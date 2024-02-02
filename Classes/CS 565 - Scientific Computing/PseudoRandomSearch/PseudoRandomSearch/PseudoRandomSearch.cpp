@@ -1,4 +1,6 @@
+#include <cassert>
 #include <iostream>
+#include <random>
 #include <vector>
 
 #include "Math/BenchmarkEquation.h"
@@ -15,9 +17,89 @@
 #include "Math/Equations/StretchVSineWave.h"
 
 using namespace std;
+
+class PRNG_Optimizer
+{
+    
+public:
+    vector<double> GenerateRandomInput_MersenneTwister(const shared_ptr<BenchmarkEquation>& eq) const;
+    vector<double> GenerateRandomInput_LaggedFibonacci(const shared_ptr<BenchmarkEquation>& eq);
+
+    void Init_LFG_State(const shared_ptr<BenchmarkEquation>& eq);
+    
+private:
+    double MersenneTwister(int inclusive_lower, int inclusive_upper) const;
+    double LaggedFibonacci();
+    
+    vector<double> LFG_state_buffer;
+    int LFG_range = 0;
+
+    enum LFG_state
+    {
+        LFG_j = 97,
+        LFG_k = 127,
+    };
+};
+
+vector<double> PRNG_Optimizer::GenerateRandomInput_MersenneTwister(const shared_ptr<BenchmarkEquation>& eq) const
+{
+    vector<double> input_vector;
+    input_vector.reserve(dimension);
+    for (int i = 0; i < dimension; i++)
+    {
+        input_vector.push_back(MersenneTwister(eq->GetLowerBound(), eq->GetUpperBound()));
+        assert(i >= eq->GetLowerBound() && i <= eq->GetUpperBound());
+    }
+    return input_vector;
+}
+
+vector<double> PRNG_Optimizer::GenerateRandomInput_LaggedFibonacci(const shared_ptr<BenchmarkEquation>& eq)
+{
+    assert(LFG_range != 0);
+    vector<double> input_vector;
+    input_vector.reserve(dimension);
+    for (int i = 0; i < dimension; i++)
+    {
+        input_vector.push_back(LaggedFibonacci());
+        assert(i >= eq->GetLowerBound() && i <= eq->GetUpperBound());
+    }
+    return input_vector;
+}
+
+void PRNG_Optimizer::Init_LFG_State(const shared_ptr<BenchmarkEquation>& eq)
+{
+    LFG_state_buffer.clear();
+    LFG_range = abs(eq->GetLowerBound()) + abs(eq->GetUpperBound());
+    for(int i = 0; i < LFG_k; i++)
+    {
+        const double r = MersenneTwister(0, LFG_range);
+        LFG_state_buffer.push_back(fmod(r, LFG_range));
+    }
+}
+
+double PRNG_Optimizer::MersenneTwister(int inclusive_lower, int inclusive_upper) const
+{
+    random_device rd;
+    mt19937_64 mt(rd());
+
+    uniform_real_distribution<> distribution(inclusive_lower, inclusive_upper);
+    const double r = distribution(mt);
+    return r;
+}
+
+double PRNG_Optimizer::LaggedFibonacci()
+{
+    const double bin_op = LFG_state_buffer[LFG_j - 1] + LFG_state_buffer[LFG_k - 1];
+    const double next = fmod(bin_op, LFG_range); //- LFG_range / 2.0;
+    LFG_state_buffer.push_back(next);
+    LFG_state_buffer.erase(LFG_state_buffer.begin());
+    return next - LFG_range / 2.0;
+}
+
+constexpr int experiments = 30;
 int main(int argc, char* argv[])
 {
-    vector<shared_ptr<BenchmarkEquation>> algorithms =
+    const vector<shared_ptr<BenchmarkEquation>> algorithms =
     {
         make_shared<Schwefel>(-512, 512, "Schwefel"),
         make_shared<DeJong1>(-100, 100, "De Jong's 1"),
@@ -31,66 +113,47 @@ int main(int argc, char* argv[])
         make_shared<EggHolder>(-500, 500, "Egg Holder")
     };
 
+    const auto optimizer = make_shared<PRNG_Optimizer>();
+    
     for(const auto& alg : algorithms)
     {
-        const double input[dimension] = {1.0};
-        //double val = alg->Evaluate(input);
-        cout << alg->GetName() << endl;
+        vector<double> results_mt;
+        vector<double> results_lfg;
+        vector<double> results_bbs;
+
+        double best_mt = numeric_limits<double>::max();
+        double best_lfg = numeric_limits<double>::max();
+        
+        optimizer->Init_LFG_State(alg);
+        for(int i = 0; i < experiments; i++)
+        {
+            const auto input_mt = optimizer->GenerateRandomInput_MersenneTwister(alg);
+            const auto input_lfg = optimizer->GenerateRandomInput_LaggedFibonacci(alg);
+            //double val = alg->Evaluate(input);
+            
+            //cout << alg->GetName() << endl;
+
+            const double mt = alg->Evaluate(input_mt);
+            if(mt < best_mt)
+            {
+                best_mt = mt;
+            }
+            
+            const double lfg = alg->Evaluate(input_lfg);
+            if(lfg < best_lfg)
+            {
+                best_lfg = lfg;
+            }
+
+            //cout << "Mersenne Twister on the " << alg->GetName() << ":           " << mt << endl;
+            //cout << "Lagged Fibonacci Generator on the " << alg->GetName() << ": " << lfg << endl;
+            //cout << "--------------------------------" << endl;
+        }
+        cout << "Stats for algorithm: " << alg->GetName() << endl;
+        cout << "\tBest solution with Mersenne Twister:           " << best_mt << endl;
+        cout << "\tBest solution with Lagged Fibonacci Generator: " << best_lfg << endl;
+        cout << "======================================" << endl;
     }
-    /*
-    auto eq = new MathEquations();
-    
-    cout << "The equations are of dimension " << dimension << endl;
-    cout << "The ackley one constant is: " << ackleys_one_constant << endl;
-    cout << "The ackley two constant 1 is: " << ackelys_two_e_02 << endl;
-    cout << "The ackley two constant 2 is: " << ackelys_two_e_05 << endl;
-    cout << "Two pi = " << PI_2 << endl;
 
-    double solution_vector[dimension];
-    for (double& i : solution_vector)
-    {
-        i = rand() % (envelope_range * 2) - envelope_range;
-    }
-
-    cout << "Schwefel:                    " << eq->Schwefel(solution_vector) << endl;
-    cout << "Min Schwefel:                " << min_schwefel << endl;
-    cout << "=====================================" << endl;
-
-    cout << "DeJongs1:                    " << eq->DeJong1(solution_vector) << endl;
-    cout << "Min DeJongs1:                " << min_dejong1 << endl;
-    cout << "=====================================" << endl;
-
-    cout << "Rosenbrock Saddle:           " << eq->RosenbrockSaddle(solution_vector) << endl;
-    cout << "Min Rosenbrock Saddle:       " << min_rosenbrocksaddle << endl;
-    cout << "=====================================" << endl;
-
-    cout << "Rastrigin:                   " << eq->Rastrigin(solution_vector) << endl;
-    cout << "Min Rastrigin:               " << min_rastrigin << endl;
-    cout << "=====================================" << endl;
-
-    cout << "Griewangk:                   " << eq->Griewangk(solution_vector) << endl;
-    cout << "Min Griewangk:               " << min_griewangk << endl;
-    cout << "=====================================" << endl;
-
-    cout << "Sine Envelope Sine Wave:     " << eq->SineEnvelopeSineWave(solution_vector) << endl;
-    cout << "Min Sine Envelope Sine Wave: " << min_envelope << endl;
-    cout << "=====================================" << endl;
-
-    cout << "Stretch V Sine Wave:         " << eq->StretchVSineWave(solution_vector) << endl;
-    cout << "Min Stretch V Sine Wave:     " << min_stretchvsine << endl;
-    cout << "=====================================" << endl;
-
-    cout << "Ackley One:                  " << eq->AckleyOne(solution_vector) << endl;
-    cout << "Min Ackley One:              " << min_ackleyone << endl;
-    cout << "=====================================" << endl;
-
-    cout << "Ackley Two:                  " << eq->AckelyTwo(solution_vector) << endl;
-    cout << "Min Ackley Two:              " << min_ackleytwo << endl;
-    cout << "=====================================" << endl;
-
-    cout << "Egg Holder:                  " << eq->EggHolder(solution_vector) << endl;
-    cout << "Min Egg Holder:              " << min_eggholder << endl;
-    cout << "=====================================" << endl;
-    */
     return 0;
 }
