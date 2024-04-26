@@ -1,0 +1,173 @@
+\documentclass{article}
+% =======PACKAGES=======
+% FORMATTING
+\usepackage[margin=0.625in]{geometry}
+\usepackage{parskip, setspace}
+\setstretch{1.15}
+% TYPESETTING - MATH
+\usepackage{amsmath, amsfonts}
+\usepackage{amsthm}
+\usepackage[ruled, linesnumbered, noend]{algorithm2e}
+\NewCommandCopy{\legacyunderscore}{\_}
+\renewcommand{\_}{\ifincsname_\else\legacyunderscore\fi}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{lightgray},   
+    commentstyle=\color{darkgray},
+    keywordstyle=\color{red},
+    numberstyle=\color{black},
+    stringstyle=\color{violet},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+% RICH
+\usepackage{graphicx, caption}
+\usepackage{hyperref}
+% BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+sorting=ynt
+]{biblatex}
+\addbibresource{bib.bib}
+
+\newcommand{\integer}{\textbf{int} }
+
+% =======TITLE=======
+\title{\vspace*{-0.625in}CS 529: Advanced Data Structures \& Algorithms \\ Assignment 4: Parallel Algorithms}
+\author{Nathan Chapman, Hunter Lawrence, Andrew Struthers}
+\date{\today}
+
+\begin{document}
+
+    \maketitle
+
+\begin{enumerate}
+	\item Consider the problem of adding two $n\times n$ matrices. If it takes $t_a$ time for one person to add two numbers, how many people do we need to minimize the total time spent to get the final answer? What will be the minimum amount of time needed to find the answer, if we assume that we have enough people? Justify your answers.
+\begin{enumerate}
+        \item
+
+        Given $n$ tasks that take equal time, the most time-efficient way to complete all of them would be for each task be done on its own processor at the same time.  Therefore, the number of processors needed to complete $n$ tasks is also $n$, as each processor executes each tasks simultaneously.
+
+        The addition of two $n \times n$ matrices requires each of the $2 n^2$ elements to be added together appropriately, where each addition is a single task.  Therefore the addition of two $n \times n$ matrices is equivalent to a set of $n^2$ tasks.  By the above conclusion, the number of people required to execute the addition of two $n \times n$ matrices is $n^2$. Because each addition takes the same amount of time $t_a$, and each addition is being done at the same time, the minimal total time required is also $t_a$.
+\end{enumerate}
+
+	\item Write a CREW PRAM algorithm for adding all $n$ numbers in a list in $O(\log n)$ time.
+	\begin{enumerate}
+		\item The standard way of adding all $n$ numbers in a list is the naive approach of having a global $sum$ variable, then iterating through the list linearly, adding the elements of the list to $sum$ one by one. We can improve this to $O(\log n)$ time with the following algorithm:
+
+	\begin{function}
+            \DontPrintSemicolon
+            \caption{addElements(list)}
+            \label{alg:addElements}
+            \KwIn{$n$-length list of numbers}
+            \KwOut{sum of all elements in $list$}
+            $sum \gets 0$ as a variable for the sum of all elements\;
+            set $q$ to some division of $n$, such as $\sqrt{n}$\;
+            create $q$ threads, that are each responsible for summing $\frac{n}{q}$ numbers\;
+            \ForEach{$thread \in threads$}
+            {
+                add the result of \texttt{threadAdd($list$, $q$, $i$)} to $sum$
+            }
+            \Return{$sum$}
+        \end{function}
+
+	\begin{function}
+            \DontPrintSemicolon
+            \caption{threadAdd(list, q, i)}
+            \label{alg:threadAdd}
+            \KwIn{$n$-length list of numbers, $q$ elements of $list$ to add, $i$ thread ID}
+            \KwOut{sum of elements in $list[q*i, q*i + q]$ ($q$ elements)}
+            $sum \gets 0$ as a variable for the sum of this thread's elements\;
+            \For{$i \gets q*i$, $i < q*i + q$}
+            {
+                add $list\left[i\right]$ to $sum$
+            }
+            \Return{$sum$}
+        \end{function}
+This will take a list of $n$ elements, and break the list up into smaller subsections. Each process is responsible for linearly adding a chunk of the original list together. This is a common divide and conqure approach, where each process adds small subset of the original list together all at the same time. The linear operation on a subset of the original list takes $O(\log n)$ time, because the linear operation only operates on $\log(n)$ elements. Then, the \texttt{addElements} function exclusively writes ``\verb|sum += subsum|'' $\log n$ times.  This is a CREW-PRAM summation in $\log n$ time.
+	\end{enumerate}
+
+	\item Write a PRAM algorithm using $n^3$ processors to multiply two $n\times n$ matrices. Your algorithm should run in $O(\log n)$ time.
+	\begin{enumerate}
+		\item 
+\begin{proof}
+	We seek to prove that two $n\times n$ matrices can be multiplied together in $O(\log n)$ time using $n^3$ processors. Let $A$ and $B$ be $n\times n$ matrices. We want to calculate $C$, where $C = A\times B$ is another $n\times n$ matrix, in $O(\log n)$ time with $n^3$ processors. 
+\begin{equation}
+\begin{aligned}
+\nonumber
+\begin{bmatrix}
+A_{0, 0} 	& A_{0, 1} 	& \cdots 	& A_{0, n} \\
+A_{1, 0} 	& \ddots 	& 	 	& \vdots \\
+\vdots 	& 	 	& \ddots 	& \vdots \\
+A_{n, 0}	& \cdots 	& \cdots 	& A_{n, n}\\
+\end{bmatrix} & \times
+\begin{bmatrix}
+B_{0, 0} 	& B_{0, 1} 	& \cdots 	& B_{0, n} \\
+B_{1, 0} 	& \ddots 	& 	 	& \vdots \\
+\vdots 	& 	 	& \ddots 	& \vdots \\
+B_{n, 0}	& \cdots 	& \cdots 	& B_{n, n}\\
+\end{bmatrix} &= 
+\begin{bmatrix}
+C_{0, 0} 	& C_{0, 1} 	& \cdots 	& C_{0, n} \\
+C_{1, 0} 	& \ddots 	& 	 	& \vdots \\
+\vdots 	& 	 	& \ddots 	& \vdots \\
+C_{n, 0}	& \cdots 	& \cdots 	& C_{n, n}\\
+\end{bmatrix}
+\end{aligned}
+\end{equation}
+Let $i, j \in \mathbb{Z}$ be nonnegative integers such that $0\leq i \leq n$ and $0\leq j \leq n$. The $\left(i, j\right)^{\text{th}}$ element of matrix $C$ can be calculated by the following equation:
+\begin{equation}
+\begin{aligned}
+C_{i,j} &= \sum_{k=0}^{n} A_{i, k}\cdot B_{k, j}
+\end{aligned}
+\end{equation}
+This equation shows that the calculation for $C_{i, j}$ is a summation of $n$ elements in a ``list". Each element in the list is one element of the resultant vector from multiplying the $i^{\text{th}}$ column vector of matrix $A$ by the $j^{\text{th}}$ row vector of matrix $B$. We have shown in Problem 2 above that the $\ref{alg:addElements}$ function is capable of summing an $n$-element list of numbers with $n$ processors in $O(\log n)$ time. Thus, we can compute the $(i, j)^{\text{th}}$ element of $C$ using $n$ processors in $O(\log n)$ time. Calculating every element in $C$ requires $n^2$ calculations of $C_{i, j}$ for all $0\leq i \leq n$, $0 \leq j \leq n$. By having one processor calculate a given $C_{i, j}$ using $n$ threads in $O(\log n)$ time, as shown above, we can create $n^2$ processors to calculate each $C_{i, j}$ in parallel. Each one of the $n^2$ processors uses $n$ threads to calculate $C_{i, j}$ in $O(\log n)$ time. Therefore, we have shown that with $n^2$ processors that each use $n$ threads to perform the matrix multiplication, we can use $n^3$ processors to multiply two $n\times n$ matrices in $O(\log n)$ time using a PRAM algorithm. \end{proof}
+	
+	
+        \begin{function}
+            \DontPrintSemicolon
+            \caption{matrixMul($M_1$, $M_2$)}
+            \label{alg:matrixMul}
+            \KwIn{two distinct $n \times n$ matricies of real numbers}
+            \KwOut{The resulting matrix $S$ of multiplying $M_1$ and $M_2$}
+            $S \gets [n][n]$\;
+            create $n^2$ threads, that are each assigned a unique location $(i, j)$ in $S$ and a corresponding location in $M_1$\;
+            \;
+            // generate solutions in a single, constant, action\;
+            \ForEach{$thread \in threads$}
+            {
+                $productList \gets [n]$\;
+                create a new set of $n$ threads, each assigned a unique location $x$ in $productList$ with corresponding location in $M_2(i, x)$\;\;
+
+                // generate n products in constant time\;
+                \ForEach{$thread \in newThreads$}
+                {
+                    $productList[x] \gets M_1(i,j) * M_2(i, x)$\;
+                }\;
+
+                release the threads in $newThreads$\;\;
+
+                // use $\texttt{addElements}$ with the productList to get each result in $O(\log n)$ time\;
+                $S(i, j) \gets \texttt{addElements(productList)}$\;\;
+            
+            }
+            
+            \Return{$S$}
+        \end{function}
+    
+    \end{enumerate}
+
+\end{enumerate}
+\end{document}
