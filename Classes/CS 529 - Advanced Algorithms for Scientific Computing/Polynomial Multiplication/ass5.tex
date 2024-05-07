@@ -1,0 +1,188 @@
+\documentclass{article}
+% =======PACKAGES=======
+% FORMATTING
+\usepackage[margin=0.625in]{geometry}
+\usepackage{parskip, setspace}
+\setstretch{1.15}
+% TYPESETTING - MATH
+\usepackage{amsmath, amsfonts}
+\usepackage{amsthm}
+\usepackage[ruled, linesnumbered, noend]{algorithm2e}
+\NewCommandCopy{\legacyunderscore}{\_}
+\renewcommand{\_}{\ifincsname_\else\legacyunderscore\fi}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{lightgray},   
+    commentstyle=\color{darkgray},
+    keywordstyle=\color{red},
+    numberstyle=\color{black},
+    stringstyle=\color{violet},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+% RICH
+\usepackage{graphicx, caption}
+\usepackage{hyperref}
+% BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+sorting=ynt
+]{biblatex}
+\addbibresource{bib.bib}
+
+\newcommand{\integer}{\textbf{int} }
+
+% =======TITLE=======
+\title{\vspace*{-0.625in}CS 529: Advanced Data Structures \& Algorithms \\ Assignment 5: Polynomial Multiplication}
+\author{Nathan Chapman, Hunter Lawrence, Andrew Struthers}
+\date{\today}
+
+\begin{document}
+
+    \maketitle
+
+    \section*{Multiplying polynomials}
+
+        Multiply the polynomials $A(x) = 7 x^3 - x^2 + x - 10$ and $B(x) = 8x^3 - 6x + 3$ using equations (30.1) and (30.2).
+
+        \underline{\textbf{Solution}}
+
+        Let there be polynomials $A$ and $B$ of degree $n = 3$ defined by 
+
+        \begin{subequations}
+            \begin{equation}
+                A(x) = 7 x^3 - x^2 + x - 10 \implies A = \langle -10, 1, -1, 7 \rangle
+            \end{equation}
+            \begin{equation}
+                B(x) = 8x^3 - 6x + 3 \implies B = \langle 3, -6, 0, 8\rangle
+            \end{equation}
+        \end{subequations}
+
+        where the $\langle \cdot, \cdot \rangle$ is the coefficient representation of the polynomials in the vector space of polynomials.
+
+        The polynomial $C$ such that $C(x) = A(x)B(x)$, can be constructed by applying the following relations from Cormen et. al. 
+
+        \begin{subequations}
+            \begin{equation}
+                C(x) = \sum_{j = 0}^{2n - 2} c_j x^j
+            \end{equation}
+            \begin{equation}
+                c_j = \sum_{k = 0}^{j} a_k b_{j - k}
+            \end{equation}
+        \end{subequations}
+
+        Therefore,
+
+        \begin{subequations}
+            \begin{equation}
+                c_0 = (-10)(3) = -30
+            \end{equation}
+            \begin{equation}
+                c_1 = (-10)(-6) + (1)(3) = 63
+            \end{equation}
+            \begin{equation}
+                c_2 = (-10)(0) + (1)(-6) + (-1)(3) = -9
+            \end{equation}
+            \begin{equation}
+                c_3 = (-10)(8) + (1)(0) + (-1)(-6) + (7)(3) = -53
+            \end{equation}
+            \begin{equation}
+                c_4 = (-10)(0) + (1)(8) + (-1)(0) + (7)(-6) + (0)(3) = -53
+            \end{equation}
+            \begin{equation}
+                c_5 = (-10)(0) + (1)(0) + (-1)(8) + (7)(0) + (0)(-6) + (0)(3) = -8
+            \end{equation}
+            \begin{equation}
+                c_6 = (-10)(0) + (1)(0) + (-1)(0) + (7)(8) + (0)(0) + (0)(-6) + (0)(3) = 56
+            \end{equation}
+        \end{subequations}
+
+        Thus the polynomial $C$ such that $C(x) = A(x)B(x)$ is defined by 
+
+        \begin{equation}
+            \boxed{C(x) = 56 x^6-8 x^5-34 x^4-53 x^3-9 x^2+63 x-30}
+        \end{equation}
+
+    \section*{$n$ degree polynomials need $n$ points}
+
+        Prove that n distinct point-value pairs are necessary to uniquely specify a polynomial of degree-bound n, that is, if fewer than n distinct point-value pairs are given, they fail to specify a unique polynomial of degree-bound n. (Hint: Use Theorem 30.1)
+
+\begin{proof}
+We will show that we need $n$ distinct points to specify a unique polynomial of order $n$. In terms of polynomial interpolation, Theorem 30.1 from the Cormen textbook states that for any set $\left\{ (x_0, y_0), (x_1, y_1), \hdots,(x_{n-1}, y_{n-1})\right\}$, of $n$ points where $x_k$ are distinct, there exists a unique polynomial $P(x)$ of degree at most $n$ such that $y_k=P(x_k) \forall k=0, 1, \hdots, n-1$. We will prove that we need $n$ distinct points to specify a unique polynomial of order $n$.
+
+Suppose we have fewer than $n$ distinct point-value pairs, say $k$ pairs where $k < n$. Then we have $(k+1)$ distinct points $\left\{(x_0, y_0), (x_1, y_1), \hdots, (x_k, y_k)\right\}$. According to Theorem 30.1, there exists a unique polynomial of degree at most $k$ that passes through these points.
+
+However, we want to specify a polynomial of degree-bound $n$. Since $k < n$, the polynomial we obtain through interpolation will have a degree less than $n$. Thus, our $k$ distinct points resulted in a polynomial of degree $k$, meaning that if we have less than $n$ distinct points, we can at most create a unique polynomial of degree $k$ that interpolates through $k$ points. We must have at least $n$ points to define a unique $n$ degree polynomial.  
+
+Therefore, if we have fewer than $n$ distinct point-value pairs, by Theorem 30.1 we cannot guarantee a polynomial of degree-bound $n$ uniquely, as there may be multiple polynomials that satisfy those points and have a degree less than $n$. Hence, we require at least $n$ distinct point-value pairs to uniquely specify a polynomial of degree-bound $n$.
+\end{proof}
+
+\pagebreak
+
+    \section*{Applications of polynomial multiplication and decomposition}
+
+    It is a common occurance in physics and engineering problems to represent the solution to a linear (i.e. seperable) partial differential equation e.g. the wave equation
+
+    \begin{equation}
+        \partial_t^2 \Psi(t, \mathbf{x}) = \frac{1}{c^2} \nabla^2 \Psi(t, \mathbf{x})
+    \end{equation}
+
+    as the product of two functions, one in time and one in space as in the wave equation e.g.
+
+    \begin{equation}
+        \Psi(t, \mathbf{x}) = T(t) \psi(\mathbf{x}).
+    \end{equation}
+
+    While the conventional method is to expand the above in their Fourier representation, if the researcher would like to know the dependence of the solution on each power, it is often helpful to represent specific functions as a power series, e.g. a Taylor series, as
+
+    \begin{equation}
+        \psi(\mathbf{x}) = \sum_{k = 0}^{\infty} c_k x^k
+    \end{equation}
+
+    or, in the case of computational implementations, a truncated approximation as 
+
+    \begin{equation}
+        \psi(\mathbf{x}) = \sum_{k = 0}^{N} c_k x^k.
+    \end{equation}
+
+    Two of the most common representations are the Taylor series approximation at a point $a$
+    
+    \begin{equation}
+        \psi(x) = \sum_{k = 0}^{\infty} \frac{f^k(a)}{k!} (x - a)^k
+    \end{equation}
+
+    where $f^k$ is the $k$-th derivative of $f$, and the Hermite polynomial expansion
+
+    \begin{equation}
+        \psi(x) = \sum_{k = 0}^{\infty} c_k H_k(x)
+    \end{equation}
+
+    where the Hermite polynomials $H_k$ are defined such that $H_k = (-1)^k e^{x^2} \frac{d^k}{dx^k} e^{-x^2}$; each of these representaions can be truncated to provide a sufficient approximation as a ``finite polynomial''.
+
+    If the seperated functions $T(t)$ and $\psi(\mathbf{x})$ are approximated as a truncated power series, the solution to the partial differential equation would then be approximated as the product of the polynomials.  In the case of Hermite (orthogonal) polynomials, there are many such use cases including:
+                
+    \begin{itemize}
+        \item Signal processing as Hermitian wavelets for wavelet transform analysis
+        \item Probability, such as the Edgeworth series, as well as in connection with Brownian motion;
+        \item Combinatorics, as an example of an Appell sequence, obeying the umbral calculus;
+        \item Numerical analysis as Gaussian quadrature;
+        \item Physics, where they give rise to the eigenstates of the quantum harmonic oscillator; and they also occur in some cases of the heat equation;
+        \item Systems theory in connection with nonlinear operations on Gaussian noise.
+        \item Random matrix theory in Gaussian ensembles.
+    \end{itemize}
+
+\printbibliography
+
+\end{document}

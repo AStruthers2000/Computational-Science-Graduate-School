@@ -1,0 +1,107 @@
+\documentclass{article}
+% =======PACKAGES=======
+% FORMATTING
+\usepackage[margin=0.625in]{geometry}
+\usepackage{parskip, setspace}
+\setstretch{1.15}
+% TYPESETTING - MATH
+\usepackage{amsmath, amsfonts}
+\usepackage{amsthm}
+\usepackage[ruled, linesnumbered, noend]{algorithm2e}
+\NewCommandCopy{\legacyunderscore}{\_}
+\renewcommand{\_}{\ifincsname_\else\legacyunderscore\fi}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{lightgray},   
+    commentstyle=\color{darkgray},
+    keywordstyle=\color{red},
+    numberstyle=\color{black},
+    stringstyle=\color{violet},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+% RICH
+\usepackage{graphicx, caption}
+\usepackage{hyperref}
+% BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+sorting=ynt
+]{biblatex}
+\addbibresource{bib.bib}
+
+\newcommand{\integer}{\textbf{int} }
+
+% =======TITLE=======
+\title{\vspace*{-0.625in}CS 529: Advanced Data Structures \& Algorithms \\ Final Project Proposal}
+\author{Nathan Chapman, Hunter Lawrence, Andrew Struthers}
+\date{\today}
+
+\begin{document}
+
+    \maketitle
+
+\section*{Introduction}
+One of the lessons we keep learning thoughout this class is that there are arbitrary decisions made in a lot of algorithms. For example, the string matching algorithm had a punishment of 2 for a gap, and a 1 for a mismatch. This, without proper explanation, is meaningless in the context of the problem and is an arbitrary decision in most cases. With Genetic Algorithms, there are typically a lot of arbitrary decisions. The population size, number of generations, and mutation rate are all usually selected based off of what ``feels right", and the algorithms that perform crossover, selection, and mutation are oftentimes unexplained and should just be accepted as ``correct". Additionally, the stopping criterion for evolutionary algorithms can be non-trivial. In optimization problems, the true optimal value is rarely known, so choosing when to stop evolving is also arbitrary. Typically it is solved by ending after a certain number of generations, but again, how many generations is an arbitrary choice. We could make this decision less arbitrary, by taking the Fast Fourier Transform of the best (or average) fitnesses each generation, and looking at the projection of the next generation's fitness. A classic combinatorial optimization problem is the Vehicle Routing Problem, where the best set of routes given to several vehicles that service customers must be terermined\cite{towardsdatascienceVehicleRouting}. Solving combinatorial optimization problems, especially with a Genetic Algorithm, is highly parallelizable and would benefit greatly from the speed parallelization offers as well as dynamic programming methods like memoization when calculating fitnesses. Likewise, the FFT can be massively parallelizable, leading to rapid increase in runtime efficiency. We would like to implement a parallelized and dynamic-programming based Genetic Algorithm to solve the Vehicle Routing Problem and determine the stopping criteria through Fourier analysis of the average fitnesses over generations. 
+
+
+\section*{Genetic Algorithm}
+A Genetic Algorithm is a type of evolutionary algorithm that attempts to follow the biological process of evolution. This algorithm works by first having an initial population generated randomly or by some smarter heuristic. The initial population then goes through typical genetic processes such as tournament or elitism selection, genetic crossover, and random mutation. Each member of the population is represented by a ``genome sequence", which encodes the some solution to an optimization problem somehow. The genetic processes operate on these genome sequences to form children. The children form the new population, and the cycle repeats, until some stopping criteria is met. As was pointed out in class, a lot of the decisions involved in using a GA to solve a problem are pretty arbitrary and disconnected from biological genetics. With this project, we want to determine the reason behind the usually arbitrary decisions when choosing a selection algorithm, a crossover algorithm, a mutation algorithm, and the hyperparameters of the model. We will analyze typical algorithms used for these processes and make decisions based off of problem context and evolutionary context to remove the arbitrary nature of these choices. Additionally, we will use the Fast Fourier Transform to determine the stopping criteria of the evolution process, as described below. To avoid using arbitrary values, we will take careful consideration to involve the problem context. For example, if we had a VRP instance with 20 nodes, there are $2e+18$ possible tours if there's a complete graph. Having a population size of 20 solutions would capture almost 0\% of the solution space, so we would want to increase the population size to allow more exploration of the search space. Taking into consideration the state of the problem will also help us to control hyperparameters. We can employ methods such as a self-adaptive genetic algorithm, where the mutation rate, crossover rate, and population size adjust dynamically throughout the problem based off of the current population's performance. For example, we might want an increased mutation rate if the algorithm seems to be stuck in local optima, or if the population diversity is too low we might want to increase population size, so the algorithm won't stagnates or fail to explore the solution space adequately. We are also going to use the FFT to dynamically evaluate the termination criteria based on the algorithm's performance. This will allow us to extend the maximum number of generations if progress is slow, or terminate early if the algorithm converges quickly and finds satisfactory solutions. By taking the problem context into account when determining initial values and specific algorithms for crossover, mutation, and selection, as well as implementing dynamically updating hyperparameters, we can capture the problem context and the algorithm's performance to take the arbitrary guesswork out of choosing values. We will give mathematical and contextual reasons for any manual values so that there is contextual justification backing our decisions.  
+
+
+\section*{Determining the stopping criterion with the FFT}
+
+There are many ways one can choose to stop an evolutionary algorithm.  Some common examples are \cite{StoppingCriteria}
+
+\begin{itemize}
+    \item MaxGenerations: The algorithm stops when the number of generations reaches \texttt{MaxGenerations}.
+    
+    \item MaxTime: The algorithm stops after running for an amount of time in seconds equal to \texttt{MaxTime}.
+    
+    \item FitnessLimit: The algorithm stops when the value of the fitness function for the best point in the current population is less than or equal to \texttt{FitnessLimit}.
+    
+    \item MaxStallGenerations: The algorithm stops when the average relative change in the fitness function value over \texttt{MaxStallGenerations is less than Function tolerance}.
+    
+    \item MaxStallTime: The algorithm stops if there is no improvement in the objective function during an interval of time in seconds equal to \texttt{MaxStallTime}.
+    
+    \item FunctionTolerance: The algorithm runs until the average relative change in the fitness function value over\\ \texttt{MaxStallGenerations} is less than Function tolerance.
+\end{itemize}
+
+Another method could be to perform a regression on the fitness data over time in order to predict the fitness of future generations.  Because such regressions can be computationally expensive, a better method is also sought.  
+
+The Fast Fourier Transform (FFT) is able to be done, not only efficiently, but also is extremely conducive to being implemented on a massively parallel platform such as a GPU high-performance computing cluster.  Because of this, the FFT can effectively replace the previous regression algorithms.  This replacement allows us to efficiently formulate a way to predict the future behavior of the fitness function and stop early if the predicted behavior is insufficient.
+
+\section*{Parallelization}
+Genetic algorithms can utilize parallelization at multiple stages of the proposed algorithm including the generation of a population, testing the fitness of each member of that population against the problem, and modeling how the fitness will continue to grow as a means to end the genetic cycle non-arbitrarily. 
+
+Parallelization can be thought of as multiple states, at the end of each stage, a synchronization is required allowing all computations of the past step to finished before the next can commence.
+
+Firstly, the generation of the initial population may be executed in parallel by creating a population of members at random. Because all these members are independent from one another, they are allowed to be created in parallel. 
+
+Second, after this parent population has finished generating, testing of this population may also take place in parallel, since the function they are being tested on is a constant and the members as well as their results are all independent, they are allowed to be tested in parallel.
+
+Third, after these tests on a population have been completed, they will need to be evaluated and culled; only allowing those with a high fitness to reproduce (how many are allowed to reproduce is a subject for further discussion). Because the data in the previous step will be unsorted (as parallelization cannot compare against other values that are being calculated concurrently), the sorting of the data can be executed while utilizing a parallel sorting algorithm, particularly those that make use of the divide and conquer approach (such as QuickSort).
+
+Lastly, it is important to evaluate our fitness data up to this point, to evaluate if continuing the genetic cycle will continue to produce sufficiently improved generations. This can be modeled by utilizing the FFT algorithm. FFT, as mentioned above, is a conventionally time-consuming task that can have the execution time drastically cut down by utilizing parallelization. If the fitness is modeled to continue to grow, then the algorithm will continue from step two with the most fit members of the population as parent population. If the fitness is modeled to have plateaued, and future generations are unlikely to produce sufficiently improved generations (how this is determined is a subject for further discussion), then the algorithm will stop, and return its most fit member of the population as the most fit solution to the problem.
+
+Parallelization is an important facet in the future of computational science. As the number of cores on CPUs and GPUs are increasing, so are the potential speedups for many computational problems. While this capability is not new, it is rapidly growing and becoming more mainstream as these techniques have been successfully producing positive results. Combined with already fast algorithms, parallel computing has made it possible to scale up existing problems or solve new ones which had otherwise not be computationally possible. 
+
+
+\section*{Bringing It All Together}
+We want to focus heavily on making decisions when implementing these algorithms that don't rely on arbitrary values. Explaining why we made decisions will be critical to the success of this project, because there are many typically arbitrary decisions that all greatly impact the convergence and success rates of a GA, and when solving a problem like the TSP, problem context can help us to relate our algorithm as closely as possible to the choices in the biological evolutionary process. We think that parallelizing the GA and the FFT on a GPGPU will allow for these typically expensive algorithms to run much faster than a standard implementation, but will require careful consideration of CRCW PRAM methodologies. The GA can also heavily benefit from memoization, so dynamic programming can further speed up the typically slow and computationally heavy evolutionary algorithm. A lot of research is also being done, and has been done for years, as to when to stop an evolutionary algorithm. Since the true optimal solution is rarely, if ever, known, stopping the evolutionary algorithm runs the risk of always being just 1 generation way from finding the true optimal. Using the FFT, we can use the fitness per generation landscape to project future fitness values, and weight the computational cost of continuing versus the projected increase in solution quality to determine a better, and most importantly not arbitrary, stopping condition. Again, we would like to implement a parallelized and dynamic-programming based Genetic Algorithm to solve the Vehicle Routing Problem and determine the stopping criteria through Fourier analysis of the average fitnesses over generations. 
+
+\pagebreak
+\printbibliography
+\end{document}

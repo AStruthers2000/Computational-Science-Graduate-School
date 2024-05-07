@@ -1,0 +1,25 @@
+# ninja log v5
+2	2599	7367604457620318	CMakeFiles/MatrixMultiplication.dir/main.cu.obj	586c11936d7eb747
+3545	3679	7367604468261045	MatrixMultiplication.exe	25abf1142a704b70
+2600	3545	7367604467131298	CMakeFiles/MatrixMultiplication.dir/cmake_device_link.obj	e8089778298cd131
+1	2596	7367602962682302	CMakeFiles/MatrixMultiplication.dir/Core/MatrixMultiplier.cu.obj	16e68aaf42040284
+1	2326	7367556066156412	build.ninja	3286102c0f6f7a49
+4	2676	7367571707523058	CMakeFiles/MatrixMultiplication.dir/Core/RandomNumberGenerator.cu.obj	38d1a65af231a87a
+1	2843	7367611076260190	CMakeFiles/MatrixMultiplication.dir/main.cu.obj	586c11936d7eb747
+2843	3773	7367611085625223	CMakeFiles/MatrixMultiplication.dir/cmake_device_link.obj	e8089778298cd131
+3775	3869	7367611086375197	MatrixMultiplication.exe	25abf1142a704b70
+1	2826	7367613647608993	CMakeFiles/MatrixMultiplication.dir/main.cu.obj	586c11936d7eb747
+2827	3829	7367613657663998	CMakeFiles/MatrixMultiplication.dir/cmake_device_link.obj	e8089778298cd131
+3829	4004	7367613659198992	MatrixMultiplication.exe	25abf1142a704b70
+1	2754	7367613806561847	CMakeFiles/MatrixMultiplication.dir/main.cu.obj	586c11936d7eb747
+2755	3758	7367613816666833	CMakeFiles/MatrixMultiplication.dir/cmake_device_link.obj	e8089778298cd131
+3758	3850	7367613817401819	MatrixMultiplication.exe	25abf1142a704b70
+1	2760	7367614455200714	CMakeFiles/MatrixMultiplication.dir/main.cu.obj	586c11936d7eb747
+2760	3700	7367614464660716	CMakeFiles/MatrixMultiplication.dir/cmake_device_link.obj	e8089778298cd131
+3700	3843	7367614465875811	MatrixMultiplication.exe	25abf1142a704b70
+1	2660	7367615670211144	CMakeFiles/MatrixMultiplication.dir/main.cu.obj	586c11936d7eb747
+2661	3602	7367615679681151	CMakeFiles/MatrixMultiplication.dir/cmake_device_link.obj	e8089778298cd131
+3602	3692	7367615680391151	MatrixMultiplication.exe	25abf1142a704b70
+2	3054	7367623284446254	CMakeFiles/MatrixMultiplication.dir/main.cu.obj	586c11936d7eb747
+3054	4072	7367623294641232	CMakeFiles/MatrixMultiplication.dir/cmake_device_link.obj	e8089778298cd131
+4072	4232	7367623295991232	MatrixMultiplication.exe	25abf1142a704b70
