@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MatrixMultiplication",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "MatrixMultiplication::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MatrixMultiplication-Debug-abc89b72c509bf615eb7.json",
+					"name" : "MatrixMultiplication",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Computational-Science-Graduate-School/Classes/CS 530 - High Performance Computing/Lab 2 - Parallel Matrix Multiplication/CUDA/cmake-build-debug",
+		"source" : "D:/Computational-Science-Graduate-School/Classes/CS 530 - High Performance Computing/Lab 2 - Parallel Matrix Multiplication/CUDA"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

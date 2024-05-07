@@ -1,0 +1,9 @@
+# ninja log v5
+6	2907	7367652693323914	CMakeFiles/MatrixMultiplication.dir/Core/MatrixMultiplier.cu.obj	3867af3b7de9ea6c
+4	2911	7367652693373911	CMakeFiles/MatrixMultiplication.dir/Core/RandomNumberGenerator.cu.obj	79ad4f6f0cd52def
+1	2989	7367652694143905	CMakeFiles/MatrixMultiplication.dir/main.cu.obj	40e5ad5695cd6a3b
+2989	3956	7367652703847395	CMakeFiles/MatrixMultiplication.dir/cmake_device_link.obj	e8089778298cd131
+3956	4181	7367652705997371	MatrixMultiplication.exe	6dfea4894c7305cd
+2	2705	7367652895106159	CMakeFiles/MatrixMultiplication.dir/main.cu.obj	40e5ad5695cd6a3b
+2705	3655	7367652904676166	CMakeFiles/MatrixMultiplication.dir/cmake_device_link.obj	e8089778298cd131
+3655	3741	7367652905367947	MatrixMultiplication.exe	6dfea4894c7305cd
