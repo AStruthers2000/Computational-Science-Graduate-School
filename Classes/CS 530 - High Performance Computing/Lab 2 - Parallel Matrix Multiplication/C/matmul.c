@@ -111,6 +111,27 @@ int main(int argc, char** argv)
 
 	case FullTest:
 		printf("Currently not implemented\n");
+		int num_dimensions = 14;
+		int num_powers = 19;
+		int num_multiplications = 3;
+		int dimensions[14] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500};//, 600, 700, 800, 900, 1000};
+		int powers[19] = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000};
+		MatrixMultType types[3] = {RowWise, ColWise, ElementWise};
+		
+		for(int j = 1; j < num_multiplications; j++)
+		{
+			MatrixMultType type = types[j];
+			for(int i = 0; i < num_dimensions; i++)
+			{
+				run_experiment(Random, dimensions[i], 1000, type);
+			}
+			printf("\n=============================================================\n\n");
+			for(int i = 0; i < num_powers; i++)
+			{
+				run_experiment(Random, 50, powers[i], type);
+			}
+			printf("\n=============================================================\n\n");
+		}
 		break;
 
 	default: break;
@@ -161,7 +182,7 @@ void run_experiment(MatrixInitType init_type, int matrix_dimension, int power,  
                 timeofday_elapsed = (timeofday_end.tv_sec -timeofday_start.tv_sec) + (timeofday_end.tv_usec - timeofday_start.tv_usec) / 1000000.0;
                 
                 //printf("\n");
-                printf("%d,%d,%.6f\n", matrix_dimension, power, timeofday_elapsed);
+                printf("%d,%d,%s,%.6f\n", matrix_dimension, power, wise_type == RowWise ? "Row wise" : wise_type == ColWise ? "Column wise" : "Element wise", timeofday_elapsed);
 
                 free_memory(matrix_dimension);
         }
