@@ -18,6 +18,5 @@
 The elective courses are selected by the student with the help of the faculty advisor. The below list of elective courses is not exhaustive, since other elective courses may also be considered, including from other departments.
 - CS 545 - Data and Information Visualization, Credits: 4
 - CS 557 - Computational Intelligence and Machine Learning, Credits: 4
-- CS 573 - Parallel Computing, Credits: 4
 - CS 595 - Graduate Research, Credits: 1-10; may be repeated up to 25 credits
 - CS 596 - Individual Study, Credits: 1-6; may be repeated up to 10 credits
