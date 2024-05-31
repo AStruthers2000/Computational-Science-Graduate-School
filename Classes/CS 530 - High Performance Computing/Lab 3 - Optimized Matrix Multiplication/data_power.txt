@@ -1,4 +1,574 @@
 Dimension,Power,Time,Optimization
+50,100,0.047607
+50,100,0.042126
+50,100,0.041971
+50,100,0.041905
+50,100,0.041990
+50,100,0.041770
+50,100,0.042455
+50,100,0.042084
+50,100,0.041834
+50,100,0.040813
+50,100,0.041680
+50,100,0.041906
+50,100,0.041594
+50,100,0.041740
+50,100,0.041636
+50,100,0.041794
+50,100,0.041580
+50,100,0.041617
+50,100,0.041913
+50,100,0.041853
+50,100,0.041541
+50,100,0.041935
+50,100,0.041863
+50,100,0.041564
+50,100,0.041019
+50,100,0.041955
+50,100,0.041721
+50,100,0.041409
+50,100,0.042022
+50,100,0.041874
+50,200,0.083263
+50,200,0.083278
+50,200,0.084072
+50,200,0.084567
+50,200,0.083408
+50,200,0.082934
+50,200,0.084106
+50,200,0.084625
+50,200,0.083187
+50,200,0.083780
+50,200,0.082682
+50,200,0.083763
+50,200,0.083453
+50,200,0.084293
+50,200,0.082601
+50,200,0.083497
+50,200,0.083410
+50,200,0.083606
+50,200,0.082484
+50,200,0.083668
+50,200,0.084344
+50,200,0.082932
+50,200,0.083011
+50,200,0.083759
+50,200,0.084888
+50,200,0.083659
+50,200,0.083704
+50,200,0.083417
+50,200,0.083714
+50,200,0.084593
+50,300,0.124479
+50,300,0.124297
+50,300,0.124025
+50,300,0.124102
+50,300,0.123898
+50,300,0.125565
+50,300,0.123685
+50,300,0.125771
+50,300,0.124490
+50,300,0.124284
+50,300,0.124048
+50,300,0.123906
+50,300,0.125287
+50,300,0.124312
+50,300,0.124655
+50,300,0.124745
+50,300,0.123823
+50,300,0.124620
+50,300,0.124262
+50,300,0.124192
+50,300,0.125186
+50,300,0.124075
+50,300,0.123078
+50,300,0.122115
+50,300,0.123103
+50,300,0.127696
+50,300,0.123006
+50,300,0.123944
+50,300,0.125200
+50,300,0.123714
+50,400,0.166227
+50,400,0.164635
+50,400,0.163296
+50,400,0.164066
+50,400,0.162612
+50,400,0.162031
+50,400,0.161334
+50,400,0.164998
+50,400,0.165841
+50,400,0.165264
+50,400,0.165745
+50,400,0.159372
+50,400,0.166350
+50,400,0.166576
+50,400,0.167496
+50,400,0.165268
+50,400,0.168216
+50,400,0.163912
+50,400,0.163649
+50,400,0.163732
+50,400,0.166168
+50,400,0.164516
+50,400,0.167195
+50,400,0.165210
+50,400,0.165623
+50,400,0.166940
+50,400,0.165900
+50,400,0.166106
+50,400,0.165721
+50,400,0.163136
+50,500,0.205118
+50,500,0.207436
+50,500,0.206330
+50,500,0.207991
+50,500,0.206800
+50,500,0.203578
+50,500,0.207936
+50,500,0.205682
+50,500,0.208723
+50,500,0.208534
+50,500,0.206204
+50,500,0.206936
+50,500,0.208025
+50,500,0.206043
+50,500,0.207508
+50,500,0.206135
+50,500,0.207589
+50,500,0.208004
+50,500,0.206525
+50,500,0.206666
+50,500,0.206789
+50,500,0.208127
+50,500,0.205926
+50,500,0.203968
+50,500,0.204328
+50,500,0.207053
+50,500,0.206175
+50,500,0.206957
+50,500,0.205658
+50,500,0.203581
+50,600,0.249096
+50,600,0.248717
+50,600,0.245950
+50,600,0.247130
+50,600,0.249124
+50,600,0.249317
+50,600,0.247666
+50,600,0.242576
+50,600,0.247098
+50,600,0.246592
+50,600,0.247152
+50,600,0.246176
+50,600,0.245374
+50,600,0.249218
+50,600,0.246634
+50,600,0.248473
+50,600,0.246058
+50,600,0.249927
+50,600,0.249255
+50,600,0.245565
+50,600,0.247823
+50,600,0.249031
+50,600,0.247530
+50,600,0.246923
+50,600,0.250056
+50,600,0.250465
+50,600,0.246185
+50,600,0.247358
+50,600,0.244801
+50,600,0.247396
+50,700,0.291935
+50,700,0.289492
+50,700,0.289219
+50,700,0.289324
+50,700,0.291271
+50,700,0.288028
+50,700,0.292516
+50,700,0.290529
+50,700,0.286236
+50,700,0.284516
+50,700,0.291067
+50,700,0.293997
+50,700,0.296557
+50,700,0.287857
+50,700,0.291210
+50,700,0.292093
+50,700,0.288446
+50,700,0.286111
+50,700,0.290095
+50,700,0.285929
+50,700,0.285984
+50,700,0.283971
+50,700,0.290213
+50,700,0.290607
+50,700,0.291424
+50,700,0.293734
+50,700,0.287959
+50,700,0.288845
+50,700,0.287117
+50,700,0.288762
+50,800,0.328309
+50,800,0.329361
+50,800,0.322479
+50,800,0.338651
+50,800,0.327238
+50,800,0.331370
+50,800,0.329748
+50,800,0.326229
+50,800,0.333363
+50,800,0.327533
+50,800,0.337954
+50,800,0.331388
+50,800,0.340713
+50,800,0.330764
+50,800,0.330175
+50,800,0.336258
+50,800,0.327828
+50,800,0.333444
+50,800,0.329900
+50,800,0.330570
+50,800,0.330629
+50,800,0.334928
+50,800,0.331001
+50,800,0.329890
+50,800,0.328603
+50,800,0.329534
+50,800,0.328967
+50,800,0.328939
+50,800,0.324931
+50,800,0.330252
+50,900,0.374355
+50,900,0.371484
+50,900,0.372495
+50,900,0.372686
+50,900,0.372231
+50,900,0.367011
+50,900,0.373720
+50,900,0.372319
+50,900,0.374872
+50,900,0.371698
+50,900,0.372299
+50,900,0.375829
+50,900,0.368680
+50,900,0.375774
+50,900,0.375834
+50,900,0.369320
+50,900,0.369759
+50,900,0.371064
+50,900,0.381699
+50,900,0.373320
+50,900,0.374871
+50,900,0.373320
+50,900,0.374343
+50,900,0.371415
+50,900,0.369367
+50,900,0.371399
+50,900,0.370696
+50,900,0.373821
+50,900,0.375256
+50,900,0.371625
+50,1000,0.419570
+50,1000,0.412186
+50,1000,0.415292
+50,1000,0.411173
+50,1000,0.413900
+50,1000,0.413981
+50,1000,0.415302
+50,1000,0.412156
+50,1000,0.418505
+50,1000,0.411553
+50,1000,0.416214
+50,1000,0.414413
+50,1000,0.414593
+50,1000,0.412678
+50,1000,0.418171
+50,1000,0.414968
+50,1000,0.417743
+50,1000,0.413625
+50,1000,0.418419
+50,1000,0.411690
+50,1000,0.412862
+50,1000,0.409802
+50,1000,0.412872
+50,1000,0.414717
+50,1000,0.413499
+50,1000,0.412593
+50,1000,0.418780
+50,1000,0.417396
+50,1000,0.419287
+50,1000,0.408367
+50,2000,0.831295
+50,2000,0.819064
+50,2000,0.828340
+50,2000,0.826768
+50,2000,0.827120
+50,2000,0.825158
+50,2000,0.824168
+50,2000,0.824893
+50,2000,0.820792
+50,2000,0.829571
+50,2000,0.829229
+50,2000,0.821446
+50,2000,0.824147
+50,2000,0.822888
+50,2000,0.824666
+50,2000,0.822387
+50,2000,0.823343
+50,2000,0.820202
+50,2000,0.834441
+50,2000,0.823008
+50,2000,0.826519
+50,2000,0.831301
+50,2000,0.816753
+50,2000,0.823967
+50,2000,0.832457
+50,2000,0.820804
+50,2000,0.828866
+50,2000,0.819476
+50,2000,0.824399
+50,2000,0.823633
+50,3000,1.238253
+50,3000,1.226816
+50,3000,1.230688
+50,3000,1.250599
+50,3000,1.234281
+50,3000,1.234684
+50,3000,1.240600
+50,3000,1.238163
+50,3000,1.234140
+50,3000,1.232856
+50,3000,1.244195
+50,3000,1.231665
+50,3000,1.221659
+50,3000,1.224991
+50,3000,1.239801
+50,3000,1.238316
+50,3000,1.229879
+50,3000,1.229557
+50,3000,1.229221
+50,3000,1.235814
+50,3000,1.238762
+50,3000,1.237041
+50,3000,1.237969
+50,3000,1.241813
+50,3000,1.232627
+50,3000,1.234045
+50,3000,1.240725
+50,3000,1.229908
+50,3000,1.231850
+50,3000,1.232701
+50,4000,1.647538
+50,4000,1.659367
+50,4000,1.667256
+50,4000,1.658859
+50,4000,1.650957
+50,4000,1.646983
+50,4000,1.654518
+50,4000,1.649822
+50,4000,1.640656
+50,4000,1.655739
+50,4000,1.654088
+50,4000,1.635670
+50,4000,1.658457
+50,4000,1.656942
+50,4000,1.653950
+50,4000,1.652417
+50,4000,1.640775
+50,4000,1.663125
+50,4000,1.651154
+50,4000,1.655769
+50,4000,1.662362
+50,4000,1.651525
+50,4000,1.659280
+50,4000,1.648732
+50,4000,1.670838
+50,4000,1.661154
+50,4000,1.652715
+50,4000,1.640513
+50,4000,1.646641
+50,4000,1.642237
+50,5000,2.051289
+50,5000,2.074298
+50,5000,2.060147
+50,5000,2.054758
+50,5000,2.064169
+50,5000,2.050377
+50,5000,2.055490
+50,5000,2.049589
+50,5000,2.046767
+50,5000,2.057698
+50,5000,2.071951
+50,5000,2.071159
+50,5000,2.064087
+50,5000,2.056423
+50,5000,2.074871
+50,5000,2.068740
+50,5000,2.060971
+50,5000,2.065395
+50,5000,2.066927
+50,5000,2.059953
+50,5000,2.063475
+50,5000,2.060882
+50,5000,2.058843
+50,5000,2.052995
+50,5000,2.051428
+50,5000,2.069262
+50,5000,2.059969
+50,5000,2.046605
+50,5000,2.052894
+50,5000,2.055174
+50,6000,2.456387
+50,6000,2.461467
+50,6000,2.475233
+50,6000,2.462017
+50,6000,2.469544
+50,6000,2.477926
+50,6000,2.464266
+50,6000,2.458393
+50,6000,2.472571
+50,6000,2.465324
+50,6000,2.475699
+50,6000,2.472717
+50,6000,2.457230
+50,6000,2.464778
+50,6000,2.461053
+50,6000,2.459648
+50,6000,2.463202
+50,6000,2.460267
+50,6000,2.466516
+50,6000,2.473530
+50,6000,2.476194
+50,6000,2.464519
+50,6000,2.490840
+50,6000,2.493194
+50,6000,2.478348
+50,6000,2.470291
+50,6000,2.484691
+50,6000,2.521795
+50,6000,2.510559
+50,6000,2.530369
+50,7000,2.923042
+50,7000,2.923903
+50,7000,2.905395
+50,7000,2.933797
+50,7000,2.910399
+50,7000,2.903490
+50,7000,2.915326
+50,7000,2.882123
+50,7000,2.878445
+50,7000,2.894825
+50,7000,2.877606
+50,7000,2.877753
+50,7000,2.875891
+50,7000,2.877007
+50,7000,2.879225
+50,7000,2.889013
+50,7000,2.899183
+50,7000,2.875693
+50,7000,2.877472
+50,7000,2.874531
+50,7000,2.870418
+50,7000,2.877495
+50,7000,2.880966
+50,7000,2.879856
+50,7000,2.893249
+50,7000,2.877708
+50,7000,2.886265
+50,7000,2.878319
+50,7000,2.889440
+50,7000,2.897111
+50,8000,2.865821
+50,8000,3.237318
+50,8000,3.298899
+50,8000,3.114794
+50,8000,3.229657
+50,8000,3.125836
+50,8000,3.131224
+50,8000,3.032834
+50,8000,3.166453
+50,8000,3.155561
+50,8000,3.338886
+50,8000,3.277238
+50,8000,3.296825
+50,8000,3.298785
+50,8000,3.287174
+50,8000,3.277198
+50,8000,3.287031
+50,8000,3.190379
+50,8000,3.286186
+50,8000,2.860236
+50,8000,3.176797
+50,8000,3.078817
+50,8000,3.307006
+50,8000,3.283527
+50,8000,3.266752
+50,8000,3.286371
+50,8000,3.305972
+50,8000,3.302410
+50,8000,3.292865
+50,8000,3.281414
+50,9000,3.171008
+50,9000,3.402022
+50,9000,3.262845
+50,9000,3.223479
+50,9000,3.237959
+50,9000,3.191074
+50,9000,3.241073
+50,9000,3.123153
+50,9000,3.084255
+50,9000,3.130498
+50,9000,3.537386
+50,9000,2.984681
+50,9000,3.298921
+50,9000,3.221416
+50,9000,3.251788
+50,9000,3.270872
+50,9000,3.315059
+50,9000,3.215231
+50,9000,3.432783
+50,9000,3.076631
+50,9000,3.243620
+50,9000,3.217956
+50,9000,3.342917
+50,9000,3.282670
+50,9000,3.330399
+50,9000,3.471934
+50,9000,3.257392
+50,9000,3.127935
+50,9000,3.228272
+50,9000,3.347681
+50,10000,3.051096
+50,10000,3.465899
+50,10000,3.344708
+50,10000,3.296866
+50,10000,3.088829
+50,10000,3.166260
+50,10000,3.146425
+50,10000,3.261283
+50,10000,3.355756
+50,10000,3.047335
+50,10000,3.219067
+50,10000,3.212520
+50,10000,2.983151
+50,10000,3.289644
+50,10000,3.379321
+50,10000,3.376611
+50,10000,3.254133
+50,10000,3.253867
+50,10000,3.096482
+50,10000,3.330803
+50,10000,3.268429
+50,10000,3.362719
+50,10000,3.210189
+50,10000,3.058769
+50,10000,3.524532
+50,10000,3.210192
+50,10000,3.154602
+50,10000,3.224921
+50,10000,3.428769
+50,10000,3.321716
 50,100,0.025746,Ofast
 50,100,0.025973,Ofast
 50,100,0.026093,Ofast
@@ -479,179 +1049,179 @@ Dimension,Power,Time,Optimization
 50,7000,1.786951,Ofast
 50,7000,1.787938,Ofast
 50,7000,1.787600,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.044631,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.063097,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.060083,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.018973,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.047053,Ofast
-All entries in matrix are NaN-like
+
 50,8000,1.998887,Ofast
-All entries in matrix are NaN-like
+
 50,8000,1.986974,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.028274,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.037478,Ofast
 50,8000,2.041300,Ofast
-All entries in matrix are NaN-like
+
 50,8000,1.972656,Ofast
 50,8000,2.044169,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.037597,Ofast
-All entries in matrix are NaN-like
+
 50,8000,1.947480,Ofast
 50,8000,2.041523,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.032233,Ofast
 50,8000,2.043198,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.036359,Ofast
 50,8000,2.042915,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.048200,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.015137,Ofast
-All entries in matrix are NaN-like
+
 50,8000,1.961035,Ofast
-All entries in matrix are NaN-like
+
 50,8000,1.933370,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.046999,Ofast
 50,8000,2.045281,Ofast
-All entries in matrix are NaN-like
+
 50,8000,1.996906,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.113045,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.066210,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.079986,Ofast
-All entries in matrix are NaN-like
+
 50,8000,2.071388,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.190662,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.062986,Ofast
-All entries in matrix are NaN-like
+
 50,9000,1.919318,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.057963,Ofast
-All entries in matrix are NaN-like
+
 50,9000,1.950900,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.001211,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.107139,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.008244,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.058897,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.002504,Ofast
-All entries in matrix are NaN-like
+
 50,9000,1.976729,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.128295,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.023347,Ofast
-All entries in matrix are NaN-like
+
 50,9000,1.880050,Ofast
-All entries in matrix are NaN-like
+
 50,9000,1.980826,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.092382,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.139867,Ofast
-All entries in matrix are NaN-like
+
 50,9000,1.968061,Ofast
-All entries in matrix are NaN-like
+
 50,9000,1.958943,Ofast
-All entries in matrix are NaN-like
+
 50,9000,1.884697,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.017074,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.077731,Ofast
-All entries in matrix are NaN-like
+
 50,9000,1.939114,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.049401,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.100585,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.088533,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.095358,Ofast
-All entries in matrix are NaN-like
+
 50,9000,1.929423,Ofast
-All entries in matrix are NaN-like
+
 50,9000,1.938732,Ofast
-All entries in matrix are NaN-like
+
 50,9000,2.013065,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.056817,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.177319,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.129078,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.062522,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.064339,Ofast
-All entries in matrix are NaN-like
+
 50,10000,1.983070,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.017882,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.044975,Ofast
-All entries in matrix are NaN-like
+
 50,10000,1.911322,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.118450,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.040853,Ofast
-All entries in matrix are NaN-like
+
 50,10000,1.912458,Ofast
-All entries in matrix are NaN-like
+
 50,10000,1.995995,Ofast
-All entries in matrix are NaN-like
+
 50,10000,1.962697,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.036083,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.002854,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.038508,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.120821,Ofast
-All entries in matrix are NaN-like
+
 50,10000,1.958701,Ofast
-All entries in matrix are NaN-like
+
 50,10000,1.987998,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.073604,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.084494,Ofast
-All entries in matrix are NaN-like
+
 50,10000,1.846334,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.071280,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.047609,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.065631,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.041565,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.041796,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.056383,Ofast
-All entries in matrix are NaN-like
+
 50,10000,2.071933,Ofast
 50,100,0.026196,O3
 50,100,0.026255,O3
@@ -1133,177 +1703,177 @@ All entries in matrix are NaN-like
 50,7000,1.790379,O3
 50,7000,1.790034,O3
 50,7000,1.787065,O3
-All entries in matrix are NaN-like
+
 50,8000,1.957522,O3
-All entries in matrix are NaN-like
+
 50,8000,1.969127,O3
-All entries in matrix are NaN-like
+
 50,8000,2.066474,O3
 50,8000,2.043747,O3
-All entries in matrix are NaN-like
+
 50,8000,1.959010,O3
-All entries in matrix are NaN-like
+
 50,8000,2.074426,O3
 50,8000,2.043486,O3
-All entries in matrix are NaN-like
+
 50,8000,2.063015,O3
 50,8000,2.046102,O3
-All entries in matrix are NaN-like
+
 50,8000,1.938083,O3
-All entries in matrix are NaN-like
+
 50,8000,1.981566,O3
-All entries in matrix are NaN-like
+
 50,8000,1.984148,O3
-All entries in matrix are NaN-like
+
 50,8000,1.943798,O3
-All entries in matrix are NaN-like
+
 50,8000,2.040395,O3
 50,8000,2.044163,O3
-All entries in matrix are NaN-like
+
 50,8000,2.068311,O3
-All entries in matrix are NaN-like
+
 50,8000,1.997171,O3
-All entries in matrix are NaN-like
+
 50,8000,1.988252,O3
-All entries in matrix are NaN-like
+
 50,8000,2.073856,O3
-All entries in matrix are NaN-like
+
 50,8000,1.908572,O3
 50,8000,2.041602,O3
-All entries in matrix are NaN-like
+
 50,8000,2.009091,O3
-All entries in matrix are NaN-like
+
 50,8000,2.077314,O3
-All entries in matrix are NaN-like
+
 50,8000,1.932722,O3
 50,8000,2.044681,O3
-All entries in matrix are NaN-like
+
 50,8000,2.081894,O3
 50,8000,2.044325,O3
-All entries in matrix are NaN-like
+
 50,8000,2.039775,O3
 50,8000,2.045874,O3
-All entries in matrix are NaN-like
+
 50,8000,1.992046,O3
-All entries in matrix are NaN-like
+
 50,9000,2.100112,O3
-All entries in matrix are NaN-like
+
 50,9000,1.972434,O3
-All entries in matrix are NaN-like
+
 50,9000,2.050997,O3
-All entries in matrix are NaN-like
+
 50,9000,2.049838,O3
-All entries in matrix are NaN-like
+
 50,9000,2.162233,O3
-All entries in matrix are NaN-like
+
 50,9000,1.992691,O3
-All entries in matrix are NaN-like
+
 50,9000,2.092665,O3
-All entries in matrix are NaN-like
+
 50,9000,2.019125,O3
-All entries in matrix are NaN-like
+
 50,9000,2.131863,O3
-All entries in matrix are NaN-like
+
 50,9000,1.979920,O3
-All entries in matrix are NaN-like
+
 50,9000,1.960175,O3
-All entries in matrix are NaN-like
+
 50,9000,2.045099,O3
-All entries in matrix are NaN-like
+
 50,9000,1.773780,O3
-All entries in matrix are NaN-like
+
 50,9000,2.101760,O3
-All entries in matrix are NaN-like
+
 50,9000,2.188984,O3
-All entries in matrix are NaN-like
+
 50,9000,1.995367,O3
-All entries in matrix are NaN-like
+
 50,9000,2.022637,O3
-All entries in matrix are NaN-like
+
 50,9000,2.104233,O3
-All entries in matrix are NaN-like
+
 50,9000,2.041750,O3
-All entries in matrix are NaN-like
+
 50,9000,2.052422,O3
-All entries in matrix are NaN-like
+
 50,9000,2.104847,O3
-All entries in matrix are NaN-like
+
 50,9000,2.045990,O3
-All entries in matrix are NaN-like
+
 50,9000,2.007230,O3
-All entries in matrix are NaN-like
+
 50,9000,2.037596,O3
-All entries in matrix are NaN-like
+
 50,9000,2.051514,O3
-All entries in matrix are NaN-like
+
 50,9000,1.942720,O3
-All entries in matrix are NaN-like
+
 50,9000,1.971967,O3
-All entries in matrix are NaN-like
+
 50,9000,2.039420,O3
-All entries in matrix are NaN-like
+
 50,9000,2.083268,O3
-All entries in matrix are NaN-like
+
 50,9000,1.976988,O3
-All entries in matrix are NaN-like
+
 50,10000,2.157127,O3
-All entries in matrix are NaN-like
+
 50,10000,2.122680,O3
-All entries in matrix are NaN-like
+
 50,10000,2.056709,O3
-All entries in matrix are NaN-like
+
 50,10000,2.019263,O3
-All entries in matrix are NaN-like
+
 50,10000,2.050610,O3
-All entries in matrix are NaN-like
+
 50,10000,1.899734,O3
-All entries in matrix are NaN-like
+
 50,10000,1.873719,O3
-All entries in matrix are NaN-like
+
 50,10000,1.952184,O3
-All entries in matrix are NaN-like
+
 50,10000,2.067113,O3
-All entries in matrix are NaN-like
+
 50,10000,2.041153,O3
-All entries in matrix are NaN-like
+
 50,10000,1.888799,O3
-All entries in matrix are NaN-like
+
 50,10000,2.056798,O3
-All entries in matrix are NaN-like
+
 50,10000,2.046874,O3
-All entries in matrix are NaN-like
+
 50,10000,1.990043,O3
-All entries in matrix are NaN-like
+
 50,10000,1.996495,O3
-All entries in matrix are NaN-like
+
 50,10000,2.095300,O3
-All entries in matrix are NaN-like
+
 50,10000,2.066735,O3
-All entries in matrix are NaN-like
+
 50,10000,1.983462,O3
-All entries in matrix are NaN-like
+
 50,10000,2.002237,O3
-All entries in matrix are NaN-like
+
 50,10000,2.167922,O3
-All entries in matrix are NaN-like
+
 50,10000,2.096740,O3
-All entries in matrix are NaN-like
+
 50,10000,2.100755,O3
-All entries in matrix are NaN-like
+
 50,10000,2.105392,O3
-All entries in matrix are NaN-like
+
 50,10000,2.019263,O3
-All entries in matrix are NaN-like
+
 50,10000,2.053774,O3
-All entries in matrix are NaN-like
+
 50,10000,2.075938,O3
-All entries in matrix are NaN-like
+
 50,10000,2.025972,O3
-All entries in matrix are NaN-like
+
 50,10000,2.038765,O3
-All entries in matrix are NaN-like
+
 50,10000,1.971533,O3
-All entries in matrix are NaN-like
+
 50,10000,2.043924,O3
 50,100,0.025619,O2
 50,100,0.026230,O2
@@ -1785,174 +2355,174 @@ All entries in matrix are NaN-like
 50,7000,1.769659,O2
 50,7000,1.782538,O2
 50,7000,1.798929,O2
-All entries in matrix are NaN-like
+
 50,8000,1.927757,O2
-All entries in matrix are NaN-like
+
 50,8000,2.017582,O2
-All entries in matrix are NaN-like
+
 50,8000,1.957302,O2
 50,8000,2.022452,O2
 50,8000,2.022512,O2
-All entries in matrix are NaN-like
+
 50,8000,1.971752,O2
-All entries in matrix are NaN-like
+
 50,8000,2.012270,O2
 50,8000,2.022962,O2
 50,8000,2.022876,O2
-All entries in matrix are NaN-like
+
 50,8000,2.023724,O2
-All entries in matrix are NaN-like
+
 50,8000,2.015080,O2
-All entries in matrix are NaN-like
+
 50,8000,1.849090,O2
-All entries in matrix are NaN-like
+
 50,8000,1.966787,O2
-All entries in matrix are NaN-like
+
 50,8000,2.021368,O2
 50,8000,1.998881,O2
-All entries in matrix are NaN-like
+
 50,8000,2.056069,O2
-All entries in matrix are NaN-like
+
 50,8000,2.077146,O2
 50,8000,2.024300,O2
 50,8000,2.024318,O2
-All entries in matrix are NaN-like
+
 50,8000,1.976519,O2
-All entries in matrix are NaN-like
+
 50,8000,1.981741,O2
-All entries in matrix are NaN-like
+
 50,8000,2.055289,O2
 50,8000,2.024606,O2
 50,8000,2.026882,O2
-All entries in matrix are NaN-like
+
 50,8000,2.065202,O2
-All entries in matrix are NaN-like
+
 50,8000,1.947863,O2
 50,8000,2.024618,O2
 50,8000,2.034923,O2
-All entries in matrix are NaN-like
+
 50,8000,1.838733,O2
-All entries in matrix are NaN-like
+
 50,8000,1.874429,O2
-All entries in matrix are NaN-like
+
 50,9000,1.960483,O2
-All entries in matrix are NaN-like
+
 50,9000,2.056728,O2
-All entries in matrix are NaN-like
+
 50,9000,2.070191,O2
-All entries in matrix are NaN-like
+
 50,9000,2.010642,O2
-All entries in matrix are NaN-like
+
 50,9000,2.060400,O2
-All entries in matrix are NaN-like
+
 50,9000,1.967106,O2
-All entries in matrix are NaN-like
+
 50,9000,2.078055,O2
-All entries in matrix are NaN-like
+
 50,9000,1.980622,O2
-All entries in matrix are NaN-like
+
 50,9000,2.096056,O2
-All entries in matrix are NaN-like
+
 50,9000,1.979262,O2
-All entries in matrix are NaN-like
+
 50,9000,1.877649,O2
-All entries in matrix are NaN-like
+
 50,9000,2.032864,O2
-All entries in matrix are NaN-like
+
 50,9000,1.954829,O2
-All entries in matrix are NaN-like
+
 50,9000,2.015756,O2
-All entries in matrix are NaN-like
+
 50,9000,1.989297,O2
-All entries in matrix are NaN-like
+
 50,9000,2.014176,O2
-All entries in matrix are NaN-like
+
 50,9000,1.994932,O2
-All entries in matrix are NaN-like
+
 50,9000,2.076933,O2
-All entries in matrix are NaN-like
+
 50,9000,2.026807,O2
-All entries in matrix are NaN-like
+
 50,9000,2.102720,O2
-All entries in matrix are NaN-like
+
 50,9000,2.084948,O2
-All entries in matrix are NaN-like
+
 50,9000,2.119569,O2
-All entries in matrix are NaN-like
+
 50,9000,2.113107,O2
-All entries in matrix are NaN-like
+
 50,9000,2.109257,O2
-All entries in matrix are NaN-like
+
 50,9000,1.956166,O2
-All entries in matrix are NaN-like
+
 50,9000,2.053322,O2
-All entries in matrix are NaN-like
+
 50,9000,1.982345,O2
-All entries in matrix are NaN-like
+
 50,9000,2.047143,O2
-All entries in matrix are NaN-like
+
 50,9000,1.966932,O2
-All entries in matrix are NaN-like
+
 50,9000,1.964220,O2
-All entries in matrix are NaN-like
+
 50,10000,1.986989,O2
-All entries in matrix are NaN-like
+
 50,10000,2.107598,O2
-All entries in matrix are NaN-like
+
 50,10000,2.079070,O2
-All entries in matrix are NaN-like
+
 50,10000,1.987912,O2
-All entries in matrix are NaN-like
+
 50,10000,1.850332,O2
-All entries in matrix are NaN-like
+
 50,10000,2.041279,O2
-All entries in matrix are NaN-like
+
 50,10000,2.151459,O2
-All entries in matrix are NaN-like
+
 50,10000,1.984894,O2
-All entries in matrix are NaN-like
+
 50,10000,1.928321,O2
-All entries in matrix are NaN-like
+
 50,10000,2.104431,O2
-All entries in matrix are NaN-like
+
 50,10000,2.009405,O2
-All entries in matrix are NaN-like
+
 50,10000,1.991119,O2
-All entries in matrix are NaN-like
+
 50,10000,1.991433,O2
-All entries in matrix are NaN-like
+
 50,10000,2.010887,O2
-All entries in matrix are NaN-like
+
 50,10000,1.878317,O2
-All entries in matrix are NaN-like
+
 50,10000,2.013421,O2
-All entries in matrix are NaN-like
+
 50,10000,2.022671,O2
-All entries in matrix are NaN-like
+
 50,10000,2.056202,O2
-All entries in matrix are NaN-like
+
 50,10000,2.007285,O2
-All entries in matrix are NaN-like
+
 50,10000,2.098960,O2
-All entries in matrix are NaN-like
+
 50,10000,2.126377,O2
-All entries in matrix are NaN-like
+
 50,10000,1.944047,O2
-All entries in matrix are NaN-like
+
 50,10000,1.825630,O2
-All entries in matrix are NaN-like
+
 50,10000,2.101995,O2
-All entries in matrix are NaN-like
+
 50,10000,2.172690,O2
-All entries in matrix are NaN-like
+
 50,10000,2.102921,O2
-All entries in matrix are NaN-like
+
 50,10000,1.928576,O2
-All entries in matrix are NaN-like
+
 50,10000,1.895164,O2
-All entries in matrix are NaN-like
+
 50,10000,1.994011,O2
-All entries in matrix are NaN-like
+
 50,10000,1.888625,O2
 50,100,0.028412,O1
 50,100,0.028272,O1
@@ -2405,7 +2975,7 @@ All entries in matrix are NaN-like
 50,6000,1.661762,O1
 50,6000,1.676786,O1
 50,7000,1.943155,O1
-All entries in matrix are NaN-like
+
 50,7000,2.000193,O1
 50,7000,1.946530,O1
 50,7000,1.949813,O1
@@ -2435,179 +3005,179 @@ All entries in matrix are NaN-like
 50,7000,1.941052,O1
 50,7000,1.955904,O1
 50,7000,1.958014,O1
-All entries in matrix are NaN-like
+
 50,8000,2.086209,O1
-All entries in matrix are NaN-like
+
 50,8000,2.139732,O1
 50,8000,2.215567,O1
-All entries in matrix are NaN-like
+
 50,8000,1.953499,O1
-All entries in matrix are NaN-like
+
 50,8000,2.305890,O1
-All entries in matrix are NaN-like
+
 50,8000,2.072146,O1
-All entries in matrix are NaN-like
+
 50,8000,2.153396,O1
 50,8000,2.224452,O1
-All entries in matrix are NaN-like
+
 50,8000,2.239520,O1
-All entries in matrix are NaN-like
+
 50,8000,2.270127,O1
 50,8000,2.229970,O1
-All entries in matrix are NaN-like
+
 50,8000,2.266710,O1
 50,8000,2.222226,O1
-All entries in matrix are NaN-like
+
 50,8000,2.244968,O1
-All entries in matrix are NaN-like
+
 50,8000,2.100706,O1
-All entries in matrix are NaN-like
+
 50,8000,2.081410,O1
 50,8000,2.244237,O1
-All entries in matrix are NaN-like
+
 50,8000,2.077600,O1
-All entries in matrix are NaN-like
+
 50,8000,2.274352,O1
-All entries in matrix are NaN-like
+
 50,8000,2.251088,O1
-All entries in matrix are NaN-like
+
 50,8000,2.069439,O1
-All entries in matrix are NaN-like
+
 50,8000,2.162788,O1
-All entries in matrix are NaN-like
+
 50,8000,2.264179,O1
-All entries in matrix are NaN-like
+
 50,8000,2.204435,O1
 50,8000,2.222611,O1
-All entries in matrix are NaN-like
+
 50,8000,2.168126,O1
-All entries in matrix are NaN-like
+
 50,8000,2.239009,O1
-All entries in matrix are NaN-like
+
 50,8000,2.276825,O1
-All entries in matrix are NaN-like
+
 50,8000,2.181189,O1
-All entries in matrix are NaN-like
+
 50,8000,2.271461,O1
-All entries in matrix are NaN-like
+
 50,9000,2.166499,O1
-All entries in matrix are NaN-like
+
 50,9000,2.313745,O1
-All entries in matrix are NaN-like
+
 50,9000,2.195366,O1
-All entries in matrix are NaN-like
+
 50,9000,2.295938,O1
-All entries in matrix are NaN-like
+
 50,9000,2.243408,O1
-All entries in matrix are NaN-like
+
 50,9000,2.080314,O1
-All entries in matrix are NaN-like
+
 50,9000,2.201600,O1
-All entries in matrix are NaN-like
+
 50,9000,2.337289,O1
-All entries in matrix are NaN-like
+
 50,9000,2.104095,O1
-All entries in matrix are NaN-like
+
 50,9000,2.266910,O1
-All entries in matrix are NaN-like
+
 50,9000,2.368090,O1
-All entries in matrix are NaN-like
+
 50,9000,2.133021,O1
-All entries in matrix are NaN-like
+
 50,9000,2.202838,O1
-All entries in matrix are NaN-like
+
 50,9000,2.177417,O1
-All entries in matrix are NaN-like
+
 50,9000,2.214393,O1
-All entries in matrix are NaN-like
+
 50,9000,2.249613,O1
-All entries in matrix are NaN-like
+
 50,9000,2.272063,O1
-All entries in matrix are NaN-like
+
 50,9000,2.049686,O1
-All entries in matrix are NaN-like
+
 50,9000,2.199801,O1
-All entries in matrix are NaN-like
+
 50,9000,2.314430,O1
-All entries in matrix are NaN-like
+
 50,9000,2.233546,O1
-All entries in matrix are NaN-like
+
 50,9000,2.231600,O1
-All entries in matrix are NaN-like
+
 50,9000,2.116571,O1
-All entries in matrix are NaN-like
+
 50,9000,2.268488,O1
-All entries in matrix are NaN-like
+
 50,9000,2.168031,O1
-All entries in matrix are NaN-like
+
 50,9000,2.257238,O1
-All entries in matrix are NaN-like
+
 50,9000,2.226641,O1
-All entries in matrix are NaN-like
+
 50,9000,2.111925,O1
-All entries in matrix are NaN-like
+
 50,9000,2.333248,O1
-All entries in matrix are NaN-like
+
 50,9000,2.275743,O1
-All entries in matrix are NaN-like
+
 50,10000,2.210211,O1
-All entries in matrix are NaN-like
+
 50,10000,2.126165,O1
-All entries in matrix are NaN-like
+
 50,10000,2.050286,O1
-All entries in matrix are NaN-like
+
 50,10000,2.256205,O1
-All entries in matrix are NaN-like
+
 50,10000,2.182422,O1
-All entries in matrix are NaN-like
+
 50,10000,2.196909,O1
-All entries in matrix are NaN-like
+
 50,10000,2.058459,O1
-All entries in matrix are NaN-like
+
 50,10000,2.342925,O1
-All entries in matrix are NaN-like
+
 50,10000,2.246197,O1
-All entries in matrix are NaN-like
+
 50,10000,2.339185,O1
-All entries in matrix are NaN-like
+
 50,10000,2.292808,O1
-All entries in matrix are NaN-like
+
 50,10000,2.235829,O1
-All entries in matrix are NaN-like
+
 50,10000,2.289751,O1
-All entries in matrix are NaN-like
+
 50,10000,2.139842,O1
-All entries in matrix are NaN-like
+
 50,10000,2.082478,O1
-All entries in matrix are NaN-like
+
 50,10000,2.180555,O1
-All entries in matrix are NaN-like
+
 50,10000,2.286642,O1
-All entries in matrix are NaN-like
+
 50,10000,2.241098,O1
-All entries in matrix are NaN-like
+
 50,10000,2.247009,O1
-All entries in matrix are NaN-like
+
 50,10000,2.296116,O1
-All entries in matrix are NaN-like
+
 50,10000,2.245345,O1
-All entries in matrix are NaN-like
+
 50,10000,2.144040,O1
-All entries in matrix are NaN-like
+
 50,10000,2.103428,O1
-All entries in matrix are NaN-like
+
 50,10000,2.282374,O1
-All entries in matrix are NaN-like
+
 50,10000,2.249470,O1
-All entries in matrix are NaN-like
+
 50,10000,2.121818,O1
-All entries in matrix are NaN-like
+
 50,10000,2.256282,O1
-All entries in matrix are NaN-like
+
 50,10000,2.257239,O1
-All entries in matrix are NaN-like
+
 50,10000,2.072464,O1
-All entries in matrix are NaN-like
+
 50,10000,2.287670,O1
 50,100,0.008130,Flattened Register O3
 50,100,0.008239,Flattened Register O3
@@ -3090,173 +3660,173 @@ All entries in matrix are NaN-like
 50,7000,0.569632,Flattened Register O3
 50,7000,0.570622,Flattened Register O3
 50,8000,0.652330,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.702917,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.654897,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.656686,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.668679,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.654244,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.655117,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.669887,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.675397,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.674235,Flattened Register O3
 50,8000,0.651324,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.680815,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.678545,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.667295,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.699340,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.699542,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.716327,Flattened Register O3
 50,8000,0.652403,Flattened Register O3
 50,8000,0.652195,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.664052,Flattened Register O3
 50,8000,0.654956,Flattened Register O3
 50,8000,0.652272,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.676395,Flattened Register O3
 50,8000,0.652170,Flattened Register O3
 50,8000,0.651589,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.693819,Flattened Register O3
 50,8000,0.652081,Flattened Register O3
 50,8000,0.653135,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,8000,0.677991,Flattened Register O3
 50,8000,0.652407,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.706223,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.728917,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.703930,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.703344,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.664615,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.712183,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.701318,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.700625,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.672929,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.719549,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.724054,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.708118,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.719019,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.720603,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.652128,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.701536,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.652802,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.652646,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.679587,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.712257,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.711817,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.725717,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.719322,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.718227,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.682773,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.685666,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.685408,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.705364,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.703882,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,9000,0.666966,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.661678,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.663475,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.736226,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.733327,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.672436,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.668123,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.673443,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.662172,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.645133,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.643654,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.645817,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.711842,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.708384,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.689424,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.693416,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.692398,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.756152,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.703613,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.693977,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.697455,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.706588,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.713478,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.711493,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.667059,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.677368,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.678395,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.712849,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.658812,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.704868,Flattened Register O3
-All entries in matrix are NaN-like
+
 50,10000,0.708401,Flattened Register O3
 50,100,0.013271,Flattened Register
 50,100,0.014206,Flattened Register
@@ -3738,177 +4308,2140 @@ All entries in matrix are NaN-like
 50,7000,0.956786,Flattened Register
 50,7000,0.956011,Flattened Register
 50,7000,0.941706,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.099565,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.065581,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.102296,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.077122,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.039353,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.097859,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.102772,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.077173,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.015327,Flattened Register
 50,8000,1.081018,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.020580,Flattened Register
 50,8000,1.079963,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.050488,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.103909,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.093093,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.092551,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.103725,Flattened Register
 50,8000,1.088630,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.091429,Flattened Register
 50,8000,1.100737,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.101591,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.107370,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.118542,Flattened Register
 50,8000,1.076733,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.009473,Flattened Register
 50,8000,1.087427,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.134926,Flattened Register
 50,8000,1.076229,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.116435,Flattened Register
-All entries in matrix are NaN-like
+
 50,8000,1.102322,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.085831,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.137705,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.077828,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.133342,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.127851,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.137449,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.118563,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.178622,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.084646,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.099728,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.081902,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.118024,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.101538,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.096162,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.126387,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.103479,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.140116,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.039064,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.150926,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.106267,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.054609,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.174558,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.135609,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.158405,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.108363,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.134165,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.024715,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.058534,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.078415,Flattened Register
-All entries in matrix are NaN-like
+
 50,9000,1.131891,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.135278,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.057898,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.126426,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.004862,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.103011,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.064636,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.134280,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.113403,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.125336,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.139357,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.107156,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.092143,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.155738,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.136239,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.102786,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.022490,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.081626,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.033944,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.110780,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.087665,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.067498,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.155262,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.101541,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.092486,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.080804,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.171048,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.113816,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.132865,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.045313,Flattened Register
-All entries in matrix are NaN-like
+
 50,10000,1.138951,Flattened Register
+50,100,0.028206,Os
+50,100,0.028066,Os
+50,100,0.028525,Os
+50,100,0.028173,Os
+50,100,0.028346,Os
+50,100,0.028114,Os
+50,100,0.028261,Os
+50,100,0.028536,Os
+50,100,0.028522,Os
+50,100,0.028844,Os
+50,100,0.028475,Os
+50,100,0.028647,Os
+50,100,0.028162,Os
+50,100,0.027852,Os
+50,100,0.028161,Os
+50,100,0.028619,Os
+50,100,0.028255,Os
+50,100,0.028261,Os
+50,100,0.028267,Os
+50,100,0.028636,Os
+50,100,0.028369,Os
+50,100,0.028487,Os
+50,100,0.028796,Os
+50,100,0.028532,Os
+50,100,0.028764,Os
+50,100,0.029532,Os
+50,100,0.028481,Os
+50,100,0.028454,Os
+50,100,0.028386,Os
+50,100,0.028371,Os
+50,200,0.056969,Os
+50,200,0.056371,Os
+50,200,0.056144,Os
+50,200,0.056287,Os
+50,200,0.056193,Os
+50,200,0.057132,Os
+50,200,0.057202,Os
+50,200,0.056195,Os
+50,200,0.056525,Os
+50,200,0.056480,Os
+50,200,0.057066,Os
+50,200,0.056229,Os
+50,200,0.056723,Os
+50,200,0.057030,Os
+50,200,0.057012,Os
+50,200,0.056305,Os
+50,200,0.056350,Os
+50,200,0.056584,Os
+50,200,0.056506,Os
+50,200,0.056599,Os
+50,200,0.056933,Os
+50,200,0.055879,Os
+50,200,0.056527,Os
+50,200,0.056364,Os
+50,200,0.056215,Os
+50,200,0.056097,Os
+50,200,0.056261,Os
+50,200,0.056478,Os
+50,200,0.056460,Os
+50,200,0.056540,Os
+50,300,0.084553,Os
+50,300,0.084249,Os
+50,300,0.084278,Os
+50,300,0.083697,Os
+50,300,0.084557,Os
+50,300,0.085411,Os
+50,300,0.083775,Os
+50,300,0.084051,Os
+50,300,0.084082,Os
+50,300,0.083712,Os
+50,300,0.084371,Os
+50,300,0.084231,Os
+50,300,0.084312,Os
+50,300,0.084095,Os
+50,300,0.084557,Os
+50,300,0.084829,Os
+50,300,0.084341,Os
+50,300,0.084169,Os
+50,300,0.083786,Os
+50,300,0.084289,Os
+50,300,0.084236,Os
+50,300,0.084442,Os
+50,300,0.084482,Os
+50,300,0.084118,Os
+50,300,0.084254,Os
+50,300,0.084181,Os
+50,300,0.085648,Os
+50,300,0.084254,Os
+50,300,0.084328,Os
+50,300,0.084315,Os
+50,400,0.111885,Os
+50,400,0.111648,Os
+50,400,0.112664,Os
+50,400,0.111999,Os
+50,400,0.111647,Os
+50,400,0.111992,Os
+50,400,0.111713,Os
+50,400,0.111396,Os
+50,400,0.111669,Os
+50,400,0.111692,Os
+50,400,0.111508,Os
+50,400,0.111671,Os
+50,400,0.112204,Os
+50,400,0.112652,Os
+50,400,0.110804,Os
+50,400,0.111132,Os
+50,400,0.111097,Os
+50,400,0.112023,Os
+50,400,0.111428,Os
+50,400,0.111633,Os
+50,400,0.111957,Os
+50,400,0.111921,Os
+50,400,0.111672,Os
+50,400,0.111611,Os
+50,400,0.113062,Os
+50,400,0.111883,Os
+50,400,0.111784,Os
+50,400,0.112283,Os
+50,400,0.111827,Os
+50,400,0.112906,Os
+50,500,0.139724,Os
+50,500,0.139950,Os
+50,500,0.139623,Os
+50,500,0.139628,Os
+50,500,0.139541,Os
+50,500,0.139663,Os
+50,500,0.140031,Os
+50,500,0.140561,Os
+50,500,0.141094,Os
+50,500,0.139379,Os
+50,500,0.139691,Os
+50,500,0.139868,Os
+50,500,0.139902,Os
+50,500,0.139366,Os
+50,500,0.138235,Os
+50,500,0.139397,Os
+50,500,0.139352,Os
+50,500,0.139723,Os
+50,500,0.139839,Os
+50,500,0.139618,Os
+50,500,0.139884,Os
+50,500,0.140862,Os
+50,500,0.140038,Os
+50,500,0.138719,Os
+50,500,0.139677,Os
+50,500,0.140361,Os
+50,500,0.139417,Os
+50,500,0.139798,Os
+50,500,0.139796,Os
+50,500,0.140073,Os
+50,600,0.168043,Os
+50,600,0.168037,Os
+50,600,0.167070,Os
+50,600,0.166926,Os
+50,600,0.167678,Os
+50,600,0.167195,Os
+50,600,0.166594,Os
+50,600,0.167631,Os
+50,600,0.166353,Os
+50,600,0.167432,Os
+50,600,0.167230,Os
+50,600,0.166910,Os
+50,600,0.166061,Os
+50,600,0.167731,Os
+50,600,0.168626,Os
+50,600,0.168056,Os
+50,600,0.167314,Os
+50,600,0.167245,Os
+50,600,0.165800,Os
+50,600,0.167712,Os
+50,600,0.167348,Os
+50,600,0.168491,Os
+50,600,0.167008,Os
+50,600,0.165943,Os
+50,600,0.167530,Os
+50,600,0.167414,Os
+50,600,0.166872,Os
+50,600,0.166911,Os
+50,600,0.167544,Os
+50,600,0.166955,Os
+50,700,0.194367,Os
+50,700,0.194907,Os
+50,700,0.195442,Os
+50,700,0.195166,Os
+50,700,0.194902,Os
+50,700,0.195046,Os
+50,700,0.193618,Os
+50,700,0.194669,Os
+50,700,0.194782,Os
+50,700,0.192526,Os
+50,700,0.193393,Os
+50,700,0.195499,Os
+50,700,0.194655,Os
+50,700,0.193972,Os
+50,700,0.195664,Os
+50,700,0.194781,Os
+50,700,0.195281,Os
+50,700,0.195620,Os
+50,700,0.193798,Os
+50,700,0.195392,Os
+50,700,0.196083,Os
+50,700,0.195081,Os
+50,700,0.194477,Os
+50,700,0.195604,Os
+50,700,0.194334,Os
+50,700,0.194705,Os
+50,700,0.195112,Os
+50,700,0.195151,Os
+50,700,0.193910,Os
+50,700,0.195854,Os
+50,800,0.222195,Os
+50,800,0.224012,Os
+50,800,0.221702,Os
+50,800,0.223002,Os
+50,800,0.222835,Os
+50,800,0.223120,Os
+50,800,0.222529,Os
+50,800,0.223360,Os
+50,800,0.222629,Os
+50,800,0.222676,Os
+50,800,0.222770,Os
+50,800,0.221957,Os
+50,800,0.222847,Os
+50,800,0.222650,Os
+50,800,0.221417,Os
+50,800,0.220687,Os
+50,800,0.222061,Os
+50,800,0.221522,Os
+50,800,0.223840,Os
+50,800,0.223877,Os
+50,800,0.224403,Os
+50,800,0.224648,Os
+50,800,0.223640,Os
+50,800,0.224405,Os
+50,800,0.221969,Os
+50,800,0.223426,Os
+50,800,0.224152,Os
+50,800,0.221653,Os
+50,800,0.222684,Os
+50,800,0.223047,Os
+50,900,0.250423,Os
+50,900,0.251211,Os
+50,900,0.250121,Os
+50,900,0.249748,Os
+50,900,0.250427,Os
+50,900,0.251214,Os
+50,900,0.250178,Os
+50,900,0.250277,Os
+50,900,0.249995,Os
+50,900,0.250513,Os
+50,900,0.249534,Os
+50,900,0.251221,Os
+50,900,0.249878,Os
+50,900,0.251218,Os
+50,900,0.248861,Os
+50,900,0.248678,Os
+50,900,0.248636,Os
+50,900,0.250613,Os
+50,900,0.251292,Os
+50,900,0.250100,Os
+50,900,0.249772,Os
+50,900,0.250734,Os
+50,900,0.250417,Os
+50,900,0.251797,Os
+50,900,0.249547,Os
+50,900,0.250526,Os
+50,900,0.250810,Os
+50,900,0.249576,Os
+50,900,0.250845,Os
+50,900,0.250481,Os
+50,1000,0.278862,Os
+50,1000,0.276402,Os
+50,1000,0.276050,Os
+50,1000,0.278133,Os
+50,1000,0.278052,Os
+50,1000,0.275995,Os
+50,1000,0.277661,Os
+50,1000,0.277341,Os
+50,1000,0.277384,Os
+50,1000,0.278873,Os
+50,1000,0.277442,Os
+50,1000,0.277981,Os
+50,1000,0.277956,Os
+50,1000,0.278531,Os
+50,1000,0.275980,Os
+50,1000,0.279568,Os
+50,1000,0.277253,Os
+50,1000,0.278621,Os
+50,1000,0.277459,Os
+50,1000,0.276810,Os
+50,1000,0.278168,Os
+50,1000,0.278232,Os
+50,1000,0.277116,Os
+50,1000,0.277253,Os
+50,1000,0.279085,Os
+50,1000,0.277289,Os
+50,1000,0.277770,Os
+50,1000,0.278030,Os
+50,1000,0.277862,Os
+50,1000,0.277533,Os
+50,2000,0.554304,Os
+50,2000,0.554112,Os
+50,2000,0.555565,Os
+50,2000,0.552324,Os
+50,2000,0.556580,Os
+50,2000,0.553315,Os
+50,2000,0.556140,Os
+50,2000,0.552513,Os
+50,2000,0.553274,Os
+50,2000,0.552455,Os
+50,2000,0.555594,Os
+50,2000,0.553974,Os
+50,2000,0.557011,Os
+50,2000,0.555359,Os
+50,2000,0.553675,Os
+50,2000,0.552898,Os
+50,2000,0.553973,Os
+50,2000,0.552702,Os
+50,2000,0.554992,Os
+50,2000,0.552204,Os
+50,2000,0.554552,Os
+50,2000,0.554566,Os
+50,2000,0.553233,Os
+50,2000,0.552670,Os
+50,2000,0.552755,Os
+50,2000,0.551238,Os
+50,2000,0.553241,Os
+50,2000,0.554148,Os
+50,2000,0.551654,Os
+50,2000,0.554022,Os
+50,3000,0.828364,Os
+50,3000,0.830662,Os
+50,3000,0.826774,Os
+50,3000,0.829958,Os
+50,3000,0.830936,Os
+50,3000,0.831294,Os
+50,3000,0.826662,Os
+50,3000,0.830268,Os
+50,3000,0.827164,Os
+50,3000,0.830289,Os
+50,3000,0.831163,Os
+50,3000,0.829538,Os
+50,3000,0.829490,Os
+50,3000,0.826866,Os
+50,3000,0.828430,Os
+50,3000,0.828065,Os
+50,3000,0.832275,Os
+50,3000,0.828086,Os
+50,3000,0.830011,Os
+50,3000,0.828135,Os
+50,3000,0.831496,Os
+50,3000,0.832427,Os
+50,3000,0.831429,Os
+50,3000,0.826863,Os
+50,3000,0.830748,Os
+50,3000,0.828715,Os
+50,3000,0.830664,Os
+50,3000,0.829120,Os
+50,3000,0.829984,Os
+50,3000,0.832115,Os
+50,4000,1.107822,Os
+50,4000,1.104310,Os
+50,4000,1.101748,Os
+50,4000,1.105361,Os
+50,4000,1.108427,Os
+50,4000,1.103157,Os
+50,4000,1.105363,Os
+50,4000,1.106922,Os
+50,4000,1.106830,Os
+50,4000,1.108734,Os
+50,4000,1.103173,Os
+50,4000,1.106007,Os
+50,4000,1.109902,Os
+50,4000,1.108424,Os
+50,4000,1.108537,Os
+50,4000,1.107572,Os
+50,4000,1.108986,Os
+50,4000,1.104688,Os
+50,4000,1.108863,Os
+50,4000,1.103695,Os
+50,4000,1.103233,Os
+50,4000,1.109275,Os
+50,4000,1.103467,Os
+50,4000,1.108740,Os
+50,4000,1.106778,Os
+50,4000,1.099005,Os
+50,4000,1.104129,Os
+50,4000,1.107014,Os
+50,4000,1.110199,Os
+50,4000,1.106685,Os
+50,5000,1.384314,Os
+50,5000,1.381829,Os
+50,5000,1.385649,Os
+50,5000,1.383646,Os
+50,5000,1.385104,Os
+50,5000,1.382543,Os
+50,5000,1.387888,Os
+50,5000,1.383218,Os
+50,5000,1.383095,Os
+50,5000,1.384436,Os
+50,5000,1.386684,Os
+50,5000,1.383647,Os
+50,5000,1.386715,Os
+50,5000,1.381833,Os
+50,5000,1.382615,Os
+50,5000,1.383853,Os
+50,5000,1.381054,Os
+50,5000,1.382969,Os
+50,5000,1.379769,Os
+50,5000,1.385363,Os
+50,5000,1.385308,Os
+50,5000,1.383927,Os
+50,5000,1.384573,Os
+50,5000,1.382647,Os
+50,5000,1.380940,Os
+50,5000,1.383259,Os
+50,5000,1.385049,Os
+50,5000,1.381872,Os
+50,5000,1.377218,Os
+50,5000,1.385372,Os
+50,6000,1.659981,Os
+50,6000,1.658828,Os
+50,6000,1.654573,Os
+50,6000,1.660324,Os
+50,6000,1.659025,Os
+50,6000,1.658012,Os
+50,6000,1.660140,Os
+50,6000,1.661392,Os
+50,6000,1.657589,Os
+50,6000,1.659168,Os
+50,6000,1.657762,Os
+50,6000,1.662054,Os
+50,6000,1.651664,Os
+50,6000,1.657292,Os
+50,6000,1.660712,Os
+50,6000,1.661074,Os
+50,6000,1.663723,Os
+50,6000,1.659696,Os
+50,6000,1.659739,Os
+50,6000,1.656390,Os
+50,6000,1.664232,Os
+50,6000,1.659166,Os
+50,6000,1.655580,Os
+50,6000,1.661756,Os
+50,6000,1.661434,Os
+50,6000,1.661984,Os
+50,6000,1.662052,Os
+50,6000,1.662794,Os
+50,6000,1.660115,Os
+50,6000,1.654477,Os
+50,7000,1.935636,Os
+50,7000,1.934414,Os
+50,7000,1.937275,Os
+50,7000,1.934204,Os
+50,7000,1.939840,Os
+50,7000,1.937036,Os
+50,7000,1.931825,Os
+50,7000,1.933555,Os
+50,7000,1.938452,Os
+50,7000,1.934387,Os
+50,7000,1.934196,Os
+50,7000,1.936990,Os
+50,7000,1.932108,Os
+50,7000,1.934616,Os
+50,7000,1.936516,Os
+50,7000,1.935027,Os
+50,7000,1.936714,Os
+50,7000,1.938314,Os
+50,7000,1.939235,Os
+50,7000,1.935951,Os
+
+50,7000,1.957578,Os
+50,7000,1.937655,Os
+50,7000,1.933466,Os
+50,7000,1.934550,Os
+50,7000,1.938896,Os
+50,7000,1.935861,Os
+50,7000,1.938812,Os
+50,7000,1.940618,Os
+50,7000,1.938793,Os
+50,7000,1.932205,Os
+
+50,8000,2.206343,Os
+
+50,8000,2.086160,Os
+
+50,8000,2.130292,Os
+
+50,8000,2.203033,Os
+50,8000,2.213737,Os
+
+50,8000,2.142493,Os
+
+50,8000,2.050662,Os
+
+50,8000,2.188772,Os
+
+50,8000,2.191302,Os
+
+50,8000,2.249576,Os
+50,8000,2.211898,Os
+
+50,8000,2.253508,Os
+
+50,8000,2.073691,Os
+
+50,8000,2.216320,Os
+
+50,8000,2.241943,Os
+
+50,8000,2.140611,Os
+
+50,8000,2.258857,Os
+
+50,8000,2.091723,Os
+
+50,8000,2.164651,Os
+50,8000,2.212487,Os
+
+50,8000,2.213821,Os
+
+50,8000,2.095149,Os
+50,8000,2.211591,Os
+
+50,8000,2.131628,Os
+50,8000,2.212405,Os
+50,8000,2.215308,Os
+
+50,8000,2.220212,Os
+50,8000,2.212572,Os
+
+50,8000,2.228873,Os
+
+50,8000,2.121479,Os
+
+50,9000,2.249763,Os
+
+50,9000,2.195172,Os
+
+50,9000,2.219415,Os
+
+50,9000,2.189108,Os
+
+50,9000,2.220496,Os
+
+50,9000,2.306134,Os
+
+50,9000,2.245849,Os
+
+50,9000,2.199558,Os
+
+50,9000,2.097885,Os
+
+50,9000,2.178517,Os
+
+50,9000,2.163359,Os
+
+50,9000,2.222636,Os
+
+50,9000,2.138013,Os
+
+50,9000,2.102522,Os
+
+50,9000,2.180833,Os
+
+50,9000,2.326910,Os
+
+50,9000,2.124629,Os
+
+50,9000,2.179272,Os
+
+50,9000,2.046930,Os
+
+50,9000,2.174930,Os
+
+50,9000,2.236376,Os
+
+50,9000,2.139816,Os
+
+50,9000,2.240036,Os
+
+50,9000,2.117516,Os
+
+50,9000,2.274045,Os
+
+50,9000,2.170213,Os
+
+50,9000,2.191195,Os
+
+50,9000,2.055084,Os
+
+50,9000,2.174205,Os
+
+50,9000,2.094913,Os
+
+50,10000,2.254302,Os
+
+50,10000,2.264632,Os
+
+50,10000,2.186455,Os
+
+50,10000,2.291825,Os
+
+50,10000,2.205056,Os
+
+50,10000,2.269227,Os
+
+50,10000,2.129846,Os
+
+50,10000,2.300751,Os
+
+50,10000,2.354816,Os
+
+50,10000,2.169560,Os
+
+50,10000,2.162089,Os
+
+50,10000,2.210552,Os
+
+50,10000,2.277374,Os
+
+50,10000,2.120572,Os
+
+50,10000,2.105192,Os
+
+50,10000,2.214600,Os
+
+50,10000,2.273661,Os
+
+50,10000,2.149460,Os
+
+50,10000,2.197976,Os
+
+50,10000,2.217854,Os
+
+50,10000,2.208232,Os
+
+50,10000,2.237560,Os
+
+50,10000,2.283676,Os
+
+50,10000,2.266919,Os
+
+50,10000,2.270168,Os
+
+50,10000,2.200182,Os
+
+50,10000,2.202904,Os
+
+50,10000,2.113309,Os
+
+50,10000,2.152585,Os
+
+50,10000,2.213364,Os
+50,100,0.025534,Flattened O3
+50,100,0.025904,Flattened O3
+50,100,0.025530,Flattened O3
+50,100,0.025532,Flattened O3
+50,100,0.025618,Flattened O3
+50,100,0.025167,Flattened O3
+50,100,0.025701,Flattened O3
+50,100,0.025552,Flattened O3
+50,100,0.025701,Flattened O3
+50,100,0.025680,Flattened O3
+50,100,0.025865,Flattened O3
+50,100,0.025489,Flattened O3
+50,100,0.025533,Flattened O3
+50,100,0.025521,Flattened O3
+50,100,0.025552,Flattened O3
+50,100,0.025677,Flattened O3
+50,100,0.025633,Flattened O3
+50,100,0.025585,Flattened O3
+50,100,0.025772,Flattened O3
+50,100,0.025541,Flattened O3
+50,100,0.025537,Flattened O3
+50,100,0.025468,Flattened O3
+50,100,0.025351,Flattened O3
+50,100,0.025571,Flattened O3
+50,100,0.025258,Flattened O3
+50,100,0.025723,Flattened O3
+50,100,0.025579,Flattened O3
+50,100,0.025517,Flattened O3
+50,100,0.025475,Flattened O3
+50,100,0.025148,Flattened O3
+50,200,0.050885,Flattened O3
+50,200,0.050604,Flattened O3
+50,200,0.051402,Flattened O3
+50,200,0.051071,Flattened O3
+50,200,0.049504,Flattened O3
+50,200,0.050960,Flattened O3
+50,200,0.051320,Flattened O3
+50,200,0.050853,Flattened O3
+50,200,0.051369,Flattened O3
+50,200,0.050795,Flattened O3
+50,200,0.051036,Flattened O3
+50,200,0.050578,Flattened O3
+50,200,0.050808,Flattened O3
+50,200,0.050832,Flattened O3
+50,200,0.043477,Flattened O3
+50,200,0.051977,Flattened O3
+50,200,0.050790,Flattened O3
+50,200,0.050620,Flattened O3
+50,200,0.051375,Flattened O3
+50,200,0.050666,Flattened O3
+50,200,0.051407,Flattened O3
+50,200,0.050698,Flattened O3
+50,200,0.051187,Flattened O3
+50,200,0.026241,Flattened O3
+50,200,0.028767,Flattened O3
+50,200,0.050721,Flattened O3
+50,200,0.051211,Flattened O3
+50,200,0.050729,Flattened O3
+50,200,0.051164,Flattened O3
+50,200,0.051004,Flattened O3
+50,300,0.077878,Flattened O3
+50,300,0.047378,Flattened O3
+50,300,0.052818,Flattened O3
+50,300,0.074313,Flattened O3
+50,300,0.072089,Flattened O3
+50,300,0.077186,Flattened O3
+50,300,0.077204,Flattened O3
+50,300,0.078164,Flattened O3
+50,300,0.076422,Flattened O3
+50,300,0.075910,Flattened O3
+50,300,0.074061,Flattened O3
+50,300,0.077349,Flattened O3
+50,300,0.077720,Flattened O3
+50,300,0.076771,Flattened O3
+50,300,0.076551,Flattened O3
+50,300,0.076414,Flattened O3
+50,300,0.076456,Flattened O3
+50,300,0.076439,Flattened O3
+50,300,0.077104,Flattened O3
+50,300,0.072306,Flattened O3
+50,300,0.077138,Flattened O3
+50,300,0.076651,Flattened O3
+50,300,0.076369,Flattened O3
+50,300,0.078117,Flattened O3
+50,300,0.077084,Flattened O3
+50,300,0.076649,Flattened O3
+50,300,0.077202,Flattened O3
+50,300,0.075784,Flattened O3
+50,300,0.076633,Flattened O3
+50,300,0.076003,Flattened O3
+50,400,0.098503,Flattened O3
+50,400,0.100832,Flattened O3
+50,400,0.101472,Flattened O3
+50,400,0.102004,Flattened O3
+50,400,0.102202,Flattened O3
+50,400,0.101734,Flattened O3
+50,400,0.100998,Flattened O3
+50,400,0.101558,Flattened O3
+50,400,0.102003,Flattened O3
+50,400,0.101497,Flattened O3
+50,400,0.071411,Flattened O3
+50,400,0.058037,Flattened O3
+50,400,0.085932,Flattened O3
+50,400,0.099444,Flattened O3
+50,400,0.102914,Flattened O3
+50,400,0.101730,Flattened O3
+50,400,0.100591,Flattened O3
+50,400,0.101646,Flattened O3
+50,400,0.101486,Flattened O3
+50,400,0.101494,Flattened O3
+50,400,0.101446,Flattened O3
+50,400,0.102122,Flattened O3
+50,400,0.101392,Flattened O3
+50,400,0.101734,Flattened O3
+50,400,0.101596,Flattened O3
+50,400,0.102126,Flattened O3
+50,400,0.101232,Flattened O3
+50,400,0.101778,Flattened O3
+50,400,0.100853,Flattened O3
+50,400,0.101569,Flattened O3
+50,500,0.125984,Flattened O3
+50,500,0.125994,Flattened O3
+50,500,0.126832,Flattened O3
+50,500,0.125990,Flattened O3
+50,500,0.125888,Flattened O3
+50,500,0.126936,Flattened O3
+50,500,0.126687,Flattened O3
+50,500,0.126820,Flattened O3
+50,500,0.126722,Flattened O3
+50,500,0.126745,Flattened O3
+50,500,0.126463,Flattened O3
+50,500,0.126870,Flattened O3
+50,500,0.068992,Flattened O3
+50,500,0.121891,Flattened O3
+50,500,0.128229,Flattened O3
+50,500,0.117235,Flattened O3
+50,500,0.128311,Flattened O3
+50,500,0.128723,Flattened O3
+50,500,0.126223,Flattened O3
+50,500,0.126716,Flattened O3
+50,500,0.126790,Flattened O3
+50,500,0.126314,Flattened O3
+50,500,0.127003,Flattened O3
+50,500,0.126614,Flattened O3
+50,500,0.126122,Flattened O3
+50,500,0.126027,Flattened O3
+50,500,0.126503,Flattened O3
+50,500,0.126364,Flattened O3
+50,500,0.126753,Flattened O3
+50,500,0.126757,Flattened O3
+50,600,0.151751,Flattened O3
+50,600,0.151909,Flattened O3
+50,600,0.151764,Flattened O3
+50,600,0.127955,Flattened O3
+50,600,0.151725,Flattened O3
+50,600,0.152071,Flattened O3
+50,600,0.151341,Flattened O3
+50,600,0.151525,Flattened O3
+50,600,0.151862,Flattened O3
+50,600,0.152412,Flattened O3
+50,600,0.151024,Flattened O3
+50,600,0.151629,Flattened O3
+50,600,0.151579,Flattened O3
+50,600,0.146743,Flattened O3
+50,600,0.149073,Flattened O3
+50,600,0.151724,Flattened O3
+50,600,0.151944,Flattened O3
+50,600,0.152517,Flattened O3
+50,600,0.151257,Flattened O3
+50,600,0.151756,Flattened O3
+50,600,0.151103,Flattened O3
+50,600,0.151303,Flattened O3
+50,600,0.151143,Flattened O3
+50,600,0.151864,Flattened O3
+50,600,0.152442,Flattened O3
+50,600,0.155433,Flattened O3
+50,600,0.151652,Flattened O3
+50,600,0.151343,Flattened O3
+50,600,0.147521,Flattened O3
+50,600,0.153583,Flattened O3
+50,700,0.176562,Flattened O3
+50,700,0.176867,Flattened O3
+50,700,0.176716,Flattened O3
+50,700,0.176100,Flattened O3
+50,700,0.177087,Flattened O3
+50,700,0.176922,Flattened O3
+50,700,0.176800,Flattened O3
+50,700,0.175223,Flattened O3
+50,700,0.095823,Flattened O3
+50,700,0.176298,Flattened O3
+50,700,0.179137,Flattened O3
+50,700,0.176541,Flattened O3
+50,700,0.177267,Flattened O3
+50,700,0.178750,Flattened O3
+50,700,0.177711,Flattened O3
+50,700,0.176630,Flattened O3
+50,700,0.177964,Flattened O3
+50,700,0.176904,Flattened O3
+50,700,0.177003,Flattened O3
+50,700,0.176153,Flattened O3
+50,700,0.173600,Flattened O3
+50,700,0.176499,Flattened O3
+50,700,0.176567,Flattened O3
+50,700,0.177140,Flattened O3
+50,700,0.176473,Flattened O3
+50,700,0.176715,Flattened O3
+50,700,0.177102,Flattened O3
+50,700,0.177447,Flattened O3
+50,700,0.176817,Flattened O3
+50,700,0.177079,Flattened O3
+50,800,0.201607,Flattened O3
+50,800,0.201254,Flattened O3
+50,800,0.201610,Flattened O3
+50,800,0.201470,Flattened O3
+50,800,0.202099,Flattened O3
+50,800,0.201430,Flattened O3
+50,800,0.202047,Flattened O3
+50,800,0.202316,Flattened O3
+50,800,0.202163,Flattened O3
+50,800,0.204037,Flattened O3
+50,800,0.202956,Flattened O3
+50,800,0.201901,Flattened O3
+50,800,0.202309,Flattened O3
+50,800,0.198594,Flattened O3
+50,800,0.201304,Flattened O3
+50,800,0.201567,Flattened O3
+50,800,0.202158,Flattened O3
+50,800,0.201522,Flattened O3
+50,800,0.202082,Flattened O3
+50,800,0.201433,Flattened O3
+50,800,0.201228,Flattened O3
+50,800,0.201794,Flattened O3
+50,800,0.201766,Flattened O3
+50,800,0.201663,Flattened O3
+50,800,0.201618,Flattened O3
+50,800,0.202206,Flattened O3
+50,800,0.201606,Flattened O3
+50,800,0.202053,Flattened O3
+50,800,0.201540,Flattened O3
+50,800,0.201567,Flattened O3
+50,900,0.227066,Flattened O3
+50,900,0.227209,Flattened O3
+50,900,0.228778,Flattened O3
+50,900,0.224365,Flattened O3
+50,900,0.226400,Flattened O3
+50,900,0.226686,Flattened O3
+50,900,0.226690,Flattened O3
+50,900,0.226357,Flattened O3
+50,900,0.226756,Flattened O3
+50,900,0.226857,Flattened O3
+50,900,0.226825,Flattened O3
+50,900,0.227014,Flattened O3
+50,900,0.226593,Flattened O3
+50,900,0.227069,Flattened O3
+50,900,0.227044,Flattened O3
+50,900,0.226848,Flattened O3
+50,900,0.227222,Flattened O3
+50,900,0.226867,Flattened O3
+50,900,0.227916,Flattened O3
+50,900,0.227279,Flattened O3
+50,900,0.227012,Flattened O3
+50,900,0.227466,Flattened O3
+50,900,0.227487,Flattened O3
+50,900,0.226818,Flattened O3
+50,900,0.173213,Flattened O3
+50,900,0.230348,Flattened O3
+50,900,0.230528,Flattened O3
+50,900,0.228868,Flattened O3
+50,900,0.226372,Flattened O3
+50,900,0.227234,Flattened O3
+50,1000,0.251801,Flattened O3
+50,1000,0.251571,Flattened O3
+50,1000,0.251859,Flattened O3
+50,1000,0.251983,Flattened O3
+50,1000,0.252105,Flattened O3
+50,1000,0.251888,Flattened O3
+50,1000,0.251784,Flattened O3
+50,1000,0.251843,Flattened O3
+50,1000,0.252125,Flattened O3
+50,1000,0.252090,Flattened O3
+50,1000,0.251401,Flattened O3
+50,1000,0.252304,Flattened O3
+50,1000,0.251485,Flattened O3
+50,1000,0.252037,Flattened O3
+50,1000,0.252085,Flattened O3
+50,1000,0.256063,Flattened O3
+50,1000,0.256272,Flattened O3
+50,1000,0.252027,Flattened O3
+50,1000,0.252395,Flattened O3
+50,1000,0.251530,Flattened O3
+50,1000,0.252770,Flattened O3
+50,1000,0.251882,Flattened O3
+50,1000,0.252134,Flattened O3
+50,1000,0.252199,Flattened O3
+50,1000,0.256635,Flattened O3
+50,1000,0.253119,Flattened O3
+50,1000,0.251837,Flattened O3
+50,1000,0.251701,Flattened O3
+50,1000,0.252401,Flattened O3
+50,1000,0.251359,Flattened O3
+50,2000,0.502552,Flattened O3
+50,2000,0.503438,Flattened O3
+50,2000,0.502668,Flattened O3
+50,2000,0.503295,Flattened O3
+50,2000,0.502378,Flattened O3
+50,2000,0.503785,Flattened O3
+50,2000,0.511910,Flattened O3
+50,2000,0.504068,Flattened O3
+50,2000,0.502590,Flattened O3
+50,2000,0.503825,Flattened O3
+50,2000,0.503204,Flattened O3
+50,2000,0.503255,Flattened O3
+50,2000,0.502730,Flattened O3
+50,2000,0.504183,Flattened O3
+50,2000,0.503460,Flattened O3
+50,2000,0.502559,Flattened O3
+50,2000,0.502194,Flattened O3
+50,2000,0.502360,Flattened O3
+50,2000,0.502972,Flattened O3
+50,2000,0.502415,Flattened O3
+50,2000,0.503474,Flattened O3
+50,2000,0.499146,Flattened O3
+50,2000,0.502716,Flattened O3
+50,2000,0.504030,Flattened O3
+50,2000,0.503600,Flattened O3
+50,2000,0.503066,Flattened O3
+50,2000,0.502484,Flattened O3
+50,2000,0.503864,Flattened O3
+50,2000,0.502697,Flattened O3
+50,2000,0.503180,Flattened O3
+50,3000,0.754760,Flattened O3
+50,3000,0.753733,Flattened O3
+50,3000,0.754307,Flattened O3
+50,3000,0.753223,Flattened O3
+50,3000,0.753764,Flattened O3
+50,3000,0.753405,Flattened O3
+50,3000,0.749192,Flattened O3
+50,3000,0.753913,Flattened O3
+50,3000,0.753457,Flattened O3
+50,3000,0.740201,Flattened O3
+50,3000,0.757229,Flattened O3
+50,3000,0.756667,Flattened O3
+50,3000,0.755104,Flattened O3
+50,3000,0.753279,Flattened O3
+50,3000,0.754543,Flattened O3
+50,3000,0.753731,Flattened O3
+50,3000,0.753876,Flattened O3
+50,3000,0.754011,Flattened O3
+50,3000,0.754011,Flattened O3
+50,3000,0.753961,Flattened O3
+50,3000,0.754335,Flattened O3
+50,3000,0.754083,Flattened O3
+50,3000,0.763057,Flattened O3
+50,3000,0.757497,Flattened O3
+50,3000,0.760955,Flattened O3
+50,3000,0.754144,Flattened O3
+50,3000,0.711333,Flattened O3
+50,3000,0.754484,Flattened O3
+50,3000,0.753524,Flattened O3
+50,3000,0.767456,Flattened O3
+50,4000,0.955271,Flattened O3
+50,4000,1.005283,Flattened O3
+50,4000,0.977358,Flattened O3
+50,4000,1.005683,Flattened O3
+50,4000,1.005794,Flattened O3
+50,4000,1.004218,Flattened O3
+50,4000,0.949391,Flattened O3
+50,4000,1.009647,Flattened O3
+50,4000,1.023547,Flattened O3
+50,4000,1.019103,Flattened O3
+50,4000,1.003797,Flattened O3
+50,4000,0.998258,Flattened O3
+50,4000,1.005492,Flattened O3
+50,4000,1.004798,Flattened O3
+50,4000,1.004575,Flattened O3
+50,4000,1.005219,Flattened O3
+50,4000,1.005463,Flattened O3
+50,4000,1.012529,Flattened O3
+50,4000,0.963638,Flattened O3
+50,4000,1.005278,Flattened O3
+50,4000,1.004631,Flattened O3
+50,4000,1.005256,Flattened O3
+50,4000,1.002626,Flattened O3
+50,4000,1.005374,Flattened O3
+50,4000,1.003545,Flattened O3
+50,4000,1.004505,Flattened O3
+50,4000,1.004404,Flattened O3
+50,4000,0.949002,Flattened O3
+50,4000,0.978491,Flattened O3
+50,4000,1.004669,Flattened O3
+50,5000,1.256984,Flattened O3
+50,5000,1.236897,Flattened O3
+50,5000,1.276880,Flattened O3
+50,5000,1.255837,Flattened O3
+50,5000,1.255790,Flattened O3
+50,5000,1.255336,Flattened O3
+50,5000,1.256526,Flattened O3
+50,5000,1.256522,Flattened O3
+50,5000,1.258788,Flattened O3
+50,5000,1.255602,Flattened O3
+50,5000,1.256241,Flattened O3
+50,5000,1.229478,Flattened O3
+50,5000,1.258165,Flattened O3
+50,5000,1.256085,Flattened O3
+50,5000,1.256308,Flattened O3
+50,5000,1.256221,Flattened O3
+50,5000,1.256397,Flattened O3
+50,5000,1.228260,Flattened O3
+50,5000,1.255440,Flattened O3
+50,5000,1.255142,Flattened O3
+50,5000,1.253233,Flattened O3
+50,5000,1.255160,Flattened O3
+50,5000,1.260987,Flattened O3
+50,5000,1.263087,Flattened O3
+50,5000,1.255869,Flattened O3
+50,5000,1.255902,Flattened O3
+50,5000,1.255988,Flattened O3
+50,5000,1.256391,Flattened O3
+50,5000,1.255503,Flattened O3
+50,5000,1.199784,Flattened O3
+50,6000,1.506734,Flattened O3
+50,6000,1.517500,Flattened O3
+50,6000,1.506029,Flattened O3
+50,6000,1.507338,Flattened O3
+50,6000,1.506594,Flattened O3
+50,6000,1.507948,Flattened O3
+50,6000,1.505844,Flattened O3
+50,6000,1.422491,Flattened O3
+50,6000,1.447682,Flattened O3
+50,6000,1.508709,Flattened O3
+50,6000,1.507061,Flattened O3
+50,6000,1.506130,Flattened O3
+50,6000,1.506697,Flattened O3
+50,6000,1.507549,Flattened O3
+50,6000,1.521474,Flattened O3
+50,6000,1.514267,Flattened O3
+50,6000,1.503674,Flattened O3
+50,6000,1.506368,Flattened O3
+50,6000,1.517882,Flattened O3
+50,6000,1.506911,Flattened O3
+50,6000,1.517898,Flattened O3
+50,6000,1.506222,Flattened O3
+50,6000,1.506719,Flattened O3
+50,6000,1.507109,Flattened O3
+50,6000,1.506591,Flattened O3
+50,6000,1.452204,Flattened O3
+50,6000,1.502394,Flattened O3
+50,6000,1.507547,Flattened O3
+50,6000,1.507258,Flattened O3
+50,6000,1.452841,Flattened O3
+50,7000,1.757043,Flattened O3
+50,7000,1.757892,Flattened O3
+50,7000,1.758817,Flattened O3
+50,7000,1.758680,Flattened O3
+50,7000,1.689387,Flattened O3
+50,7000,1.670562,Flattened O3
+50,7000,1.739006,Flattened O3
+50,7000,1.757800,Flattened O3
+50,7000,1.756793,Flattened O3
+50,7000,1.758479,Flattened O3
+50,7000,1.756965,Flattened O3
+50,7000,1.757389,Flattened O3
+50,7000,1.757874,Flattened O3
+50,7000,1.757537,Flattened O3
+50,7000,1.758649,Flattened O3
+50,7000,1.759687,Flattened O3
+50,7000,1.761530,Flattened O3
+50,7000,1.758125,Flattened O3
+50,7000,1.757469,Flattened O3
+50,7000,1.758615,Flattened O3
+50,7000,1.758721,Flattened O3
+50,7000,1.769089,Flattened O3
+50,7000,1.757689,Flattened O3
+50,7000,1.727842,Flattened O3
+50,7000,1.758060,Flattened O3
+50,7000,1.757272,Flattened O3
+50,7000,1.757926,Flattened O3
+50,7000,1.756984,Flattened O3
+50,7000,1.757694,Flattened O3
+50,7000,1.757345,Flattened O3
+50,8000,2.009175,Flattened O3
+50,8000,2.009818,Flattened O3
+50,8000,2.009493,Flattened O3
+
+50,8000,1.974704,Flattened O3
+
+50,8000,1.904020,Flattened O3
+
+50,8000,1.916947,Flattened O3
+
+50,8000,2.089345,Flattened O3
+
+50,8000,2.047507,Flattened O3
+
+50,8000,1.987099,Flattened O3
+
+50,8000,1.960740,Flattened O3
+
+50,8000,1.933642,Flattened O3
+
+50,8000,1.980901,Flattened O3
+
+50,8000,2.063329,Flattened O3
+
+50,8000,1.898495,Flattened O3
+
+50,8000,1.962279,Flattened O3
+
+50,8000,1.901077,Flattened O3
+50,8000,1.953900,Flattened O3
+
+50,8000,1.963332,Flattened O3
+
+50,8000,1.994886,Flattened O3
+
+50,8000,2.006530,Flattened O3
+
+50,8000,2.021134,Flattened O3
+
+50,8000,2.023001,Flattened O3
+
+50,8000,2.062145,Flattened O3
+
+50,8000,1.953880,Flattened O3
+
+50,8000,1.748487,Flattened O3
+
+50,8000,1.854482,Flattened O3
+
+50,8000,1.985336,Flattened O3
+
+50,8000,2.036261,Flattened O3
+
+50,8000,2.002443,Flattened O3
+50,8000,2.007349,Flattened O3
+
+50,9000,2.043952,Flattened O3
+
+50,9000,2.002119,Flattened O3
+
+50,9000,2.064887,Flattened O3
+
+50,9000,2.055338,Flattened O3
+
+50,9000,2.043662,Flattened O3
+
+50,9000,2.057801,Flattened O3
+
+50,9000,1.993966,Flattened O3
+
+50,9000,1.883431,Flattened O3
+
+50,9000,2.137921,Flattened O3
+
+50,9000,2.099773,Flattened O3
+
+50,9000,1.885872,Flattened O3
+
+50,9000,1.840716,Flattened O3
+
+50,9000,2.013524,Flattened O3
+
+50,9000,2.091939,Flattened O3
+
+50,9000,2.021580,Flattened O3
+
+50,9000,1.907211,Flattened O3
+
+50,9000,1.970741,Flattened O3
+
+50,9000,2.067190,Flattened O3
+
+50,9000,1.932297,Flattened O3
+
+50,9000,1.995763,Flattened O3
+
+50,9000,2.003204,Flattened O3
+
+50,9000,2.107374,Flattened O3
+
+50,9000,1.981108,Flattened O3
+
+50,9000,1.988153,Flattened O3
+
+50,9000,1.929630,Flattened O3
+
+50,9000,1.958280,Flattened O3
+
+50,9000,2.097011,Flattened O3
+
+50,9000,2.088355,Flattened O3
+
+50,9000,2.044830,Flattened O3
+
+50,9000,2.117087,Flattened O3
+
+50,10000,2.000460,Flattened O3
+
+50,10000,2.018121,Flattened O3
+
+50,10000,2.022877,Flattened O3
+
+50,10000,2.036702,Flattened O3
+
+50,10000,2.066137,Flattened O3
+
+50,10000,2.071903,Flattened O3
+
+50,10000,1.954986,Flattened O3
+
+50,10000,1.961563,Flattened O3
+
+50,10000,1.972909,Flattened O3
+
+50,10000,2.033331,Flattened O3
+
+50,10000,2.033347,Flattened O3
+
+50,10000,1.959894,Flattened O3
+
+50,10000,1.875528,Flattened O3
+
+50,10000,2.083672,Flattened O3
+
+50,10000,1.984317,Flattened O3
+
+50,10000,1.978942,Flattened O3
+
+50,10000,1.990354,Flattened O3
+
+50,10000,2.031724,Flattened O3
+
+50,10000,2.101124,Flattened O3
+
+50,10000,2.013805,Flattened O3
+
+50,10000,1.989478,Flattened O3
+
+50,10000,2.085848,Flattened O3
+
+50,10000,2.028101,Flattened O3
+
+50,10000,1.899810,Flattened O3
+
+50,10000,1.877100,Flattened O3
+
+50,10000,2.024390,Flattened O3
+
+50,10000,2.119294,Flattened O3
+
+50,10000,2.078838,Flattened O3
+
+50,10000,1.976102,Flattened O3
+
+50,10000,1.978211,Flattened O3
+
+50,100,0.037224,Flattened
+50,100,0.036858,Flattened
+50,100,0.038280,Flattened
+50,100,0.037172,Flattened
+50,100,0.038364,Flattened
+50,100,0.037743,Flattened
+50,100,0.037535,Flattened
+50,100,0.037476,Flattened
+50,100,0.037846,Flattened
+50,100,0.038367,Flattened
+50,100,0.037197,Flattened
+50,100,0.038220,Flattened
+50,100,0.037217,Flattened
+50,100,0.037746,Flattened
+50,100,0.037590,Flattened
+50,100,0.037944,Flattened
+50,100,0.038739,Flattened
+50,100,0.038294,Flattened
+50,100,0.038148,Flattened
+50,100,0.037078,Flattened
+50,100,0.037198,Flattened
+50,100,0.037031,Flattened
+50,100,0.038264,Flattened
+50,100,0.037508,Flattened
+50,100,0.037682,Flattened
+50,100,0.038833,Flattened
+50,100,0.038318,Flattened
+50,100,0.037843,Flattened
+50,100,0.037218,Flattened
+50,100,0.038192,Flattened
+50,200,0.075344,Flattened
+50,200,0.075050,Flattened
+50,200,0.076653,Flattened
+50,200,0.074456,Flattened
+50,200,0.074153,Flattened
+50,200,0.075154,Flattened
+50,200,0.073519,Flattened
+50,200,0.076481,Flattened
+50,200,0.074271,Flattened
+50,200,0.074540,Flattened
+50,200,0.075292,Flattened
+50,200,0.074131,Flattened
+50,200,0.074033,Flattened
+50,200,0.074957,Flattened
+50,200,0.074001,Flattened
+50,200,0.073855,Flattened
+50,200,0.073636,Flattened
+50,200,0.074625,Flattened
+50,200,0.075014,Flattened
+50,200,0.075034,Flattened
+50,200,0.075521,Flattened
+50,200,0.075831,Flattened
+50,200,0.074361,Flattened
+50,200,0.074516,Flattened
+50,200,0.073752,Flattened
+50,200,0.075613,Flattened
+50,200,0.074325,Flattened
+50,200,0.076988,Flattened
+50,200,0.074602,Flattened
+50,200,0.074820,Flattened
+50,300,0.109822,Flattened
+50,300,0.110577,Flattened
+50,300,0.111000,Flattened
+50,300,0.111439,Flattened
+50,300,0.111301,Flattened
+50,300,0.112341,Flattened
+50,300,0.111809,Flattened
+50,300,0.112948,Flattened
+50,300,0.109559,Flattened
+50,300,0.111162,Flattened
+50,300,0.111656,Flattened
+50,300,0.111185,Flattened
+50,300,0.111688,Flattened
+50,300,0.111747,Flattened
+50,300,0.110631,Flattened
+50,300,0.112039,Flattened
+50,300,0.110796,Flattened
+50,300,0.111436,Flattened
+50,300,0.114033,Flattened
+50,300,0.111854,Flattened
+50,300,0.110289,Flattened
+50,300,0.113207,Flattened
+50,300,0.111402,Flattened
+50,300,0.110815,Flattened
+50,300,0.112292,Flattened
+50,300,0.111552,Flattened
+50,300,0.111851,Flattened
+50,300,0.110922,Flattened
+50,300,0.110555,Flattened
+50,300,0.110231,Flattened
+50,400,0.147823,Flattened
+50,400,0.149895,Flattened
+50,400,0.149218,Flattened
+50,400,0.147412,Flattened
+50,400,0.148617,Flattened
+50,400,0.149274,Flattened
+50,400,0.148267,Flattened
+50,400,0.149961,Flattened
+50,400,0.147603,Flattened
+50,400,0.147918,Flattened
+50,400,0.149156,Flattened
+50,400,0.149072,Flattened
+50,400,0.148456,Flattened
+50,400,0.149671,Flattened
+50,400,0.148596,Flattened
+50,400,0.147751,Flattened
+50,400,0.148549,Flattened
+50,400,0.148519,Flattened
+50,400,0.148647,Flattened
+50,400,0.149642,Flattened
+50,400,0.148823,Flattened
+50,400,0.151463,Flattened
+50,400,0.149852,Flattened
+50,400,0.149853,Flattened
+50,400,0.147287,Flattened
+50,400,0.147877,Flattened
+50,400,0.147790,Flattened
+50,400,0.147924,Flattened
+50,400,0.148494,Flattened
+50,400,0.149239,Flattened
+50,500,0.187119,Flattened
+50,500,0.184946,Flattened
+50,500,0.183076,Flattened
+50,500,0.182882,Flattened
+50,500,0.186897,Flattened
+50,500,0.183049,Flattened
+50,500,0.186937,Flattened
+50,500,0.185586,Flattened
+50,500,0.186157,Flattened
+50,500,0.184205,Flattened
+50,500,0.186312,Flattened
+50,500,0.186231,Flattened
+50,500,0.184466,Flattened
+50,500,0.183763,Flattened
+50,500,0.184111,Flattened
+50,500,0.185498,Flattened
+50,500,0.186691,Flattened
+50,500,0.185167,Flattened
+50,500,0.185039,Flattened
+50,500,0.185606,Flattened
+50,500,0.186283,Flattened
+50,500,0.186216,Flattened
+50,500,0.186174,Flattened
+50,500,0.187805,Flattened
+50,500,0.189260,Flattened
+50,500,0.185007,Flattened
+50,500,0.184120,Flattened
+50,500,0.184882,Flattened
+50,500,0.183195,Flattened
+50,500,0.184065,Flattened
+50,600,0.223333,Flattened
+50,600,0.221656,Flattened
+50,600,0.221984,Flattened
+50,600,0.222460,Flattened
+50,600,0.223455,Flattened
+50,600,0.223503,Flattened
+50,600,0.222386,Flattened
+50,600,0.222686,Flattened
+50,600,0.221814,Flattened
+50,600,0.221579,Flattened
+50,600,0.224083,Flattened
+50,600,0.224597,Flattened
+50,600,0.222843,Flattened
+50,600,0.223685,Flattened
+50,600,0.223525,Flattened
+50,600,0.223492,Flattened
+50,600,0.223665,Flattened
+50,600,0.222175,Flattened
+50,600,0.221771,Flattened
+50,600,0.220798,Flattened
+50,600,0.222722,Flattened
+50,600,0.221468,Flattened
+50,600,0.225675,Flattened
+50,600,0.222956,Flattened
+50,600,0.222695,Flattened
+50,600,0.222606,Flattened
+50,600,0.220916,Flattened
+50,600,0.221367,Flattened
+50,600,0.221820,Flattened
+50,600,0.223089,Flattened
+50,700,0.258469,Flattened
+50,700,0.258550,Flattened
+50,700,0.259741,Flattened
+50,700,0.259669,Flattened
+50,700,0.262111,Flattened
+50,700,0.261484,Flattened
+50,700,0.257671,Flattened
+50,700,0.260477,Flattened
+50,700,0.260589,Flattened
+50,700,0.260754,Flattened
+50,700,0.259328,Flattened
+50,700,0.260393,Flattened
+50,700,0.260056,Flattened
+50,700,0.259161,Flattened
+50,700,0.256923,Flattened
+50,700,0.262125,Flattened
+50,700,0.259145,Flattened
+50,700,0.258355,Flattened
+50,700,0.259424,Flattened
+50,700,0.262302,Flattened
+50,700,0.259350,Flattened
+50,700,0.260985,Flattened
+50,700,0.260400,Flattened
+50,700,0.258990,Flattened
+50,700,0.259635,Flattened
+50,700,0.260526,Flattened
+50,700,0.261377,Flattened
+50,700,0.260668,Flattened
+50,700,0.262764,Flattened
+50,700,0.257742,Flattened
+50,800,0.299453,Flattened
+50,800,0.296430,Flattened
+50,800,0.299307,Flattened
+50,800,0.296337,Flattened
+50,800,0.296128,Flattened
+50,800,0.298127,Flattened
+50,800,0.299352,Flattened
+50,800,0.298552,Flattened
+50,800,0.293784,Flattened
+50,800,0.295349,Flattened
+50,800,0.295679,Flattened
+50,800,0.297387,Flattened
+50,800,0.299171,Flattened
+50,800,0.296518,Flattened
+50,800,0.300469,Flattened
+50,800,0.297831,Flattened
+50,800,0.296244,Flattened
+50,800,0.299162,Flattened
+50,800,0.296307,Flattened
+50,800,0.295672,Flattened
+50,800,0.296042,Flattened
+50,800,0.296172,Flattened
+50,800,0.296152,Flattened
+50,800,0.298774,Flattened
+50,800,0.296749,Flattened
+50,800,0.296007,Flattened
+50,800,0.297541,Flattened
+50,800,0.295363,Flattened
+50,800,0.295719,Flattened
+50,800,0.294875,Flattened
+50,900,0.335230,Flattened
+50,900,0.333821,Flattened
+50,900,0.334026,Flattened
+50,900,0.330647,Flattened
+50,900,0.332591,Flattened
+50,900,0.332566,Flattened
+50,900,0.333151,Flattened
+50,900,0.334978,Flattened
+50,900,0.333684,Flattened
+50,900,0.333306,Flattened
+50,900,0.332184,Flattened
+50,900,0.333196,Flattened
+50,900,0.335819,Flattened
+50,900,0.331812,Flattened
+50,900,0.335742,Flattened
+50,900,0.335861,Flattened
+50,900,0.333962,Flattened
+50,900,0.334367,Flattened
+50,900,0.334820,Flattened
+50,900,0.332848,Flattened
+50,900,0.332079,Flattened
+50,900,0.334899,Flattened
+50,900,0.333832,Flattened
+50,900,0.331506,Flattened
+50,900,0.330139,Flattened
+50,900,0.332750,Flattened
+50,900,0.333037,Flattened
+50,900,0.333028,Flattened
+50,900,0.331642,Flattened
+50,900,0.333365,Flattened
+50,1000,0.368957,Flattened
+50,1000,0.370333,Flattened
+50,1000,0.370109,Flattened
+50,1000,0.369425,Flattened
+50,1000,0.373494,Flattened
+50,1000,0.369632,Flattened
+50,1000,0.368414,Flattened
+50,1000,0.372444,Flattened
+50,1000,0.369426,Flattened
+50,1000,0.368005,Flattened
+50,1000,0.371836,Flattened
+50,1000,0.369654,Flattened
+50,1000,0.372488,Flattened
+50,1000,0.371250,Flattened
+50,1000,0.369852,Flattened
+50,1000,0.374653,Flattened
+50,1000,0.371982,Flattened
+50,1000,0.371025,Flattened
+50,1000,0.369529,Flattened
+50,1000,0.367288,Flattened
+50,1000,0.373080,Flattened
+50,1000,0.370956,Flattened
+50,1000,0.371755,Flattened
+50,1000,0.370162,Flattened
+50,1000,0.371776,Flattened
+50,1000,0.371060,Flattened
+50,1000,0.371339,Flattened
+50,1000,0.370349,Flattened
+50,1000,0.369256,Flattened
+50,1000,0.368707,Flattened
+50,2000,0.739452,Flattened
+50,2000,0.744533,Flattened
+50,2000,0.742581,Flattened
+50,2000,0.739124,Flattened
+50,2000,0.738341,Flattened
+50,2000,0.746002,Flattened
+50,2000,0.735252,Flattened
+50,2000,0.737562,Flattened
+50,2000,0.740108,Flattened
+50,2000,0.742940,Flattened
+50,2000,0.736801,Flattened
+50,2000,0.741568,Flattened
+50,2000,0.740447,Flattened
+50,2000,0.741766,Flattened
+50,2000,0.737426,Flattened
+50,2000,0.740058,Flattened
+50,2000,0.736755,Flattened
+50,2000,0.742083,Flattened
+50,2000,0.739164,Flattened
+50,2000,0.741816,Flattened
+50,2000,0.741288,Flattened
+50,2000,0.740750,Flattened
+50,2000,0.743790,Flattened
+50,2000,0.742242,Flattened
+50,2000,0.739086,Flattened
+50,2000,0.741446,Flattened
+50,2000,0.740442,Flattened
+50,2000,0.741401,Flattened
+50,2000,0.737366,Flattened
+50,2000,0.741191,Flattened
+50,3000,1.114580,Flattened
+50,3000,1.107415,Flattened
+50,3000,1.112576,Flattened
+50,3000,1.109517,Flattened
+50,3000,1.109323,Flattened
+50,3000,1.105285,Flattened
+50,3000,1.106382,Flattened
+50,3000,1.107128,Flattened
+50,3000,1.108996,Flattened
+50,3000,1.108633,Flattened
+50,3000,1.108573,Flattened
+50,3000,1.104104,Flattened
+50,3000,1.114820,Flattened
+50,3000,1.110029,Flattened
+50,3000,1.114921,Flattened
+50,3000,1.107077,Flattened
+50,3000,1.107945,Flattened
+50,3000,1.115339,Flattened
+50,3000,1.120037,Flattened
+50,3000,1.106879,Flattened
+50,3000,1.113740,Flattened
+50,3000,1.112191,Flattened
+50,3000,1.107195,Flattened
+50,3000,1.111907,Flattened
+50,3000,1.114882,Flattened
+50,3000,1.110881,Flattened
+50,3000,1.109540,Flattened
+50,3000,1.113456,Flattened
+50,3000,1.110013,Flattened
+50,3000,1.108988,Flattened
+50,4000,1.482589,Flattened
+50,4000,1.485511,Flattened
+50,4000,1.475736,Flattened
+50,4000,1.480147,Flattened
+50,4000,1.479220,Flattened
+50,4000,1.485683,Flattened
+50,4000,1.487253,Flattened
+50,4000,1.500545,Flattened
+50,4000,1.489413,Flattened
+50,4000,1.480572,Flattened
+50,4000,1.482191,Flattened
+50,4000,1.479457,Flattened
+50,4000,1.480353,Flattened
+50,4000,1.482502,Flattened
+50,4000,1.479872,Flattened
+50,4000,1.485766,Flattened
+50,4000,1.478032,Flattened
+50,4000,1.480316,Flattened
+50,4000,1.479013,Flattened
+50,4000,1.478525,Flattened
+50,4000,1.475218,Flattened
+50,4000,1.481089,Flattened
+50,4000,1.482066,Flattened
+50,4000,1.477268,Flattened
+50,4000,1.483690,Flattened
+50,4000,1.487910,Flattened
+50,4000,1.482687,Flattened
+50,4000,1.477874,Flattened
+50,4000,1.483654,Flattened
+50,4000,1.477957,Flattened
+50,5000,1.849167,Flattened
+50,5000,1.851028,Flattened
+50,5000,1.844862,Flattened
+50,5000,1.851014,Flattened
+50,5000,1.854245,Flattened
+50,5000,1.856528,Flattened
+50,5000,1.845266,Flattened
+50,5000,1.847986,Flattened
+50,5000,1.850270,Flattened
+50,5000,1.846373,Flattened
+50,5000,1.848594,Flattened
+50,5000,1.848677,Flattened
+50,5000,1.852989,Flattened
+50,5000,1.848022,Flattened
+50,5000,1.852772,Flattened
+50,5000,1.848777,Flattened
+50,5000,1.851456,Flattened
+50,5000,1.851693,Flattened
+50,5000,1.854852,Flattened
+50,5000,1.852510,Flattened
+50,5000,1.852119,Flattened
+50,5000,1.849930,Flattened
+50,5000,1.855359,Flattened
+50,5000,1.850800,Flattened
+50,5000,1.856521,Flattened
+50,5000,1.848402,Flattened
+50,5000,1.845683,Flattened
+50,5000,1.854342,Flattened
+50,5000,1.849306,Flattened
+50,5000,1.843961,Flattened
+50,6000,2.215881,Flattened
+50,6000,2.216184,Flattened
+50,6000,2.217287,Flattened
+50,6000,2.214902,Flattened
+50,6000,2.220352,Flattened
+50,6000,2.222329,Flattened
+50,6000,2.213923,Flattened
+50,6000,2.220212,Flattened
+50,6000,2.218594,Flattened
+50,6000,2.218416,Flattened
+50,6000,2.218977,Flattened
+50,6000,2.226711,Flattened
+50,6000,2.219277,Flattened
+50,6000,2.221120,Flattened
+50,6000,2.221608,Flattened
+50,6000,2.216427,Flattened
+50,6000,2.214443,Flattened
+50,6000,2.224893,Flattened
+50,6000,2.214556,Flattened
+50,6000,2.223069,Flattened
+50,6000,2.219931,Flattened
+50,6000,2.223675,Flattened
+50,6000,2.218639,Flattened
+50,6000,2.217174,Flattened
+50,6000,2.222937,Flattened
+50,6000,2.228519,Flattened
+50,6000,2.220627,Flattened
+50,6000,2.217710,Flattened
+50,6000,2.233458,Flattened
+50,6000,2.225375,Flattened
+50,7000,2.599262,Flattened
+50,7000,2.590596,Flattened
+50,7000,2.591935,Flattened
+50,7000,2.592808,Flattened
+50,7000,2.588432,Flattened
+50,7000,2.592591,Flattened
+50,7000,2.591119,Flattened
+50,7000,2.591164,Flattened
+50,7000,2.600269,Flattened
+50,7000,2.584622,Flattened
+50,7000,2.586286,Flattened
+50,7000,2.600797,Flattened
+50,7000,2.593355,Flattened
+50,7000,2.587998,Flattened
+50,7000,2.584480,Flattened
+50,7000,2.603269,Flattened
+50,7000,2.598624,Flattened
+50,7000,2.586970,Flattened
+50,7000,2.588480,Flattened
+50,7000,2.587252,Flattened
+50,7000,2.589080,Flattened
+50,7000,2.602335,Flattened
+50,7000,2.590858,Flattened
+50,7000,2.599786,Flattened
+50,7000,2.589590,Flattened
+50,7000,2.590742,Flattened
+50,7000,2.581806,Flattened
+50,7000,2.588683,Flattened
+50,7000,2.589292,Flattened
+50,7000,2.599491,Flattened
+50,8000,2.961432,Flattened
+
+50,8000,2.906468,Flattened
+
+50,8000,3.010812,Flattened
+
+50,8000,2.929678,Flattened
+
+50,8000,2.958157,Flattened
+
+50,8000,2.972381,Flattened
+50,8000,2.944520,Flattened
+
+50,8000,2.742863,Flattened
+
+50,8000,2.815752,Flattened
+
+50,8000,2.909733,Flattened
+
+50,8000,2.978266,Flattened
+50,8000,2.970743,Flattened
+
+50,8000,2.966231,Flattened
+
+50,8000,2.739523,Flattened
+50,8000,2.959919,Flattened
+50,8000,2.952169,Flattened
+
+50,8000,2.949785,Flattened
+
+50,8000,2.793258,Flattened
+
+50,8000,2.877011,Flattened
+
+50,8000,2.867526,Flattened
+
+50,8000,2.909460,Flattened
+
+50,8000,2.833708,Flattened
+
+50,8000,2.939832,Flattened
+
+50,8000,2.922320,Flattened
+
+50,8000,2.866432,Flattened
+
+50,8000,2.927195,Flattened
+
+50,8000,2.989756,Flattened
+50,8000,2.952741,Flattened
+50,8000,2.952739,Flattened
+
+50,8000,2.957625,Flattened
+
+50,9000,2.970837,Flattened
+
+50,9000,2.874179,Flattened
+
+50,9000,2.901633,Flattened
+
+50,9000,3.065050,Flattened
+
+50,9000,3.004958,Flattened
+
+50,9000,2.839114,Flattened
+
+50,9000,3.041231,Flattened
+
+50,9000,2.861467,Flattened
+
+50,9000,2.899103,Flattened
+
+50,9000,2.924012,Flattened
+
+50,9000,2.881605,Flattened
+
+50,9000,2.674523,Flattened
+
+50,9000,3.062304,Flattened
+
+50,9000,2.657133,Flattened
+
+50,9000,2.923344,Flattened
+
+50,9000,2.911012,Flattened
+
+50,9000,2.983383,Flattened
+
+50,9000,2.994285,Flattened
+
+50,9000,2.832336,Flattened
+
+50,9000,2.924466,Flattened
+
+50,9000,2.955196,Flattened
+
+50,9000,2.968358,Flattened
+
+50,9000,2.927494,Flattened
+
+50,9000,2.900894,Flattened
+
+50,9000,3.050956,Flattened
+
+50,9000,3.009770,Flattened
+
+50,9000,2.992821,Flattened
+
+50,9000,2.848788,Flattened
+
+50,9000,3.025808,Flattened
+
+50,9000,2.967451,Flattened
+
+50,10000,2.818696,Flattened
+
+50,10000,3.042710,Flattened
+
+50,10000,2.835876,Flattened
+
+50,10000,2.941558,Flattened
+
+50,10000,2.924440,Flattened
+
+50,10000,2.864189,Flattened
+
+50,10000,2.866626,Flattened
+
+50,10000,2.828935,Flattened
+
+50,10000,2.948600,Flattened
+
+50,10000,2.873347,Flattened
+
+50,10000,3.087822,Flattened
+
+50,10000,3.006667,Flattened
+
+50,10000,2.969048,Flattened
+
+50,10000,2.943997,Flattened
+
+50,10000,2.877525,Flattened
+
+50,10000,2.982044,Flattened
+
+50,10000,3.133300,Flattened
+
+50,10000,2.882903,Flattened
+
+50,10000,2.681910,Flattened
+
+50,10000,2.826950,Flattened
+
+50,10000,3.058285,Flattened
+
+50,10000,3.087266,Flattened
+
+50,10000,2.963234,Flattened
+
+50,10000,2.786296,Flattened
+
+50,10000,2.962937,Flattened
+
+50,10000,2.928078,Flattened
+
+50,10000,2.917830,Flattened
+
+50,10000,2.974500,Flattened
+
+50,10000,3.096888,Flattened
+
+50,10000,2.949443,Flattened
 
