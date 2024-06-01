@@ -25,81 +25,53 @@ void print_matrix(long double** matrix, const int& matrix_dimension, const char*
 
 int main()
 {
-    int num_dimensions = 19;
-    int num_powers = 19;
-    int dimensions[19] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
+    int num_dimensions = 6;
+    int num_powers = 14;
+    int dimensions[6] = {/*10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, */500, 600, 700, 800, 900, 1000};
     int powers[19] = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000};
 
     for(int i = 0; i < num_dimensions; i++)
     {
         run_experiment(dimensions[i], 1000);
     }
-    printf("\n=============================================================\n\n");
-    for(int i = 0; i < num_powers; i++)
-    {
-        run_experiment(50, powers[i]);
-    }
+    //printf("\n=============================================================\n\n");
+//    for(int i = 0; i < num_powers; i++)
+//    {
+//        run_experiment(50, powers[i]);
+//    }
 }
 
 
 void run_experiment(const int &dimension, const int &power)
 {
-    for(int i = 0; i < 30; i++)
+    for(const auto type : {ElementWise/*, RowWise, ColWise*/})
     {
-        curandGenerator_t prng;
-        build_curand_generator(prng, CURAND_RNG_PSEUDO_XORWOW, 1);
+        for (int i = 0; i < 30; i++)
+        {
+            curandGenerator_t prng;
+            build_curand_generator(prng, CURAND_RNG_PSEUDO_XORWOW, 1);
 
-        allocate_memory(dimension);
-        initialize_memory(dimension, prng);
+            allocate_memory(dimension);
+            initialize_memory(dimension, prng);
 
-        /*
-        print_matrix(host_base, matrix_dimension, "Host matrix");
-        print_matrix(host_previous, matrix_dimension, "Host previous");
-        print_matrix(host_current, matrix_dimension, "Host current");
+            auto start = high_resolution_clock::now();
 
-        printf("Dev base:\n");
-        PrintMatrix<<<1, 1>>>(dev_base, matrix_dimension);
-        cudaDeviceSynchronize();
+            raise_to_power(
+                    dev_base,
+                    dev_previous,
+                    dev_current,
+                    dimension,
+                    power,
+                    type
+            );
 
-        printf("Dev previous:\n");
-        PrintMatrix<<<1, 1>>>(dev_previous, matrix_dimension);
-        cudaDeviceSynchronize();
+            auto stop = high_resolution_clock::now();
+            auto duration = static_cast<double>(duration_cast<microseconds>(stop - start).count()) / 1e06;
 
-        printf("Dev current:\n");
-        PrintMatrix<<<1, 1>>>(dev_current, matrix_dimension);
-        cudaDeviceSynchronize();
-         */
-        auto start = high_resolution_clock::now();
+            printf("%d,%d,%s,%.6f\n", dimension, power, type == RowWise ? "Row wise" : type == ColWise ? "Column wise" : "Element wise",duration);
 
-        raise_to_power(
-                dev_base,
-                dev_previous,
-                dev_current,
-                dimension,
-                power,
-                ElementWise
-        );
-
-        auto stop = high_resolution_clock::now();
-        auto duration = static_cast<double>(duration_cast<microseconds>(stop - start).count()) / 1e06;
-
-        printf("%d,%d,%.6f\n", dimension, power, duration);
-
-        /*
-        printf("Dev base:\n");
-        PrintMatrix<<<1, 1>>>(dev_base, matrix_dimension);
-        cudaDeviceSynchronize();
-
-        printf("Dev previous:\n");
-        PrintMatrix<<<1, 1>>>(dev_previous, matrix_dimension);
-        cudaDeviceSynchronize();
-
-        printf("Dev current:\n");
-        PrintMatrix<<<1, 1>>>(dev_current, matrix_dimension);
-        cudaDeviceSynchronize();
-         */
-
-        free_memory(dimension);
+            free_memory(dimension);
+        }
     }
 }
 
